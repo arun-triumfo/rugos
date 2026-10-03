@@ -41,12 +41,12 @@ import {
   IntegrationsPage, JobsPage, AuditLogsPage, SettingsPage,
 } from './pages/AnalyticsAdmin/AnalyticsAdminPages';
 import {
-  SuperAdminHomePage, SuperAdminPlansPage, SuperAdminSubscriptionsPage, SuperAdminTenantsPage,
+  SuperAdminPlansPage, SuperAdminSubscriptionsPage, SuperAdminBuyersPage,
 } from './pages/SuperAdmin/SuperAdminPages';
 
 function TenantAppGuard() {
   const { isPlatformAdmin } = useAuth();
-  if (isPlatformAdmin) return <Navigate to="/superadmin" replace />;
+  if (isPlatformAdmin) return <Navigate to="/superadmin/buyers" replace />;
   return <AppLayout />;
 }
 
@@ -62,10 +62,10 @@ export default function App() {
 
               <Route element={<ProtectedRoute />}>
                 <Route path="/superadmin" element={<SuperAdminLayout />}>
-                  <Route index element={<SuperAdminHomePage />} />
+                  <Route index element={<Navigate to="/superadmin/buyers" replace />} />
                   <Route path="plans" element={<SuperAdminPlansPage />} />
+                  <Route path="buyers" element={<SuperAdminBuyersPage />} />
                   <Route path="subscriptions" element={<SuperAdminSubscriptionsPage />} />
-                  <Route path="tenants" element={<SuperAdminTenantsPage />} />
                 </Route>
 
                 <Route element={<TenantAppGuard />}>

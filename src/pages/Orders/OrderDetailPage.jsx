@@ -88,6 +88,7 @@ export default function OrderDetailPage() {
       markPacked: `Order ${order.orderNumber} marked as Packed`,
       createShipment: 'Shipped to customer',
       markDelivered: 'Delivery confirmed · profitability finalized',
+      
     };
     toast(messages[action] || 'Updated');
   };

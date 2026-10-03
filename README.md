@@ -39,21 +39,22 @@ SPA routing uses `public/_redirects` only (no `netlify.toml` — avoids Netlify 
 
 **No Git?** `npm run build`, then drag `dist` to [app.netlify.com/drop](https://app.netlify.com/drop).
 
-## SaaS demo
+## SaaS + app demo
 
 - Marketing site: `/` (product + monthly/yearly pricing)
-- Superadmin: `/superadmin` (plans, subscriptions, Import/Export activation)
-- Tenant app: `/dashboard` (same modules; mode badge shows Export or Import)
+- **Admin (main app):** same product flow as before → `/dashboard`
+- **Superadmin (SaaS only):** pricing plans, buyers, subscriptions → `/superadmin`
 
 ### Demo login (password: `demo123`)
 
 | Account | Email | Lands on |
 |---------|-------|----------|
-| Platform Superadmin | `admin@rugos.demo` | Superadmin |
-| Export tenant | `tenant@rugos.demo` | App (Export mode) |
-| Import tenant | `import@rugos.demo` | App (Import mode) |
+| Admin | `admin@rugos.demo` | Main app (all modules + role switcher) |
+| Superadmin | `superadmin@rugos.demo` | Pricing · Buyers · Subscriptions only |
 
-Purchase on landing creates **Pending Approval**. Superadmin must choose **Export** or **Import** to activate.
+Quick-login role buttons still open the **main app** (unchanged).
+
+Purchase on landing → buyer stays Pending → Superadmin activates with **Export** or **Import**.
 
 ## Key demo path
 

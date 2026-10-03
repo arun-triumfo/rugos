@@ -2,7 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState } 
 import { AUTH_STORAGE_KEY, ROLE_STORAGE_KEY } from '../config/api';
 import { DEMO_CREDENTIALS, ROLES, ROLE_LIST } from '../constants';
 import { ROLE_PERMISSIONS } from '../data/mockSystem';
-import { TENANT_DEMO_LOGINS, BUSINESS_MODE_LABELS } from '../data/mockSaas';
+import { DEMO_LOGINS, BUSINESS_MODE_LABELS } from '../data/mockSaas';
 
 const AuthContext = createContext(null);
 
@@ -23,6 +23,19 @@ function readTenantsFromStorage() {
   } catch {
     return null;
   }
+}
+
+function defaultAppTenant() {
+  const tenants = readTenantsFromStorage();
+  return (
+    tenants?.find((t) => t.id === 'ten-001') || {
+      id: 'ten-001',
+      businessMode: 'export',
+      companyName: 'Rugos Demo Exports Pvt Ltd',
+      planId: 'plan-growth',
+      status: 'Active',
+    }
+  );
 }
 
 export function AuthProvider({ children }) {
@@ -48,27 +61,29 @@ export function AuthProvider({ children }) {
   const login = useCallback(async (email, password) => {
     await new Promise((r) => setTimeout(r, 400));
 
-    const demo = TENANT_DEMO_LOGINS.find(
+    const account = DEMO_LOGINS.find(
       (d) => d.email.toLowerCase() === email.toLowerCase() && d.password === password
     );
 
-    if (!demo && !(email === DEMO_CREDENTIALS.email && password === DEMO_CREDENTIALS.password)) {
-      return { ok: false, error: 'Invalid credentials. Try admin@rugos.demo / demo123 or tenant demos.' };
+    // Fallback: original admin credentials → main app (not platform SaaS)
+    const isLegacyAdmin =
+      !account &&
+      email.toLowerCase() === DEMO_CREDENTIALS.email.toLowerCase() &&
+      password === DEMO_CREDENTIALS.password;
+
+    if (!account && !isLegacyAdmin) {
+      return {
+        ok: false,
+        error: 'Invalid credentials. Use admin@rugos.demo / demo123 (app) or superadmin@rugos.demo / demo123 (SaaS).',
+      };
     }
 
-    const account = demo || {
-      email,
-      tenantId: null,
-      name: 'Arjun Mehta',
-      role: ROLES.SUPER_ADMIN,
-      isPlatformAdmin: true,
-    };
-
-    if (account.isPlatformAdmin) {
+    // Platform Superadmin — pricing / buyers / subscriptions only
+    if (account?.isPlatformAdmin) {
       const u = {
         name: account.name,
         email: account.email,
-        role: ROLES.SUPER_ADMIN,
+        role: 'Platform Superadmin',
         isPlatformAdmin: true,
         tenantId: null,
         businessMode: null,
@@ -76,69 +91,32 @@ export function AuthProvider({ children }) {
       };
       setUser(u);
       setRoleState(ROLES.SUPER_ADMIN);
-      return { ok: true, redirectTo: '/superadmin' };
+      return { ok: true, redirectTo: '/superadmin/buyers' };
     }
 
-    const tenants = readTenantsFromStorage();
-    const tenant = tenants?.find((t) => t.id === account.tenantId || t.email?.toLowerCase() === email.toLowerCase());
-
-    if (!tenant) {
-      return { ok: false, error: 'Tenant not found. Complete purchase and wait for Superadmin activation.' };
-    }
-    if (tenant.status === 'Pending Approval') {
-      return { ok: false, error: 'Account pending Superadmin approval. Import or Export mode not assigned yet.' };
-    }
-    if (tenant.status === 'Suspended') {
-      return { ok: false, error: 'Account suspended. Contact RugOS Superadmin.' };
-    }
-    if (!tenant.businessMode) {
-      return { ok: false, error: 'Business mode not set. Superadmin must choose Import or Export.' };
-    }
-
+    // Main app admin (and any non-platform demo login) — original product flow
+    const tenant = defaultAppTenant();
     const u = {
-      name: account.name || tenant.contactName,
-      email: account.email || tenant.email,
-      role: account.role || ROLES.MANAGEMENT,
+      name: account?.name || 'Arjun Mehta',
+      email: account?.email || email,
+      role: account?.role || ROLES.SUPER_ADMIN,
       isPlatformAdmin: false,
       tenantId: tenant.id,
-      businessMode: tenant.businessMode,
+      businessMode: tenant.businessMode || 'export',
       companyName: tenant.companyName,
       planId: tenant.planId,
     };
     setUser(u);
-    setRoleState(account.role || ROLES.MANAGEMENT);
+    setRoleState(account?.role || ROLES.SUPER_ADMIN);
     return { ok: true, redirectTo: '/dashboard' };
   }, []);
 
+  /** Role switcher / quick login — always main app (same as before) */
   const quickLogin = useCallback((selectedRole) => {
-    if (selectedRole === ROLES.SUPER_ADMIN) {
-      const u = {
-        name: 'Arjun Mehta',
-        email: 'admin@rugos.demo',
-        role: ROLES.SUPER_ADMIN,
-        isPlatformAdmin: true,
-        tenantId: null,
-        businessMode: null,
-        companyName: 'RugOS Platform',
-      };
-      setUser(u);
-      setRoleState(ROLES.SUPER_ADMIN);
-      return { redirectTo: '/superadmin' };
-    }
-
-    // Tenant demo — export mode company by default for role previews
-    const tenants = readTenantsFromStorage();
-    const tenant = tenants?.find((t) => t.id === 'ten-001') || {
-      id: 'ten-001',
-      businessMode: 'export',
-      companyName: 'Rugos Demo Exports Pvt Ltd',
-      planId: 'plan-growth',
-      status: 'Active',
-    };
-
+    const tenant = defaultAppTenant();
     const u = {
-      name: `${selectedRole} User`,
-      email: 'tenant@rugos.demo',
+      name: selectedRole === ROLES.SUPER_ADMIN ? 'Arjun Mehta' : `${selectedRole} User`,
+      email: 'admin@rugos.demo',
       role: selectedRole,
       isPlatformAdmin: false,
       tenantId: tenant.id,
@@ -157,7 +135,7 @@ export function AuthProvider({ children }) {
 
   const setRole = useCallback((r) => {
     setRoleState(r);
-    setUser((prev) => (prev ? { ...prev, role: r } : prev));
+    setUser((prev) => (prev ? { ...prev, role: r, isPlatformAdmin: false } : prev));
   }, []);
 
   const can = useCallback(

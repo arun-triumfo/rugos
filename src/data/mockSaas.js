@@ -177,9 +177,29 @@ export const mockSubscriptions = [
   },
 ];
 
-/** Demo logins for SaaS tenants (static) */
-export const TENANT_DEMO_LOGINS = [
-  { email: 'tenant@rugos.demo', password: 'demo123', tenantId: 'ten-001', name: 'Priya Sharma', role: 'Management' },
-  { email: 'import@rugos.demo', password: 'demo123', tenantId: 'ten-002', name: 'Mike Chen', role: 'Management' },
-  { email: 'admin@rugos.demo', password: 'demo123', tenantId: null, name: 'Arjun Mehta', role: 'Super Admin', isPlatformAdmin: true },
+/**
+ * Demo logins
+ * - admin@ = main app (same as before)
+ * - superadmin@ = SaaS only (plans / buyers / subscriptions)
+ */
+export const DEMO_LOGINS = [
+  {
+    email: 'admin@rugos.demo',
+    password: 'demo123',
+    name: 'Arjun Mehta',
+    role: 'Super Admin',
+    isPlatformAdmin: false,
+    tenantId: 'ten-001',
+  },
+  {
+    email: 'superadmin@rugos.demo',
+    password: 'demo123',
+    name: 'Platform Superadmin',
+    role: 'Platform Superadmin',
+    isPlatformAdmin: true,
+    tenantId: null,
+  },
 ];
+
+/** @deprecated use DEMO_LOGINS */
+export const TENANT_DEMO_LOGINS = DEMO_LOGINS;

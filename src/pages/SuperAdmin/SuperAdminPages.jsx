@@ -1,59 +1,11 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import PageHeader, { KpiCard } from '../../components/common/PageHeader';
+import PageHeader from '../../components/common/PageHeader';
 import DataTable from '../../components/common/DataTable';
 import StatusBadge from '../../components/common/StatusBadge';
 import Modal from '../../components/common/Modal';
 import { useSaas } from '../../context/SaasContext';
 import { BUSINESS_MODES, BUSINESS_MODE_LABELS } from '../../data/mockSaas';
 import { formatCurrency, formatDateTime } from '../../utils/format';
-
-export function SuperAdminHomePage() {
-  const { plans, tenants, subscriptions, pendingTenants, resetSaasData } = useSaas();
-  return (
-    <div>
-      <PageHeader
-        title="Superadmin Overview"
-        subtitle="Manage SaaS pricing, subscriptions and Import/Export activations"
-        actions={
-          <div className="flex gap-2">
-            <button type="button" className="btn-secondary" onClick={() => { if (window.confirm('Reset SaaS plans/tenants/subscriptions?')) resetSaasData(); }}>Reset SaaS data</button>
-            <Link to="/" className="btn-secondary">View landing page</Link>
-          </div>
-        }
-      />
-      <div className="mb-5 grid grid-cols-2 gap-3 md:grid-cols-4">
-        <KpiCard label="Active plans" value={plans.filter((p) => p.active).length} accent="blue" />
-        <KpiCard label="Active tenants" value={tenants.filter((t) => t.status === 'Active').length} accent="green" />
-        <KpiCard label="Pending approvals" value={pendingTenants.length} accent="amber" />
-        <KpiCard label="Active subscriptions" value={subscriptions.filter((s) => s.status === 'Active').length} accent="purple" />
-      </div>
-      <div className="rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
-        <p className="font-semibold">Activation rule</p>
-        <p className="mt-1">New plan purchase → tenant stays Pending → Superadmin chooses <strong>Export</strong> or <strong>Import</strong> → user becomes Active. One mode only per tenant.</p>
-      </div>
-      {pendingTenants.length > 0 && (
-        <div className="mt-4">
-          <h3 className="mb-2 text-sm font-semibold">Needs approval</h3>
-          <DataTable
-            columns={[
-              { key: 'companyName', label: 'Company' },
-              { key: 'email', label: 'Email' },
-              { key: 'planId', label: 'Plan' },
-              { key: 'billingCycle', label: 'Cycle' },
-              {
-                key: 'action',
-                label: 'Action',
-                render: (r) => <Link to="/superadmin/tenants" className="text-accent text-xs font-medium">Review →</Link>,
-              },
-            ]}
-            rows={pendingTenants}
-          />
-        </div>
-      )}
-    </div>
-  );
-}
 
 export function SuperAdminPlansPage() {
   const { plans, updatePlan, togglePlanActive } = useSaas();
@@ -164,7 +116,7 @@ export function SuperAdminSubscriptionsPage() {
       <DataTable
         columns={[
           { key: 'id', label: 'Subscription' },
-          { key: 'company', label: 'Tenant' },
+          { key: 'company', label: 'Buyer' },
           { key: 'planName', label: 'Plan' },
           { key: 'billingCycle', label: 'Cycle' },
           { key: 'amount', label: 'Amount', render: (r) => formatCurrency(r.amount) },
@@ -198,19 +150,24 @@ export function SuperAdminSubscriptionsPage() {
   );
 }
 
-export function SuperAdminTenantsPage() {
-  const { tenants, plans, approveTenant, suspendTenant, getPlan } = useSaas();
+export function SuperAdminBuyersPage() {
+  const { tenants, plans, approveTenant, suspendTenant, getPlan, resetSaasData } = useSaas();
   const [approve, setApprove] = useState(null);
   const [mode, setMode] = useState(BUSINESS_MODES.EXPORT);
 
   return (
     <div>
       <PageHeader
-        title="Tenants / Approvals"
-        subtitle="Activate new purchases by choosing Import or Export mode"
+        title="Buyers"
+        subtitle="Purchased plans awaiting activation — choose Import or Export mode"
+        actions={
+          <button type="button" className="btn-secondary" onClick={() => { if (window.confirm('Reset SaaS buyers/plans/subscriptions?')) resetSaasData(); }}>
+            Reset SaaS data
+          </button>
+        }
       />
       <div className="mb-4 rounded-lg border border-blue-200 bg-blue-50 p-3 text-sm text-blue-900">
-        Modules are the same for both modes. Each company may run only <strong>Export</strong> or only <strong>Import</strong> — not both.
+        New buyer purchases stay Pending until you activate with <strong>Export</strong> or <strong>Import</strong> (one mode only).
       </div>
       <DataTable
         columns={[
@@ -250,7 +207,7 @@ export function SuperAdminTenantsPage() {
       <Modal
         open={!!approve}
         onClose={() => setApprove(null)}
-        title="Activate tenant"
+        title="Activate buyer"
         footer={
           <>
             <button type="button" className="btn-secondary" onClick={() => setApprove(null)}>Cancel</button>
