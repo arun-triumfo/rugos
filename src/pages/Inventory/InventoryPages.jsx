@@ -56,13 +56,14 @@ export function InventoryOverviewPage() {
 
       {rug1001 && (
         <div className="mb-4 rounded-lg border border-blue-200 bg-blue-50 p-4">
-          <p className="text-sm font-semibold text-navy-900">Concurrency / Reservation Demo — RUG-1001</p>
+          <p className="text-sm font-semibold text-navy-900">Allocation rule + reservation — RUG-1001</p>
           <div className="mt-2 flex flex-wrap gap-4 text-sm">
-            <span>Available: <strong>{rug1001.indiaAvailable}</strong></span>
-            <span>Reserved: <strong className="text-amber-700">{rug1001.reserved}</strong></span>
-            <span>Free: <strong className="text-emerald-700">{rug1001.indiaAvailable - rug1001.reserved}</strong></span>
+            <span>USA free: <strong className="text-emerald-700">{rug1001.usa}</strong></span>
+            <span>India available: <strong>{rug1001.indiaAvailable}</strong></span>
+            <span>India reserved: <strong className="text-amber-700">{rug1001.reserved}</strong></span>
+            <span>India free: <strong className="text-emerald-700">{rug1001.indiaAvailable - rug1001.reserved}</strong></span>
           </div>
-          <p className="mt-2 text-xs text-slate-600">Reserved inventory cannot be allocated to another active order. This represents future concurrency-safe backend logic.</p>
+          <p className="mt-2 text-xs text-slate-600">Check USA first → then India free (Available − Reserved) → else Make (MTO). Reserved stock cannot be allocated to another active order.</p>
         </div>
       )}
 

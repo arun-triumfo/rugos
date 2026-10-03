@@ -19,16 +19,25 @@ npm run preview
 
 ## Deploy on Netlify (free)
 
-Config is already in the repo (`netlify.toml` + `public/_redirects`).
+SPA routing uses `public/_redirects` only (no `netlify.toml` — avoids Netlify config/extension parse failures).
 
-1. Push this project to GitHub
-2. Go to [app.netlify.com](https://app.netlify.com) → **Add new site** → **Import an existing project**
-3. Connect the repo — Netlify will use:
-   - Build command: `npm run build`
-   - Publish directory: `dist`
-4. Deploy — you get a free URL like `https://your-site.netlify.app`
+### Build settings (Netlify UI)
 
-**No Git?** Run `npm run build`, then drag the `dist` folder to [app.netlify.com/drop](https://app.netlify.com/drop).
+- **Build command:** `npm run build`
+- **Publish directory:** `dist`
+
+### If you see “Failed retrieving extensions”
+
+1. Site → **Integrations / Plugins** — remove any extensions/plugins  
+2. **Deploys → Trigger deploy → Clear cache and deploy site**  
+3. If it still fails, it is usually a Netlify platform issue — retry later or contact Support with your site ID  
+
+### Deploy
+
+1. Push to GitHub → import site on [app.netlify.com](https://app.netlify.com)  
+2. Set build settings above → Deploy  
+
+**No Git?** `npm run build`, then drag `dist` to [app.netlify.com/drop](https://app.netlify.com/drop).
 
 ## Demo login
 

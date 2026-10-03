@@ -10,16 +10,26 @@ import { formatDate } from '../../utils/format';
 const MTO_STAGES = ['To Make', 'Production', 'QC Ready', 'Pack'];
 
 export function MtoPage() {
-  const { state, setState, toast } = useDemo();
+  const { state, setState, toast, advanceWorkflow } = useDemo();
   const [view, setView] = useState('kanban');
 
   const advance = (id) => {
+    const current = state.mto.find((m) => m.id === id);
+    if (!current) return;
+    const idx = MTO_STAGES.indexOf(current.stage);
+    const next = MTO_STAGES[Math.min(idx + 1, MTO_STAGES.length - 1)];
+
+    // Order #1001 linked MTO: finishing production releases stock into the order workflow
+    if ((current.id === 'MTO-1001' || current.order === '#1001') && next === 'Pack') {
+      advanceWorkflow('completeMto');
+      toast('MTO completed — Order #1001 ready to pick');
+      return;
+    }
+
     setState((prev) => ({
       ...prev,
       mto: prev.mto.map((m) => {
         if (m.id !== id) return m;
-        const idx = MTO_STAGES.indexOf(m.stage);
-        const next = MTO_STAGES[Math.min(idx + 1, MTO_STAGES.length - 1)];
         return { ...m, stage: next, pendingQty: next === 'Pack' || next === 'QC Ready' ? 0 : m.pendingQty };
       }),
     }));
