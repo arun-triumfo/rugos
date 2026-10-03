@@ -2,6 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState } 
 import { AUTH_STORAGE_KEY, ROLE_STORAGE_KEY } from '../config/api';
 import { DEMO_CREDENTIALS, ROLES, ROLE_LIST } from '../constants';
 import { ROLE_PERMISSIONS } from '../data/mockSystem';
+import { TENANT_DEMO_LOGINS, BUSINESS_MODE_LABELS } from '../data/mockSaas';
 
 const AuthContext = createContext(null);
 
@@ -13,6 +14,16 @@ const ROLE_NAV_FILTER = {
   [ROLES.LOGISTICS]: ['Overview', 'Commerce', 'Warehouse', 'Replenishment', 'Shipping', 'Export', 'Returns', 'System'],
   [ROLES.AUDITOR]: ['Overview', 'Commerce', 'Catalog', 'Inventory', 'Warehouse', 'Shipping', 'Export', 'Returns', 'Finance', 'Analytics', 'System'],
 };
+
+function readTenantsFromStorage() {
+  try {
+    const raw = localStorage.getItem('rugos_saas_v1');
+    if (!raw) return null;
+    return JSON.parse(raw)?.tenants || null;
+  } catch {
+    return null;
+  }
+}
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(() => {
@@ -36,23 +47,108 @@ export function AuthProvider({ children }) {
 
   const login = useCallback(async (email, password) => {
     await new Promise((r) => setTimeout(r, 400));
-    if (email === DEMO_CREDENTIALS.email && password === DEMO_CREDENTIALS.password) {
-      const u = { name: 'Arjun Mehta', email, role: ROLES.SUPER_ADMIN };
+
+    const demo = TENANT_DEMO_LOGINS.find(
+      (d) => d.email.toLowerCase() === email.toLowerCase() && d.password === password
+    );
+
+    if (!demo && !(email === DEMO_CREDENTIALS.email && password === DEMO_CREDENTIALS.password)) {
+      return { ok: false, error: 'Invalid credentials. Try admin@rugos.demo / demo123 or tenant demos.' };
+    }
+
+    const account = demo || {
+      email,
+      tenantId: null,
+      name: 'Arjun Mehta',
+      role: ROLES.SUPER_ADMIN,
+      isPlatformAdmin: true,
+    };
+
+    if (account.isPlatformAdmin) {
+      const u = {
+        name: account.name,
+        email: account.email,
+        role: ROLES.SUPER_ADMIN,
+        isPlatformAdmin: true,
+        tenantId: null,
+        businessMode: null,
+        companyName: 'RugOS Platform',
+      };
       setUser(u);
       setRoleState(ROLES.SUPER_ADMIN);
-      return { ok: true };
+      return { ok: true, redirectTo: '/superadmin' };
     }
-    return { ok: false, error: 'Invalid demo credentials. Use admin@rugos.demo / demo123' };
+
+    const tenants = readTenantsFromStorage();
+    const tenant = tenants?.find((t) => t.id === account.tenantId || t.email?.toLowerCase() === email.toLowerCase());
+
+    if (!tenant) {
+      return { ok: false, error: 'Tenant not found. Complete purchase and wait for Superadmin activation.' };
+    }
+    if (tenant.status === 'Pending Approval') {
+      return { ok: false, error: 'Account pending Superadmin approval. Import or Export mode not assigned yet.' };
+    }
+    if (tenant.status === 'Suspended') {
+      return { ok: false, error: 'Account suspended. Contact RugOS Superadmin.' };
+    }
+    if (!tenant.businessMode) {
+      return { ok: false, error: 'Business mode not set. Superadmin must choose Import or Export.' };
+    }
+
+    const u = {
+      name: account.name || tenant.contactName,
+      email: account.email || tenant.email,
+      role: account.role || ROLES.MANAGEMENT,
+      isPlatformAdmin: false,
+      tenantId: tenant.id,
+      businessMode: tenant.businessMode,
+      companyName: tenant.companyName,
+      planId: tenant.planId,
+    };
+    setUser(u);
+    setRoleState(account.role || ROLES.MANAGEMENT);
+    return { ok: true, redirectTo: '/dashboard' };
   }, []);
 
   const quickLogin = useCallback((selectedRole) => {
+    if (selectedRole === ROLES.SUPER_ADMIN) {
+      const u = {
+        name: 'Arjun Mehta',
+        email: 'admin@rugos.demo',
+        role: ROLES.SUPER_ADMIN,
+        isPlatformAdmin: true,
+        tenantId: null,
+        businessMode: null,
+        companyName: 'RugOS Platform',
+      };
+      setUser(u);
+      setRoleState(ROLES.SUPER_ADMIN);
+      return { redirectTo: '/superadmin' };
+    }
+
+    // Tenant demo — export mode company by default for role previews
+    const tenants = readTenantsFromStorage();
+    const tenant = tenants?.find((t) => t.id === 'ten-001') || {
+      id: 'ten-001',
+      businessMode: 'export',
+      companyName: 'Rugos Demo Exports Pvt Ltd',
+      planId: 'plan-growth',
+      status: 'Active',
+    };
+
     const u = {
-      name: selectedRole === ROLES.SUPER_ADMIN ? 'Arjun Mehta' : `${selectedRole} User`,
-      email: 'admin@rugos.demo',
+      name: `${selectedRole} User`,
+      email: 'tenant@rugos.demo',
       role: selectedRole,
+      isPlatformAdmin: false,
+      tenantId: tenant.id,
+      businessMode: tenant.businessMode || 'export',
+      companyName: tenant.companyName,
+      planId: tenant.planId,
     };
     setUser(u);
     setRoleState(selectedRole);
+    return { redirectTo: '/dashboard' };
   }, []);
 
   const logout = useCallback(() => {
@@ -75,14 +171,17 @@ export function AuthProvider({ children }) {
 
   const visibleNavGroups = useCallback(
     (allGroups) => {
+      if (user?.isPlatformAdmin) return [];
       const allowed = ROLE_NAV_FILTER[role];
       if (!allowed || role === ROLES.MANAGEMENT || role === ROLES.SUPER_ADMIN || role === ROLES.AUDITOR) {
         return allGroups;
       }
       return allGroups.filter((g) => allowed.includes(g.label));
     },
-    [role]
+    [role, user]
   );
+
+  const modeLabel = user?.businessMode ? BUSINESS_MODE_LABELS[user.businessMode] : null;
 
   const value = useMemo(
     () => ({
@@ -96,8 +195,11 @@ export function AuthProvider({ children }) {
       can,
       visibleNavGroups,
       isAuthenticated: !!user,
+      isPlatformAdmin: !!user?.isPlatformAdmin,
+      businessMode: user?.businessMode || null,
+      modeLabel,
     }),
-    [user, role, login, quickLogin, logout, setRole, can, visibleNavGroups]
+    [user, role, login, quickLogin, logout, setRole, can, visibleNavGroups, modeLabel]
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

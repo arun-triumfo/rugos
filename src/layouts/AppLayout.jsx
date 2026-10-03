@@ -12,7 +12,7 @@ import { Drawer } from '../components/common/Modal';
 import { DEMO_TOUR_STEPS } from '../constants/demoTour';
 
 export default function AppLayout() {
-  const { user, role, roles, setRole, logout, visibleNavGroups } = useAuth();
+  const { user, role, roles, setRole, logout, visibleNavGroups, modeLabel, businessMode } = useAuth();
   const { state, toast } = useDemo();
   const navigate = useNavigate();
   const [collapsed, setCollapsed] = useState(false);
@@ -59,7 +59,9 @@ export default function AppLayout() {
         {!collapsed && (
           <Link to="/dashboard" className="flex flex-col leading-tight">
             <span className="text-sm font-bold tracking-wide text-white">RugOS</span>
-            <span className="text-[10px] text-slate-400">ExportOS Platform</span>
+            <span className="text-[10px] text-slate-400">
+              {modeLabel ? `${modeLabel} mode` : 'ExportOS Platform'}
+            </span>
           </Link>
         )}
         {collapsed && <span className="mx-auto text-xs font-bold text-white">R</span>}
@@ -152,6 +154,20 @@ export default function AppLayout() {
           <span className="hidden rounded border border-amber-200 bg-amber-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-700 sm:inline">
             Demo Environment
           </span>
+          {modeLabel && (
+            <span className={`hidden rounded border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide sm:inline ${
+              businessMode === 'import'
+                ? 'border-sky-200 bg-sky-50 text-sky-800'
+                : 'border-emerald-200 bg-emerald-50 text-emerald-800'
+            }`}>
+              {modeLabel} mode
+            </span>
+          )}
+          {user?.companyName && (
+            <span className="hidden max-w-[140px] truncate text-xs text-slate-500 lg:inline" title={user.companyName}>
+              {user.companyName}
+            </span>
+          )}
 
           <button type="button" className="btn-secondary hidden sm:inline-flex" onClick={() => setTourOpen(true)}>
             <Play size={14} /> Start Demo Tour

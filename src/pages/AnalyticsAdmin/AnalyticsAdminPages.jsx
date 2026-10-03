@@ -9,6 +9,7 @@ import DataTable from '../../components/common/DataTable';
 import StatusBadge from '../../components/common/StatusBadge';
 import SearchInput, { FilterBar, SelectFilter } from '../../components/common/SearchInput';
 import { useDemo } from '../../context/DemoContext';
+import { useAuth } from '../../context/AuthContext';
 import { downloadCsv, formatCurrency, formatDateTime, formatNumber, formatPercent } from '../../utils/format';
 import { PERMISSION_ACTIONS, PERMISSION_MODULES } from '../../data/mockSystem';
 import { ROLE_LIST } from '../../constants';
@@ -357,10 +358,18 @@ export function AuditLogsPage() {
 
 export function SettingsPage() {
   const { resetDemoData, toast } = useDemo();
+  const { user, modeLabel } = useAuth();
   return (
     <div>
       <PageHeader title="Settings" breadcrumbs={[{ label: 'System' }, { label: 'Settings' }]} />
       <div className="max-w-xl space-y-4">
+        <div className="rounded-lg border border-border bg-panel p-4 text-sm">
+          <h3 className="text-sm font-semibold">Tenant mode</h3>
+          <p className="mt-1 text-slate-600">
+            Company: <strong>{user?.companyName || '—'}</strong><br />
+            Business mode: <strong>{modeLabel || '—'}</strong> (set by Superadmin — Import or Export, not both)
+          </p>
+        </div>
         <div className="rounded-lg border border-border bg-panel p-4">
           <h3 className="text-sm font-semibold">Demo Environment</h3>
           <p className="mt-1 text-sm text-slate-600">Reset all localStorage demo mutations back to the initial seed dataset.</p>

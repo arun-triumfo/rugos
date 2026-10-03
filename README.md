@@ -39,12 +39,21 @@ SPA routing uses `public/_redirects` only (no `netlify.toml` — avoids Netlify 
 
 **No Git?** `npm run build`, then drag `dist` to [app.netlify.com/drop](https://app.netlify.com/drop).
 
-## Demo login
+## SaaS demo
 
-- Email: `admin@rugos.demo`
-- Password: `demo123`
+- Marketing site: `/` (product + monthly/yearly pricing)
+- Superadmin: `/superadmin` (plans, subscriptions, Import/Export activation)
+- Tenant app: `/dashboard` (same modules; mode badge shows Export or Import)
 
-Or use the role quick-login buttons on the login screen.
+### Demo login (password: `demo123`)
+
+| Account | Email | Lands on |
+|---------|-------|----------|
+| Platform Superadmin | `admin@rugos.demo` | Superadmin |
+| Export tenant | `tenant@rugos.demo` | App (Export mode) |
+| Import tenant | `import@rugos.demo` | App (Import mode) |
+
+Purchase on landing creates **Pending Approval**. Superadmin must choose **Export** or **Import** to activate.
 
 ## Key demo path
 
