@@ -258,8 +258,8 @@ export function SuperAdminDemoRequestsPage() {
   return (
     <div>
       <PageHeader
-        title="Demo Requests"
-        subtitle="Landing page “Apply for demo” submissions"
+        title="Access Requests"
+        subtitle="Landing page trial / access form submissions"
       />
       <DataTable
         columns={[
@@ -303,7 +303,7 @@ export function SuperAdminDemoRequestsPage() {
           },
         ]}
         rows={demoRequests || []}
-        emptyMessage="No demo requests yet"
+        emptyMessage="No access requests yet"
       />
     </div>
   );

@@ -94,9 +94,9 @@ export const mockImportLogs = [
 ];
 
 export const mockMarketplaceSync = [
-  { marketplace: 'Amazon', status: 'Demo Connected', lastSync: '2026-09-22T05:00:00', ordersImported: 156, failedImports: 0, syncStatus: 'Healthy', nextSync: '2026-09-22T11:00:00' },
-  { marketplace: 'Etsy', status: 'Demo Connected', lastSync: '2026-09-22T05:05:00', ordersImported: 64, failedImports: 0, syncStatus: 'Healthy', nextSync: '2026-09-22T11:05:00' },
-  { marketplace: 'Walmart', status: 'Demo Connected', lastSync: '2026-09-22T05:10:00', ordersImported: 42, failedImports: 2, syncStatus: 'Warning', nextSync: '2026-09-22T11:10:00' },
+  { marketplace: 'Amazon', status: 'Connected', lastSync: '2026-09-22T05:00:00', ordersImported: 156, failedImports: 0, syncStatus: 'Healthy', nextSync: '2026-09-22T11:00:00' },
+  { marketplace: 'Etsy', status: 'Connected', lastSync: '2026-09-22T05:05:00', ordersImported: 64, failedImports: 0, syncStatus: 'Healthy', nextSync: '2026-09-22T11:05:00' },
+  { marketplace: 'Walmart', status: 'Connected', lastSync: '2026-09-22T05:10:00', ordersImported: 42, failedImports: 2, syncStatus: 'Warning', nextSync: '2026-09-22T11:10:00' },
 ];
 
 export const ROLE_PERMISSIONS = {

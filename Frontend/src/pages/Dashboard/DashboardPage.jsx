@@ -54,7 +54,7 @@ export default function DashboardPage() {
         subtitle="Commerce · Inventory · Logistics · Finance snapshot"
         breadcrumbs={[{ label: 'Overview' }, { label: 'Dashboard' }]}
         actions={
-          <Link to="/orders/1001" className="btn-primary">Open Order #1001 Demo</Link>
+          <Link to="/orders/1001" className="btn-primary">Open Order #1001</Link>
         }
       />
 

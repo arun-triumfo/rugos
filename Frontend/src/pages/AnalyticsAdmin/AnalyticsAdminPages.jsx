@@ -293,7 +293,7 @@ export function RolesPage() {
           </tbody>
         </table>
       </div>
-      <p className="mt-2 text-xs text-slate-500">Static permission matrix for demo — changes are visual only.</p>
+      <p className="mt-2 text-xs text-slate-500">Permission matrix preview — changes are visual only.</p>
     </div>
   );
 }
@@ -385,11 +385,11 @@ export function SettingsPage() {
           </p>
         </div>
         <div className="rounded-lg border border-border bg-panel p-4">
-          <h3 className="text-sm font-semibold">Demo Environment</h3>
-          <p className="mt-1 text-sm text-slate-600">Reset all localStorage demo mutations back to the initial seed dataset.</p>
+          <h3 className="text-sm font-semibold">Reset data</h3>
+          <p className="mt-1 text-sm text-slate-600">Restore operational data to the initial seed dataset.</p>
           <button type="button" className="btn-danger mt-3" onClick={() => {
-            if (window.confirm('Reset all demo data to initial seed?')) resetDemoData();
-          }}>Reset Demo Data</button>
+            if (window.confirm('Reset all data to the initial seed?')) resetDemoData();
+          }}>Reset Data</button>
         </div>
         <div className="rounded-lg border border-border bg-panel p-4 text-sm text-slate-600">
           <h3 className="font-semibold text-navy-900">Future Backend</h3>

@@ -22,7 +22,7 @@ const TABS = [
   { id: 'profitability', label: 'Profitability' },
   { id: 'timeline', label: 'Timeline' },
   { id: 'audit', label: 'Audit Log' },
-  { id: 'workflow', label: 'Demo Workflow' },
+  { id: 'workflow', label: 'Workflow' },
 ];
 
 export default function OrderDetailPage() {
@@ -120,7 +120,7 @@ export default function OrderDetailPage() {
         actions={
           <div className="flex flex-wrap gap-2">
             {order.demoWorkflow && (
-              <button type="button" className="btn-secondary" onClick={resetWorkflow1001}>Reset Demo Workflow</button>
+              <button type="button" className="btn-secondary" onClick={resetWorkflow1001}>Reset Workflow</button>
             )}
             {order.labelGenerated && (
               <button type="button" className="btn-secondary" onClick={() => setLabelOpen(true)}>Print Label</button>
@@ -187,8 +187,8 @@ export default function OrderDetailPage() {
             )}
             {order.demoWorkflow && (
               <div className="rounded-lg border border-blue-200 bg-blue-50 p-4 text-sm text-blue-900">
-                <p className="font-semibold">Client Demo Order</p>
-                <button type="button" className="btn-primary mt-3" onClick={() => setTab('workflow')}>Open Demo Workflow</button>
+                <p className="font-semibold">Guided order walkthrough</p>
+                <button type="button" className="btn-primary mt-3" onClick={() => setTab('workflow')}>Open Workflow</button>
               </div>
             )}
           </div>
@@ -326,7 +326,7 @@ export default function OrderDetailPage() {
           <div className="rounded-lg border border-border bg-panel p-4">
             <h3 className="text-sm font-semibold mb-2">Interactive Client Workflow</h3>
             <p className="text-sm text-slate-600 mb-3">
-              Auto allocation uses current stock. Use force buttons to demo India or MTO paths.
+              Auto allocation uses current stock. Use force buttons to try India or MTO paths.
             </p>
 
             <div className="mb-4 grid gap-2 sm:grid-cols-3">
@@ -403,7 +403,7 @@ export default function OrderDetailPage() {
                 );
               })}
             </div>
-            <button type="button" className="btn-secondary mt-4" onClick={resetWorkflow1001}>Reset Demo Workflow</button>
+            <button type="button" className="btn-secondary mt-4" onClick={resetWorkflow1001}>Reset Workflow</button>
           </div>
           <Timeline items={order.timeline || []} />
         </div>

@@ -33,7 +33,7 @@ const QUICK_LOGINS = [
   {
     key: 'owner',
     title: 'Product Owner',
-    subtitle: 'Full app demo · Dashboard & ops',
+    subtitle: 'Full app · Dashboard & ops',
     email: 'admin@rugos.demo',
     password: 'demo123',
     icon: Building2,
@@ -43,7 +43,7 @@ const QUICK_LOGINS = [
   {
     key: 'super',
     title: 'Superadmin',
-    subtitle: 'Plans · Buyers · Demo requests',
+    subtitle: 'Plans · Buyers · Access requests',
     email: 'superadmin@rugos.demo',
     password: 'demo123',
     icon: Crown,
@@ -102,7 +102,7 @@ export default function LandingPage() {
       setDemoSubmitted(true);
       setDemoForm({ companyName: '', contactName: '', email: '', phone: '', message: '' });
     } else {
-      setDemoError(res?.error || 'Could not submit demo request');
+      setDemoError(res?.error || 'Could not submit access request');
     }
   };
 
@@ -129,7 +129,7 @@ export default function LandingPage() {
           </div>
           <nav className="hidden items-center gap-6 text-sm font-medium text-[#5b6b7c] md:flex">
             <a href="#product" className="hover:text-[#0f2744]">Product</a>
-            <a href="#demo" className="hover:text-[#0f2744]">Apply for demo</a>
+            <a href="#demo" className="hover:text-[#0f2744]">Request access</a>
             <a href="#pricing" className="hover:text-[#0f2744]">Pricing</a>
             <a href="#login" className="hover:text-[#0f2744]">Quick login</a>
           </nav>
@@ -141,7 +141,7 @@ export default function LandingPage() {
               href="#demo"
               className="hidden items-center gap-1 rounded-lg bg-[#0e7490] px-3 py-1.5 text-sm font-semibold text-white shadow-sm shadow-teal-900/10 hover:bg-[#0f5f6e] sm:inline-flex"
             >
-              Apply for demo <ArrowRight size={14} />
+              Request access <ArrowRight size={14} />
             </a>
             <button
               type="button"
@@ -159,7 +159,7 @@ export default function LandingPage() {
             <ul className="space-y-1 text-sm font-medium text-[#0f2744]">
               {[
                 { href: '#product', label: 'Product' },
-                { href: '#demo', label: 'Apply for demo' },
+                { href: '#demo', label: 'Request access' },
                 { href: '#pricing', label: 'Pricing' },
                 { href: '#login', label: 'Quick login' },
               ].map((link) => (
@@ -202,13 +202,13 @@ export default function LandingPage() {
                 href="#demo"
                 className="inline-flex items-center gap-2 rounded-lg bg-[#0e7490] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-teal-900/15 transition hover:-translate-y-0.5 hover:bg-[#0f5f6e]"
               >
-                Apply for demo <ArrowRight size={16} />
+                Request access <ArrowRight size={16} />
               </a>
               <a
                 href="#login"
                 className="inline-flex items-center gap-2 rounded-lg border border-[#d5dde6] bg-white/80 px-5 py-3 text-sm font-semibold text-[#0f2744] shadow-sm transition hover:-translate-y-0.5 hover:border-[#0e7490]/40"
               >
-                Quick demo login
+                Quick login
               </a>
             </div>
           </div>
@@ -237,7 +237,7 @@ export default function LandingPage() {
       {/* Quick login */}
       <section id="login" className="border-t border-[#d5dde6]/80 bg-white/50">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-          <h2 className="landing-display text-3xl font-semibold text-[#0f2744] sm:text-4xl">Demo login</h2>
+          <h2 className="landing-display text-3xl font-semibold text-[#0f2744] sm:text-4xl">Quick login</h2>
           <p className="mt-2 max-w-2xl text-sm text-[#5b6b7c]">
             One click to explore. Password for both accounts: <span className="font-semibold text-[#0f2744]">demo123</span>
           </p>
@@ -280,11 +280,11 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Apply for demo */}
+      {/* Request access */}
       <section id="demo" className="border-t border-[#d5dde6]/80">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:items-start">
           <div>
-            <h2 className="landing-display text-3xl font-semibold text-[#0f2744] sm:text-4xl">Apply for a demo</h2>
+            <h2 className="landing-display text-3xl font-semibold text-[#0f2744] sm:text-4xl">Request access</h2>
             <p className="mt-3 text-sm leading-relaxed text-[#5b6b7c]">
               Tell us about your company. Superadmin reviews requests and schedules a guided walkthrough of RugOS modules.
             </p>
@@ -308,7 +308,7 @@ export default function LandingPage() {
             {demoSubmitted ? (
               <div className="space-y-3 py-8 text-center">
                 <p className="landing-display text-2xl font-semibold text-teal-700">Request received</p>
-                <p className="text-sm text-[#5b6b7c]">Our team will contact you to schedule the demo.</p>
+                <p className="text-sm text-[#5b6b7c]">Our team will contact you to schedule a walkthrough.</p>
                 <button
                   type="button"
                   className="mt-2 rounded-lg border border-[#d5dde6] px-4 py-2 text-sm font-medium text-[#0f2744] hover:bg-[#e8f4f8]"
@@ -378,7 +378,7 @@ export default function LandingPage() {
                   disabled={demoLoading}
                   className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#0e7490] py-3 text-sm font-semibold text-white shadow-md shadow-teal-900/10 hover:bg-[#0f5f6e] disabled:opacity-60"
                 >
-                  {demoLoading ? 'Submitting…' : 'Apply for demo'} <ArrowRight size={16} />
+                  {demoLoading ? 'Submitting…' : 'Request access'} <ArrowRight size={16} />
                 </button>
               </form>
             )}
@@ -524,7 +524,7 @@ export default function LandingPage() {
       </section>
 
       <footer className="border-t border-[#d5dde6] bg-white/70 py-6 text-center text-xs text-[#5b6b7c]">
-        © {new Date().getFullYear()} RugOS / ExportOS · Demo SaaS prototype
+        © {new Date().getFullYear()} RugOS / ExportOS · SaaS platform
       </footer>
 
       <Modal
@@ -546,7 +546,7 @@ export default function LandingPage() {
           <div className="space-y-2 text-sm text-slate-700">
             <p>Your subscription request is <strong>Pending Approval</strong>.</p>
             <p>Platform Superadmin will activate the account and assign either <strong>Export</strong> or <strong>Import</strong> mode.</p>
-            <p className="text-xs text-slate-500">Demo only — no real payment was charged.</p>
+            <p className="text-xs text-slate-500">No real payment was charged.</p>
           </div>
         ) : (
           <div className="space-y-3">

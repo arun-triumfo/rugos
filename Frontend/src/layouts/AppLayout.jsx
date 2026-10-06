@@ -1,15 +1,13 @@
 import { useMemo, useState, useEffect, useRef } from 'react';
 import { Link, NavLink, Outlet, useNavigate, useLocation } from 'react-router-dom';
 import {
-  Bell, ChevronDown, ChevronLeft, ChevronRight, LogOut, Menu, Play, Search, User, X,
+  Bell, ChevronDown, ChevronLeft, ChevronRight, LogOut, Menu, Search, User, X,
 } from 'lucide-react';
 import { NAV_GROUPS } from '../constants/navigation';
 import { useAuth } from '../context/AuthContext';
 import { useDemo } from '../context/DemoContext';
 import { globalSearch } from '../services';
 import ToastStack from '../components/common/ToastStack';
-import { Drawer } from '../components/common/Modal';
-import { DEMO_TOUR_STEPS } from '../constants/demoTour';
 
 function pathMatches(to, pathname) {
   if (to === '/dashboard') return pathname === '/dashboard';
@@ -33,8 +31,6 @@ export default function AppLayout() {
   const [searchQ, setSearchQ] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [searchOpen, setSearchOpen] = useState(false);
-  const [tourOpen, setTourOpen] = useState(false);
-  const [tourStep, setTourStep] = useState(0);
   const [openMenus, setOpenMenus] = useState({});
   const searchRef = useRef(null);
   const headerMenuRef = useRef(null);
@@ -260,9 +256,6 @@ export default function AppLayout() {
               )}
             </div>
 
-            <span className="hidden rounded border border-amber-200 bg-amber-50 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-700 xl:inline">
-              Demo Environment
-            </span>
             {modeLabel && (
               <span className={`hidden rounded border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide xl:inline ${
                 businessMode === 'import'
@@ -273,14 +266,10 @@ export default function AppLayout() {
               </span>
             )}
             {user?.companyName && (
-              <span className="hidden max-w-[140px] truncate text-xs text-slate-500 2xl:inline" title={user.companyName}>
-                {user.companyName}
+              <span className="hidden max-w-[160px] truncate text-xs text-slate-500 2xl:inline" title={user.companyName.replace(/\bDemo\b/gi, '').replace(/\s+/g, ' ').trim()}>
+                {user.companyName.replace(/\bDemo\b/gi, '').replace(/\s+/g, ' ').trim()}
               </span>
             )}
-
-            <button type="button" className="btn-secondary hidden shrink-0 md:inline-flex lg:order-none" onClick={() => setTourOpen(true)}>
-              <Play size={14} /> <span className="hidden lg:inline">Start Demo Tour</span><span className="lg:hidden">Tour</span>
-            </button>
 
             <div className="col-start-3 row-start-1 flex shrink-0 items-center gap-0.5 sm:gap-1.5" ref={headerMenuRef}>
             <div className="relative">
@@ -384,29 +373,6 @@ export default function AppLayout() {
       </div>
 
       <ToastStack />
-
-      <Drawer open={tourOpen} onClose={() => setTourOpen(false)} title="Client Demo Guide" width="max-w-sm">
-        <p className="mb-3 text-xs text-slate-500">Walk through the Order #1001 end-to-end lifecycle.</p>
-        <ol className="space-y-2">
-          {DEMO_TOUR_STEPS.map((step, i) => (
-            <li key={i}>
-              <button
-                type="button"
-                className={`w-full rounded-md border px-3 py-2 text-left text-sm ${i === tourStep ? 'border-accent bg-blue-50' : 'border-border hover:bg-slate-50'}`}
-                onClick={() => { setTourStep(i); navigate(step.to); }}
-              >
-                <span className="text-[10px] font-semibold uppercase text-slate-400">Step {i + 1}</span>
-                <p className="font-medium text-navy-900">{step.title}</p>
-                <p className="text-xs text-slate-500">{step.description}</p>
-              </button>
-            </li>
-          ))}
-        </ol>
-        <div className="mt-4 flex gap-2">
-          <button type="button" className="btn-secondary flex-1" disabled={tourStep === 0} onClick={() => { const n = Math.max(0, tourStep - 1); setTourStep(n); navigate(DEMO_TOUR_STEPS[n].to); }}>Previous</button>
-          <button type="button" className="btn-primary flex-1" disabled={tourStep >= DEMO_TOUR_STEPS.length - 1} onClick={() => { const n = Math.min(DEMO_TOUR_STEPS.length - 1, tourStep + 1); setTourStep(n); navigate(DEMO_TOUR_STEPS[n].to); }}>Next</button>
-        </div>
-      </Drawer>
     </div>
   );
 }

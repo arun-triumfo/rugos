@@ -43,7 +43,7 @@ export default function LoginPage() {
           </ul>
         </div>
         <div className="space-y-1">
-          <p className="text-xs text-slate-500">Demo Environment — static interactive prototype</p>
+          <p className="text-xs text-slate-500">Interactive operations platform</p>
           <Link to="/" className="text-sm text-blue-300 hover:text-blue-200">← Marketing / pricing site</Link>
         </div>
       </div>
@@ -73,13 +73,13 @@ export default function LoginPage() {
           </form>
 
           <div className="mt-6 space-y-2 rounded-lg border border-border bg-slate-50 p-3 text-xs text-slate-600">
-            <p className="font-semibold text-slate-700">Demo accounts</p>
+            <p className="font-semibold text-slate-700">Sample accounts</p>
             <p><strong>Product Owner (app):</strong> admin@rugos.demo / demo123</p>
             <p><strong>Superadmin (SaaS):</strong> superadmin@rugos.demo / demo123</p>
           </div>
 
           <div className="mt-6">
-            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">One-click demo login</p>
+            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">One-click login</p>
             <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
               <button
                 type="button"

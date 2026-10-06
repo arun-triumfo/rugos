@@ -13,19 +13,19 @@ export const NAV_GROUPS = [
     label: 'Overview',
     items: [
       { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
-      // Show modules one-by-one during demos — uncomment when ready:
       // { to: '/command-center', label: 'Command Center', icon: Command },
     ],
   },
-  /*
   {
     label: 'Commerce',
     items: [
       { to: '/orders', label: 'Orders', icon: ShoppingCart },
       { to: '/marketplace-imports', label: 'Marketplace Imports', icon: Download },
-      { to: '/sku-mapping', label: 'SKU Mapping Exceptions', icon: Link2 },
+      // { to: '/sku-mapping', label: 'SKU Mapping Exceptions', icon: Link2 },
     ],
   },
+  /*
+  // Uncomment modules one-by-one when ready:
   {
     label: 'Catalog',
     items: [
