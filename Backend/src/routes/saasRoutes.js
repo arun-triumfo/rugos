@@ -8,6 +8,9 @@ import {
   suspendBuyer,
   listSubscriptions,
   changeSubscriptionPlan,
+  createDemoRequest,
+  listDemoRequests,
+  updateDemoRequestStatus,
 } from '../controllers/saasController.js';
 import { requireAuth, requirePlatformAdmin } from '../middleware/auth.js';
 
@@ -16,6 +19,7 @@ const router = Router();
 // Public
 router.get('/plans', listPlans);
 router.post('/buyers/purchase', createBuyerPurchase);
+router.post('/demo-requests', createDemoRequest);
 
 // Platform superadmin
 router.patch('/plans/:id', requireAuth, requirePlatformAdmin, updatePlan);
@@ -24,5 +28,7 @@ router.post('/buyers/:id/approve', requireAuth, requirePlatformAdmin, approveBuy
 router.post('/buyers/:id/suspend', requireAuth, requirePlatformAdmin, suspendBuyer);
 router.get('/subscriptions', requireAuth, requirePlatformAdmin, listSubscriptions);
 router.patch('/subscriptions/:id', requireAuth, requirePlatformAdmin, changeSubscriptionPlan);
+router.get('/demo-requests', requireAuth, requirePlatformAdmin, listDemoRequests);
+router.patch('/demo-requests/:id', requireAuth, requirePlatformAdmin, updateDemoRequestStatus);
 
 export default router;

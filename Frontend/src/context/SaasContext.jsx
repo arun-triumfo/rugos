@@ -14,6 +14,7 @@ function seedSaas() {
     plans: mockPlans,
     tenants: mockTenants,
     subscriptions: mockSubscriptions,
+    demoRequests: [],
   }));
 }
 
@@ -29,7 +30,7 @@ function loadSaas() {
 
 export function SaasProvider({ children }) {
   const { isPlatformAdmin, isAuthenticated } = useAuth();
-  const [state, setState] = useState(USE_MOCK_API ? loadSaas : { plans: [], tenants: [], subscriptions: [] });
+  const [state, setState] = useState(USE_MOCK_API ? loadSaas : { plans: [], tenants: [], subscriptions: [], demoRequests: [] });
   const [toastMsg, setToastMsg] = useState(null);
   const [loaded, setLoaded] = useState(USE_MOCK_API);
 
@@ -44,13 +45,15 @@ export function SaasProvider({ children }) {
       const plans = await apiGet('/saas/plans');
       let tenants = [];
       let subscriptions = [];
+      let demoRequests = [];
       if (isAuthenticated && isPlatformAdmin) {
-        [tenants, subscriptions] = await Promise.all([
+        [tenants, subscriptions, demoRequests] = await Promise.all([
           apiGet('/saas/buyers'),
           apiGet('/saas/subscriptions'),
+          apiGet('/saas/demo-requests').catch(() => []),
         ]);
       }
-      setState({ plans: plans || [], tenants: tenants || [], subscriptions: subscriptions || [] });
+      setState({ plans: plans || [], tenants: tenants || [], subscriptions: subscriptions || [], demoRequests: demoRequests || [] });
       setLoaded(true);
     } catch (err) {
       console.error('SaaS load failed', err);
@@ -274,6 +277,58 @@ export function SaasProvider({ children }) {
     notify('Subscription plan updated');
   }, [state.plans, state.subscriptions, notify, refreshFromApi]);
 
+  const requestDemo = useCallback(async ({ companyName, contactName, email, phone, message }) => {
+    if (!companyName?.trim() || !contactName?.trim() || !email?.trim()) {
+      return { ok: false, error: 'Company, contact name and email are required' };
+    }
+
+    if (!USE_MOCK_API) {
+      try {
+        await apiPost('/saas/demo-requests', {
+          companyName, contactName, email, phone, message,
+        });
+        notify('Demo request submitted — we will contact you soon');
+        return { ok: true };
+      } catch (err) {
+        return { ok: false, error: err.message };
+      }
+    }
+
+    const id = `demo-${Date.now()}`;
+    setState((prev) => ({
+      ...prev,
+      demoRequests: [
+        {
+          id,
+          companyName: companyName.trim(),
+          contactName: contactName.trim(),
+          email: email.trim().toLowerCase(),
+          phone: phone || '',
+          message: message || '',
+          status: 'Pending',
+          createdAt: new Date().toISOString(),
+        },
+        ...(prev.demoRequests || []),
+      ],
+    }));
+    notify('Demo request submitted — we will contact you soon');
+    return { ok: true };
+  }, [notify]);
+
+  const updateDemoRequestStatus = useCallback(async (id, status) => {
+    if (!USE_MOCK_API) {
+      await apiPatch(`/saas/demo-requests/${id}`, { status });
+      await refreshFromApi();
+      notify('Demo request updated');
+      return;
+    }
+    setState((prev) => ({
+      ...prev,
+      demoRequests: (prev.demoRequests || []).map((d) => (d.id === id ? { ...d, status } : d)),
+    }));
+    notify('Demo request updated');
+  }, [notify, refreshFromApi]);
+
   const getTenant = useCallback((tenantId) => state.tenants.find((t) => t.id === tenantId), [state.tenants]);
   const getPlan = useCallback((planId) => state.plans.find((p) => p.id === planId), [state.plans]);
 
@@ -287,12 +342,15 @@ export function SaasProvider({ children }) {
       plans: state.plans,
       tenants: state.tenants,
       subscriptions: state.subscriptions,
+      demoRequests: state.demoRequests || [],
       pendingTenants,
       toastMsg,
       loaded,
       updatePlan,
       togglePlanActive,
       requestSubscription,
+      requestDemo,
+      updateDemoRequestStatus,
       approveTenant,
       suspendTenant,
       changeTenantPlan,
@@ -303,7 +361,8 @@ export function SaasProvider({ children }) {
     }),
     [
       state, pendingTenants, toastMsg, loaded, updatePlan, togglePlanActive, requestSubscription,
-      approveTenant, suspendTenant, changeTenantPlan, getTenant, getPlan, resetSaasData, refreshFromApi,
+      requestDemo, updateDemoRequestStatus, approveTenant, suspendTenant, changeTenantPlan,
+      getTenant, getPlan, resetSaasData, refreshFromApi,
     ]
   );
 

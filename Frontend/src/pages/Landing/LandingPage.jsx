@@ -1,7 +1,8 @@
 import { useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Check, Menu, Package, Ship, Boxes, PieChart, Shield, X } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
+import { ArrowRight, Check, Menu, Package, Ship, Boxes, PieChart, Shield, X, Building2, Crown } from 'lucide-react';
 import { useSaas } from '../../context/SaasContext';
+import { useAuth } from '../../context/AuthContext';
 import { formatCurrency } from '../../utils/format';
 import Modal from '../../components/common/Modal';
 
@@ -28,13 +29,50 @@ const FEATURES = [
   },
 ];
 
+const QUICK_LOGINS = [
+  {
+    key: 'owner',
+    title: 'Product Owner',
+    subtitle: 'Full app demo · Dashboard & ops',
+    email: 'admin@rugos.demo',
+    password: 'demo123',
+    icon: Building2,
+    ring: 'hover:border-teal-500 hover:shadow-teal-900/5',
+    badge: 'bg-teal-50 text-teal-800',
+  },
+  {
+    key: 'super',
+    title: 'Superadmin',
+    subtitle: 'Plans · Buyers · Demo requests',
+    email: 'superadmin@rugos.demo',
+    password: 'demo123',
+    icon: Crown,
+    ring: 'hover:border-sky-500 hover:shadow-sky-900/5',
+    badge: 'bg-sky-50 text-sky-800',
+  },
+];
+
 export default function LandingPage() {
-  const { plans, requestSubscription } = useSaas();
+  const { plans, requestSubscription, requestDemo } = useSaas();
+  const { login, isAuthenticated, isPlatformAdmin } = useAuth();
+  const navigate = useNavigate();
   const [cycle, setCycle] = useState('monthly');
   const [buyOpen, setBuyOpen] = useState(null);
   const [form, setForm] = useState({ companyName: '', contactName: '', email: '', phone: '' });
   const [submitted, setSubmitted] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
+  const [demoForm, setDemoForm] = useState({
+    companyName: '',
+    contactName: '',
+    email: '',
+    phone: '',
+    message: '',
+  });
+  const [demoSubmitted, setDemoSubmitted] = useState(false);
+  const [demoError, setDemoError] = useState('');
+  const [demoLoading, setDemoLoading] = useState(false);
+  const [loginLoading, setLoginLoading] = useState(null);
+  const [loginError, setLoginError] = useState('');
 
   const activePlans = useMemo(() => plans.filter((p) => p.active), [plans]);
 
@@ -54,28 +92,60 @@ export default function LandingPage() {
     if (res?.ok) setSubmitted(true);
   };
 
+  const submitDemo = async (e) => {
+    e.preventDefault();
+    setDemoError('');
+    setDemoLoading(true);
+    const res = await requestDemo(demoForm);
+    setDemoLoading(false);
+    if (res?.ok) {
+      setDemoSubmitted(true);
+      setDemoForm({ companyName: '', contactName: '', email: '', phone: '', message: '' });
+    } else {
+      setDemoError(res?.error || 'Could not submit demo request');
+    }
+  };
+
+  const handleQuickLogin = async (account) => {
+    setLoginError('');
+    setLoginLoading(account.key);
+    const res = await login(account.email, account.password);
+    setLoginLoading(null);
+    if (res?.ok) {
+      navigate(res.redirectTo === '/superadmin' || account.key === 'super' ? '/superadmin/buyers' : res.redirectTo || '/dashboard');
+    } else {
+      setLoginError(res?.error || 'Login failed');
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-[#0b1220] text-white">
+    <div className="landing-root min-h-screen">
       {/* Nav */}
-      <header className="sticky top-0 z-20 border-b border-white/10 bg-[#0b1220]/90 backdrop-blur">
+      <header className="sticky top-0 z-20 border-b border-[#d5dde6]/80 bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-3 sm:px-6">
           <div className="min-w-0">
-            <p className="text-lg font-bold tracking-tight">RugOS</p>
-            <p className="text-[10px] uppercase tracking-[0.18em] text-slate-400">ExportOS Platform</p>
+            <p className="landing-display text-xl font-semibold text-[#0f2744]">RugOS</p>
+            <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#0e7490]">ExportOS Platform</p>
           </div>
-          <nav className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
-            <a href="#product" className="hover:text-white">Product</a>
-            <a href="#modes" className="hover:text-white">Import / Export</a>
-            <a href="#pricing" className="hover:text-white">Pricing</a>
+          <nav className="hidden items-center gap-6 text-sm font-medium text-[#5b6b7c] md:flex">
+            <a href="#product" className="hover:text-[#0f2744]">Product</a>
+            <a href="#demo" className="hover:text-[#0f2744]">Apply for demo</a>
+            <a href="#pricing" className="hover:text-[#0f2744]">Pricing</a>
+            <a href="#login" className="hover:text-[#0f2744]">Quick login</a>
           </nav>
           <div className="flex items-center gap-1.5 sm:gap-2">
-            <Link to="/login" className="rounded-md px-2 py-1.5 text-sm text-slate-200 hover:bg-white/10 sm:px-3">Sign in</Link>
-            <a href="#pricing" className="hidden items-center gap-1 rounded-md bg-blue-600 px-3 py-1.5 text-sm font-medium hover:bg-blue-500 sm:inline-flex">
-              View pricing <ArrowRight size={14} />
+            <Link to="/login" className="rounded-lg px-2.5 py-1.5 text-sm font-medium text-[#0f2744] hover:bg-[#0f2744]/5 sm:px-3">
+              Sign in
+            </Link>
+            <a
+              href="#demo"
+              className="hidden items-center gap-1 rounded-lg bg-[#0e7490] px-3 py-1.5 text-sm font-semibold text-white shadow-sm shadow-teal-900/10 hover:bg-[#0f5f6e] sm:inline-flex"
+            >
+              Apply for demo <ArrowRight size={14} />
             </a>
             <button
               type="button"
-              className="rounded-md p-2 text-slate-200 hover:bg-white/10 md:hidden"
+              className="rounded-lg p-2 text-[#0f2744] hover:bg-[#0f2744]/5 md:hidden"
               onClick={() => setNavOpen((v) => !v)}
               aria-expanded={navOpen}
               aria-label={navOpen ? 'Close menu' : 'Open menu'}
@@ -85,74 +155,78 @@ export default function LandingPage() {
           </div>
         </div>
         {navOpen && (
-          <nav className="border-t border-white/10 px-4 py-3 md:hidden">
-            <ul className="space-y-1 text-sm text-slate-200">
+          <nav className="border-t border-[#d5dde6] bg-white px-4 py-3 md:hidden">
+            <ul className="space-y-1 text-sm font-medium text-[#0f2744]">
               {[
                 { href: '#product', label: 'Product' },
-                { href: '#modes', label: 'Import / Export' },
+                { href: '#demo', label: 'Apply for demo' },
                 { href: '#pricing', label: 'Pricing' },
+                { href: '#login', label: 'Quick login' },
               ].map((link) => (
                 <li key={link.href}>
-                  <a
-                    href={link.href}
-                    className="block rounded-md px-3 py-2.5 hover:bg-white/10"
-                    onClick={() => setNavOpen(false)}
-                  >
+                  <a href={link.href} className="block rounded-lg px-3 py-2.5 hover:bg-[#e8f4f8]" onClick={() => setNavOpen(false)}>
                     {link.label}
                   </a>
                 </li>
               ))}
-              <li>
-                <a href="#pricing" className="mt-1 flex items-center gap-1 rounded-md bg-blue-600 px-3 py-2.5 font-medium text-white hover:bg-blue-500" onClick={() => setNavOpen(false)}>
-                  View pricing <ArrowRight size={14} />
-                </a>
-              </li>
             </ul>
           </nav>
         )}
       </header>
 
-      {/* Hero */}
+      {/* Hero — one composition */}
       <section className="relative overflow-hidden">
         <div
-          className="absolute inset-0 opacity-40"
+          className="pointer-events-none absolute inset-0 opacity-70"
           style={{
-            background:
-              'radial-gradient(ellipse 80% 60% at 70% 20%, #1e3a5f 0%, transparent 55%), linear-gradient(180deg, #0b1220 0%, #111827 100%)',
+            backgroundImage:
+              'linear-gradient(rgba(15,39,68,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(15,39,68,0.04) 1px, transparent 1px)',
+            backgroundSize: '48px 48px',
+            maskImage: 'linear-gradient(180deg, black 40%, transparent 95%)',
           }}
         />
-        <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:py-24">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-300">SaaS for rug commerce ops</p>
-            <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-5xl lg:text-[3.25rem] lg:leading-[1.1]">
+        <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-14 sm:px-6 sm:pt-20 lg:pb-24 lg:pt-24">
+          <div className="max-w-3xl">
+            <p className="landing-fade-up text-xs font-semibold uppercase tracking-[0.22em] text-[#0e7490]">
+              SaaS for rug commerce ops
+            </p>
+            <h1 className="landing-display landing-fade-up-delay mt-4 text-4xl font-semibold leading-[1.05] text-[#0f2744] sm:text-5xl lg:text-6xl">
               RugOS / ExportOS
             </h1>
-            <p className="mt-4 max-w-xl text-base text-slate-300 sm:text-lg">
-              One platform for marketplace orders, inventory, warehouse, shipping labels, export documents,
-              receivables and true profitability — built for India-to-USA rug operations.
+            <p className="landing-fade-up-delay-2 mt-5 max-w-xl text-base leading-relaxed text-[#5b6b7c] sm:text-lg">
+              Marketplace orders, inventory, warehouse, shipping, export docs and true profitability —
+              built for India → USA rug operations.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#pricing" className="inline-flex items-center gap-2 rounded-md bg-blue-600 px-4 py-2.5 text-sm font-semibold hover:bg-blue-500">
-                Start with a plan <ArrowRight size={16} />
+            <div className="landing-fade-up-delay-2 mt-9 flex flex-wrap gap-3">
+              <a
+                href="#demo"
+                className="inline-flex items-center gap-2 rounded-lg bg-[#0e7490] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-teal-900/15 transition hover:-translate-y-0.5 hover:bg-[#0f5f6e]"
+              >
+                Apply for demo <ArrowRight size={16} />
               </a>
-              <Link to="/login" className="inline-flex items-center gap-2 rounded-md border border-white/20 px-4 py-2.5 text-sm font-medium text-slate-100 hover:bg-white/5">
-                Open demo login
-              </Link>
+              <a
+                href="#login"
+                className="inline-flex items-center gap-2 rounded-lg border border-[#d5dde6] bg-white/80 px-5 py-3 text-sm font-semibold text-[#0f2744] shadow-sm transition hover:-translate-y-0.5 hover:border-[#0e7490]/40"
+              >
+                Quick demo login
+              </a>
             </div>
-            <p className="mt-4 text-xs text-slate-500">Demo environment · Static prototype · No live payments</p>
           </div>
-          <div className="rounded-xl border border-white/10 bg-white/5 p-5 shadow-2xl backdrop-blur">
-            <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">Operating flow</p>
-            <ol className="mt-4 space-y-3 text-sm text-slate-200">
+
+          <div className="landing-float mt-14 max-w-xl rounded-2xl border border-white/70 bg-white/70 p-5 shadow-[0_20px_50px_-24px_rgba(15,39,68,0.35)] backdrop-blur-sm sm:p-6 lg:absolute lg:right-6 lg:top-24 lg:mt-0 lg:w-[min(100%,22rem)]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#0e7490]">Operating flow</p>
+            <ol className="mt-4 space-y-3.5">
               {[
                 'Marketplace order lands in RugOS',
                 'Inventory: USA → India → Make (MTO)',
-                'Pick · Weigh (photo + dimensions) · Label',
-                'Ship to customer · cost & profit locked',
+                'Pick · Weigh · Label',
+                'Ship · cost & profit locked',
               ].map((step, i) => (
-                <li key={step} className="flex gap-3">
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded bg-blue-600/30 text-xs font-bold text-blue-200">{i + 1}</span>
-                  <span>{step}</span>
+                <li key={step} className="flex gap-3 text-sm text-[#0f2744]">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#e8f4f8] text-xs font-bold text-[#0e7490]">
+                    {i + 1}
+                  </span>
+                  <span className="pt-1 leading-snug">{step}</span>
                 </li>
               ))}
             </ol>
@@ -160,19 +234,176 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Quick login */}
+      <section id="login" className="border-t border-[#d5dde6]/80 bg-white/50">
+        <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+          <h2 className="landing-display text-3xl font-semibold text-[#0f2744] sm:text-4xl">Demo login</h2>
+          <p className="mt-2 max-w-2xl text-sm text-[#5b6b7c]">
+            One click to explore. Password for both accounts: <span className="font-semibold text-[#0f2744]">demo123</span>
+          </p>
+          {isAuthenticated && (
+            <p className="mt-3 text-sm text-teal-700">
+              You are already signed in.{' '}
+              <Link to={isPlatformAdmin ? '/superadmin/buyers' : '/dashboard'} className="font-semibold underline">
+                Open app →
+              </Link>
+            </p>
+          )}
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            {QUICK_LOGINS.map((account) => (
+              <button
+                key={account.key}
+                type="button"
+                disabled={!!loginLoading}
+                onClick={() => handleQuickLogin(account)}
+                className={`group flex items-start gap-4 rounded-2xl border border-[#d5dde6] bg-white p-5 text-left shadow-sm transition hover:-translate-y-0.5 hover:shadow-md disabled:opacity-60 ${account.ring}`}
+              >
+                <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${account.badge}`}>
+                  <account.icon size={22} />
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span className="block text-base font-semibold text-[#0f2744]">{account.title}</span>
+                  <span className="mt-0.5 block text-sm text-[#5b6b7c]">{account.subtitle}</span>
+                  <span className="mt-2 block truncate text-xs text-slate-400">{account.email}</span>
+                  <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-[#0e7490] group-hover:gap-2">
+                    {loginLoading === account.key ? 'Signing in…' : 'Click to login'} <ArrowRight size={14} />
+                  </span>
+                </span>
+              </button>
+            ))}
+          </div>
+          {loginError && <p className="mt-3 text-sm text-red-600">{loginError}</p>}
+          <p className="mt-4 text-xs text-[#5b6b7c]">
+            Prefer email / password?{' '}
+            <Link to="/login" className="font-medium text-[#0e7490] hover:underline">Open full sign-in →</Link>
+          </p>
+        </div>
+      </section>
+
+      {/* Apply for demo */}
+      <section id="demo" className="border-t border-[#d5dde6]/80">
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:items-start">
+          <div>
+            <h2 className="landing-display text-3xl font-semibold text-[#0f2744] sm:text-4xl">Apply for a demo</h2>
+            <p className="mt-3 text-sm leading-relaxed text-[#5b6b7c]">
+              Tell us about your company. Superadmin reviews requests and schedules a guided walkthrough of RugOS modules.
+            </p>
+            <ul className="mt-8 space-y-3 text-sm text-[#0f2744]">
+              {[
+                'Live ops walkthrough (orders → ship → profit)',
+                'Import or Export mode discussion',
+                'No payment required to apply',
+              ].map((item) => (
+                <li key={item} className="flex gap-2.5">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-teal-100 text-teal-700">
+                    <Check size={12} strokeWidth={3} />
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="rounded-2xl border border-[#d5dde6] bg-white p-5 shadow-[0_16px_40px_-28px_rgba(15,39,68,0.4)] sm:p-7">
+            {demoSubmitted ? (
+              <div className="space-y-3 py-8 text-center">
+                <p className="landing-display text-2xl font-semibold text-teal-700">Request received</p>
+                <p className="text-sm text-[#5b6b7c]">Our team will contact you to schedule the demo.</p>
+                <button
+                  type="button"
+                  className="mt-2 rounded-lg border border-[#d5dde6] px-4 py-2 text-sm font-medium text-[#0f2744] hover:bg-[#e8f4f8]"
+                  onClick={() => setDemoSubmitted(false)}
+                >
+                  Submit another
+                </button>
+              </div>
+            ) : (
+              <form onSubmit={submitDemo} className="space-y-3.5">
+                <div>
+                  <label className="mb-1 block text-xs font-semibold text-[#5b6b7c]" htmlFor="demo-company">Company name *</label>
+                  <input
+                    id="demo-company"
+                    required
+                    className="landing-input"
+                    value={demoForm.companyName}
+                    onChange={(e) => setDemoForm({ ...demoForm, companyName: e.target.value })}
+                  />
+                </div>
+                <div>
+                  <label className="mb-1 block text-xs font-semibold text-[#5b6b7c]" htmlFor="demo-contact">Contact name *</label>
+                  <input
+                    id="demo-contact"
+                    required
+                    className="landing-input"
+                    value={demoForm.contactName}
+                    onChange={(e) => setDemoForm({ ...demoForm, contactName: e.target.value })}
+                  />
+                </div>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  <div>
+                    <label className="mb-1 block text-xs font-semibold text-[#5b6b7c]" htmlFor="demo-email">Work email *</label>
+                    <input
+                      id="demo-email"
+                      type="email"
+                      required
+                      className="landing-input"
+                      value={demoForm.email}
+                      onChange={(e) => setDemoForm({ ...demoForm, email: e.target.value })}
+                    />
+                  </div>
+                  <div>
+                    <label className="mb-1 block text-xs font-semibold text-[#5b6b7c]" htmlFor="demo-phone">Phone</label>
+                    <input
+                      id="demo-phone"
+                      className="landing-input"
+                      value={demoForm.phone}
+                      onChange={(e) => setDemoForm({ ...demoForm, phone: e.target.value })}
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="mb-1 block text-xs font-semibold text-[#5b6b7c]" htmlFor="demo-message">What do you want to see?</label>
+                  <textarea
+                    id="demo-message"
+                    rows={3}
+                    className="landing-input"
+                    placeholder="e.g. Orders workflow, India→USA replenishment, costing…"
+                    value={demoForm.message}
+                    onChange={(e) => setDemoForm({ ...demoForm, message: e.target.value })}
+                  />
+                </div>
+                {demoError && <p className="text-sm text-red-600">{demoError}</p>}
+                <button
+                  type="submit"
+                  disabled={demoLoading}
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#0e7490] py-3 text-sm font-semibold text-white shadow-md shadow-teal-900/10 hover:bg-[#0f5f6e] disabled:opacity-60"
+                >
+                  {demoLoading ? 'Submitting…' : 'Apply for demo'} <ArrowRight size={16} />
+                </button>
+              </form>
+            )}
+          </div>
+        </div>
+      </section>
+
       {/* Product */}
-      <section id="product" className="border-t border-white/10 bg-[#111827]">
+      <section id="product" className="border-t border-[#d5dde6]/80 bg-white/60">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">What the product does</h2>
-          <p className="mt-2 max-w-2xl text-sm text-slate-400">
+          <h2 className="landing-display text-3xl font-semibold text-[#0f2744] sm:text-4xl">What the product does</h2>
+          <p className="mt-3 max-w-2xl text-sm text-[#5b6b7c]">
             Modules stay the same whether you run Import or Export — Superadmin assigns exactly one mode per company.
           </p>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2">
             {FEATURES.map((f) => (
-              <div key={f.title} className="rounded-lg border border-white/10 bg-[#0b1220]/60 p-5">
-                <f.icon size={20} className="text-blue-400" />
-                <h3 className="mt-3 text-base font-semibold">{f.title}</h3>
-                <p className="mt-1.5 text-sm text-slate-400">{f.text}</p>
+              <div
+                key={f.title}
+                className="rounded-2xl border border-transparent bg-gradient-to-br from-white to-[#f4fafb] p-6 shadow-[inset_0_0_0_1px_#d5dde6] transition hover:shadow-[inset_0_0_0_1px_#0e749055]"
+              >
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#e8f4f8] text-[#0e7490]">
+                  <f.icon size={20} />
+                </span>
+                <h3 className="mt-4 text-lg font-semibold text-[#0f2744]">{f.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[#5b6b7c]">{f.text}</p>
               </div>
             ))}
           </div>
@@ -180,24 +411,24 @@ export default function LandingPage() {
       </section>
 
       {/* Modes */}
-      <section id="modes" className="border-t border-white/10">
+      <section id="modes" className="border-t border-[#d5dde6]/80">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">One subscription. One mode.</h2>
-          <p className="mt-2 max-w-2xl text-sm text-slate-400">
-            Same modules for both. When Superadmin activates a purchase, they choose <strong className="text-slate-200">Export</strong> or <strong className="text-slate-200">Import</strong>. A company cannot use both at once.
+          <h2 className="landing-display text-3xl font-semibold text-[#0f2744] sm:text-4xl">One subscription. One mode.</h2>
+          <p className="mt-3 max-w-2xl text-sm text-[#5b6b7c]">
+            Same modules for both. When Superadmin activates a purchase, they choose Export or Import. A company cannot use both at once.
           </p>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
-            <div className="rounded-lg border border-emerald-500/30 bg-emerald-500/5 p-6">
-              <p className="text-xs font-semibold uppercase tracking-wider text-emerald-300">Export mode</p>
-              <h3 className="mt-2 text-xl font-semibold">India → world selling</h3>
-              <p className="mt-2 text-sm text-slate-400">
+            <div className="rounded-2xl border border-emerald-200 bg-emerald-50/70 p-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700">Export mode</p>
+              <h3 className="landing-display mt-2 text-2xl font-semibold text-[#0f2744]">India → world selling</h3>
+              <p className="mt-2 text-sm text-[#5b6b7c]">
                 Marketplace selling, India warehouse, replenishment to USA, export docs, EBRC/FIRA, and landed profitability.
               </p>
             </div>
-            <div className="rounded-lg border border-sky-500/30 bg-sky-500/5 p-6">
-              <p className="text-xs font-semibold uppercase tracking-wider text-sky-300">Import mode</p>
-              <h3 className="mt-2 text-xl font-semibold">Inbound / receiving ops</h3>
-              <p className="mt-2 text-sm text-slate-400">
+            <div className="rounded-2xl border border-sky-200 bg-sky-50/70 p-6">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-sky-700">Import mode</p>
+              <h3 className="landing-display mt-2 text-2xl font-semibold text-[#0f2744]">Inbound / receiving ops</h3>
+              <p className="mt-2 text-sm text-[#5b6b7c]">
                 Same operational stack focused on receiving, USA inventory, inbound reconciliation and domestic fulfilment.
               </p>
             </div>
@@ -206,49 +437,65 @@ export default function LandingPage() {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="border-t border-white/10 bg-[#111827]">
+      <section id="pricing" className="border-t border-[#d5dde6]/80 bg-white/60">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Pricing</h2>
-              <p className="mt-2 text-sm text-slate-400">Managed by Superadmin. Demo checkout creates a pending activation.</p>
+              <h2 className="landing-display text-3xl font-semibold text-[#0f2744] sm:text-4xl">Pricing</h2>
+              <p className="mt-2 text-sm text-[#5b6b7c]">Managed by Superadmin. Checkout creates a pending activation.</p>
             </div>
-            <div className="flex rounded-md border border-white/15 p-1 text-sm">
-              <button type="button" onClick={() => setCycle('monthly')} className={`rounded px-3 py-1.5 ${cycle === 'monthly' ? 'bg-blue-600 text-white' : 'text-slate-300'}`}>Monthly</button>
-              <button type="button" onClick={() => setCycle('yearly')} className={`rounded px-3 py-1.5 ${cycle === 'yearly' ? 'bg-blue-600 text-white' : 'text-slate-300'}`}>
-                Yearly <span className="ml-1 text-[10px] text-emerald-300">save ~17%</span>
+            <div className="flex rounded-xl border border-[#d5dde6] bg-white p-1 text-sm shadow-sm">
+              <button
+                type="button"
+                onClick={() => setCycle('monthly')}
+                className={`rounded-lg px-3.5 py-1.5 font-medium ${cycle === 'monthly' ? 'bg-[#0e7490] text-white' : 'text-[#5b6b7c]'}`}
+              >
+                Monthly
+              </button>
+              <button
+                type="button"
+                onClick={() => setCycle('yearly')}
+                className={`rounded-lg px-3.5 py-1.5 font-medium ${cycle === 'yearly' ? 'bg-[#0e7490] text-white' : 'text-[#5b6b7c]'}`}
+              >
+                Yearly <span className="ml-1 text-[10px] text-emerald-600">save ~17%</span>
               </button>
             </div>
           </div>
 
-          <div className="mt-10 grid gap-4 lg:grid-cols-3">
+          <div className="mt-10 grid gap-5 lg:grid-cols-3">
             {activePlans.map((plan) => {
               const price = cycle === 'yearly' ? plan.yearlyPrice : plan.monthlyPrice;
               return (
                 <div
                   key={plan.id}
-                  className={`flex flex-col rounded-xl border p-5 ${
-                    plan.popular ? 'border-blue-400 bg-[#0b1220] shadow-lg shadow-blue-900/20' : 'border-white/10 bg-[#0b1220]/50'
+                  className={`flex flex-col rounded-2xl border bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md ${
+                    plan.popular ? 'border-[#0e7490] ring-2 ring-[#0e7490]/20' : 'border-[#d5dde6]'
                   }`}
                 >
                   {plan.popular && (
-                    <span className="mb-2 w-fit rounded bg-blue-600 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide">Most popular</span>
+                    <span className="mb-2 w-fit rounded-full bg-[#0e7490] px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white">
+                      Most popular
+                    </span>
                   )}
-                  <h3 className="text-lg font-semibold">{plan.name}</h3>
-                  <p className="mt-1 text-sm text-slate-400">{plan.description}</p>
+                  <h3 className="text-lg font-semibold text-[#0f2744]">{plan.name}</h3>
+                  <p className="mt-1 text-sm text-[#5b6b7c]">{plan.description}</p>
                   <p className="mt-5">
-                    <span className="text-3xl font-bold tabular-nums">{formatCurrency(price)}</span>
-                    <span className="text-sm text-slate-400">/{cycle === 'yearly' ? 'year' : 'month'}</span>
+                    <span className="landing-display text-3xl font-semibold tabular-nums text-[#0f2744]">{formatCurrency(price)}</span>
+                    <span className="text-sm text-[#5b6b7c]">/{cycle === 'yearly' ? 'year' : 'month'}</span>
                   </p>
-                  <ul className="mt-5 flex-1 space-y-2 text-sm text-slate-300">
+                  <ul className="mt-5 flex-1 space-y-2.5 text-sm text-[#0f2744]">
                     {plan.features.map((f) => (
                       <li key={f} className="flex gap-2">
-                        <Check size={16} className="mt-0.5 shrink-0 text-emerald-400" />
+                        <Check size={16} className="mt-0.5 shrink-0 text-teal-600" />
                         <span>{f}</span>
                       </li>
                     ))}
                   </ul>
-                  <button type="button" onClick={() => openBuy(plan)} className="mt-6 w-full rounded-md bg-blue-600 py-2.5 text-sm font-semibold hover:bg-blue-500">
+                  <button
+                    type="button"
+                    onClick={() => openBuy(plan)}
+                    className="mt-6 w-full rounded-lg bg-[#0e7490] py-2.5 text-sm font-semibold text-white hover:bg-[#0f5f6e]"
+                  >
                     Choose {plan.name}
                   </button>
                 </div>
@@ -259,20 +506,24 @@ export default function LandingPage() {
       </section>
 
       {/* Trust */}
-      <section className="border-t border-white/10">
+      <section className="border-t border-[#d5dde6]/80">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-12 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <div className="flex items-start gap-3">
-            <Shield size={20} className="mt-0.5 text-slate-400" />
+            <span className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-xl bg-[#e8f4f8] text-[#0e7490]">
+              <Shield size={18} />
+            </span>
             <div>
-              <p className="font-semibold">Superadmin controlled activation</p>
-              <p className="text-sm text-slate-400">New purchases stay pending until Superadmin sets Import or Export and activates the company.</p>
+              <p className="font-semibold text-[#0f2744]">Superadmin controlled activation</p>
+              <p className="text-sm text-[#5b6b7c]">New purchases stay pending until Superadmin sets Import or Export mode.</p>
             </div>
           </div>
-          <Link to="/login" className="text-sm font-medium text-blue-300 hover:text-blue-200">Superadmin / tenant sign in →</Link>
+          <a href="#login" className="text-sm font-semibold text-[#0e7490] hover:underline">
+            Superadmin / Product Owner login →
+          </a>
         </div>
       </section>
 
-      <footer className="border-t border-white/10 py-6 text-center text-xs text-slate-500">
+      <footer className="border-t border-[#d5dde6] bg-white/70 py-6 text-center text-xs text-[#5b6b7c]">
         © {new Date().getFullYear()} RugOS / ExportOS · Demo SaaS prototype
       </footer>
 
@@ -292,7 +543,7 @@ export default function LandingPage() {
         }
       >
         {submitted ? (
-          <div className="text-sm text-slate-700 space-y-2">
+          <div className="space-y-2 text-sm text-slate-700">
             <p>Your subscription request is <strong>Pending Approval</strong>.</p>
             <p>Platform Superadmin will activate the account and assign either <strong>Export</strong> or <strong>Import</strong> mode.</p>
             <p className="text-xs text-slate-500">Demo only — no real payment was charged.</p>

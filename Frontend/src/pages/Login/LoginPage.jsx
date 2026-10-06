@@ -73,15 +73,51 @@ export default function LoginPage() {
           </form>
 
           <div className="mt-6 space-y-2 rounded-lg border border-border bg-slate-50 p-3 text-xs text-slate-600">
-            <p className="font-semibold text-slate-700">Demo login</p>
-            <p><strong>Admin (app):</strong> admin@rugos.demo / demo123</p>
+            <p className="font-semibold text-slate-700">Demo accounts</p>
+            <p><strong>Product Owner (app):</strong> admin@rugos.demo / demo123</p>
             <p><strong>Superadmin (SaaS):</strong> superadmin@rugos.demo / demo123</p>
+          </div>
+
+          <div className="mt-6">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">One-click demo login</p>
+            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+              <button
+                type="button"
+                className="btn-primary justify-center"
+                disabled={loading}
+                onClick={async () => {
+                  setLoading(true);
+                  setError('');
+                  const res = await login('admin@rugos.demo', 'demo123');
+                  setLoading(false);
+                  if (res?.ok) navigate(res.redirectTo || '/dashboard');
+                  else setError(res.error || 'Login failed');
+                }}
+              >
+                Product Owner
+              </button>
+              <button
+                type="button"
+                className="btn-secondary justify-center"
+                disabled={loading}
+                onClick={async () => {
+                  setLoading(true);
+                  setError('');
+                  const res = await login('superadmin@rugos.demo', 'demo123');
+                  setLoading(false);
+                  if (res?.ok) navigate(res.redirectTo === '/superadmin' ? '/superadmin/buyers' : res.redirectTo || '/superadmin/buyers');
+                  else setError(res.error || 'Login failed');
+                }}
+              >
+                Superadmin
+              </button>
+            </div>
           </div>
 
           <div className="mt-6">
             <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Quick login by role</p>
             <div className="grid grid-cols-1 gap-2 min-[420px]:grid-cols-2">
-              {ROLE_LIST.filter((r) => r !== 'Sales').map((r) => (
+              {ROLE_LIST.filter((r) => r !== 'Sales' && r !== 'Super Admin').map((r) => (
                 <button
                   key={r}
                   type="button"

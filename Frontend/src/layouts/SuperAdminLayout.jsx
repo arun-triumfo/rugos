@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink, Outlet, Link, Navigate, useNavigate } from 'react-router-dom';
-import { Building2, CreditCard, LogOut, Menu, Tags, X } from 'lucide-react';
+import { Building2, CreditCard, LogOut, Menu, Tags, X, ClipboardList } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useSaas } from '../context/SaasContext';
 
@@ -8,6 +8,7 @@ const NAV = [
   { to: '/superadmin/plans', label: 'Pricing Plans', icon: Tags },
   { to: '/superadmin/buyers', label: 'Buyers', icon: Building2 },
   { to: '/superadmin/subscriptions', label: 'Subscriptions', icon: CreditCard },
+  { to: '/superadmin/demo-requests', label: 'Demo Requests', icon: ClipboardList },
 ];
 
 export default function SuperAdminLayout() {

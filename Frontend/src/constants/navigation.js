@@ -13,9 +13,11 @@ export const NAV_GROUPS = [
     label: 'Overview',
     items: [
       { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
-      { to: '/command-center', label: 'Command Center', icon: Command },
+      // Show modules one-by-one during demos — uncomment when ready:
+      // { to: '/command-center', label: 'Command Center', icon: Command },
     ],
   },
+  /*
   {
     label: 'Commerce',
     items: [
@@ -125,6 +127,7 @@ export const NAV_GROUPS = [
       { to: '/settings', label: 'Settings', icon: Settings },
     ],
   },
+  */
 ];
 
 export { ChevronDown, ChevronRight };

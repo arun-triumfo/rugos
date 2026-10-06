@@ -41,7 +41,7 @@ import {
   IntegrationsPage, JobsPage, AuditLogsPage, SettingsPage,
 } from './pages/AnalyticsAdmin/AnalyticsAdminPages';
 import {
-  SuperAdminPlansPage, SuperAdminSubscriptionsPage, SuperAdminBuyersPage,
+  SuperAdminPlansPage, SuperAdminSubscriptionsPage, SuperAdminBuyersPage, SuperAdminDemoRequestsPage,
 } from './pages/SuperAdmin/SuperAdminPages';
 
 function TenantAppGuard() {
@@ -66,6 +66,7 @@ export default function App() {
                   <Route path="plans" element={<SuperAdminPlansPage />} />
                   <Route path="buyers" element={<SuperAdminBuyersPage />} />
                   <Route path="subscriptions" element={<SuperAdminSubscriptionsPage />} />
+                  <Route path="demo-requests" element={<SuperAdminDemoRequestsPage />} />
                 </Route>
 
                 <Route element={<TenantAppGuard />}>

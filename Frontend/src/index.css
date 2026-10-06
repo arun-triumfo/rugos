@@ -84,3 +84,63 @@
     display: block !important;
   }
 }
+
+/* Landing page — light “trade route” theme */
+@layer components {
+  .landing-root {
+    --lp-ink: #0f2744;
+    --lp-muted: #5b6b7c;
+    --lp-accent: #0e7490;
+    --lp-accent-deep: #0f5f6e;
+    --lp-sand: #f7f4ef;
+    --lp-sky: #e8f4f8;
+    --lp-line: #d5dde6;
+    font-family: "DM Sans", var(--font-sans);
+    color: var(--lp-ink);
+    background:
+      radial-gradient(ellipse 90% 55% at 12% -10%, #cfeef5 0%, transparent 55%),
+      radial-gradient(ellipse 70% 45% at 95% 8%, #fde8d8 0%, transparent 50%),
+      linear-gradient(180deg, #f4fafb 0%, var(--lp-sand) 42%, #eef6f8 100%);
+  }
+
+  .landing-display {
+    font-family: "Fraunces", Georgia, serif;
+    letter-spacing: -0.02em;
+  }
+
+  .landing-fade-up {
+    animation: landingFadeUp 0.7s ease-out both;
+  }
+
+  .landing-fade-up-delay {
+    animation: landingFadeUp 0.75s ease-out 0.12s both;
+  }
+
+  .landing-fade-up-delay-2 {
+    animation: landingFadeUp 0.8s ease-out 0.22s both;
+  }
+
+  .landing-float {
+    animation: landingFloat 5.5s ease-in-out infinite;
+  }
+
+  .landing-input {
+    @apply w-full rounded-lg border border-[#d5dde6] bg-white px-3 py-2.5 text-sm text-[#0f2744] outline-none transition placeholder:text-slate-400 focus:border-[#0e7490] focus:ring-2 focus:ring-[#0e7490]/20;
+  }
+}
+
+@keyframes landingFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes landingFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}

@@ -2,6 +2,7 @@ import { Plan } from '../models/Plan.js';
 import { Tenant } from '../models/Tenant.js';
 import { Subscription } from '../models/Subscription.js';
 import { AuditLog } from '../models/AuditLog.js';
+import { DemoRequest } from '../models/DemoRequest.js';
 import { httpError } from '../middleware/errorHandler.js';
 import { ok, created } from '../utils/apiResponse.js';
 import { asyncHandler } from '../utils/asyncHandler.js';
@@ -269,4 +270,51 @@ export const changeSubscriptionPlan = asyncHandler(async (req, res) => {
   const tenantKeys = Object.fromEntries(tenants.map((t) => [t._id.toString(), t.key || t._id.toString()]));
 
   return ok(res, mapSubscription(sub, { planKeys: byId, tenantKeys }), 'Subscription plan updated');
+});
+
+function mapDemoRequest(d) {
+  return {
+    id: d._id.toString(),
+    companyName: d.companyName,
+    contactName: d.contactName,
+    email: d.email,
+    phone: d.phone || '',
+    message: d.message || '',
+    status: d.status,
+    createdAt: d.createdAt,
+  };
+}
+
+export const createDemoRequest = asyncHandler(async (req, res) => {
+  const { companyName, contactName, email, phone, message } = req.body || {};
+  if (!companyName?.trim() || !contactName?.trim() || !email?.trim()) {
+    throw httpError(400, 'Company name, contact name and email are required');
+  }
+
+  const doc = await DemoRequest.create({
+    companyName: companyName.trim(),
+    contactName: contactName.trim(),
+    email: email.trim().toLowerCase(),
+    phone: (phone || '').trim(),
+    message: (message || '').trim(),
+    status: 'Pending',
+  });
+
+  return created(res, mapDemoRequest(doc), 'Demo request submitted');
+});
+
+export const listDemoRequests = asyncHandler(async (req, res) => {
+  const rows = await DemoRequest.find().sort({ createdAt: -1 });
+  return ok(res, rows.map(mapDemoRequest));
+});
+
+export const updateDemoRequestStatus = asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  const { status } = req.body || {};
+  const allowed = ['Pending', 'Contacted', 'Approved', 'Rejected'];
+  if (!allowed.includes(status)) throw httpError(400, 'Invalid status');
+
+  const doc = await DemoRequest.findByIdAndUpdate(id, { status }, { new: true });
+  if (!doc) throw httpError(404, 'Demo request not found');
+  return ok(res, mapDemoRequest(doc), 'Demo request updated');
 });

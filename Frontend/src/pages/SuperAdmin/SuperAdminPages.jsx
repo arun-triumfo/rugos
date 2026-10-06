@@ -251,3 +251,60 @@ export function SuperAdminBuyersPage() {
     </div>
   );
 }
+
+export function SuperAdminDemoRequestsPage() {
+  const { demoRequests, updateDemoRequestStatus } = useSaas();
+
+  return (
+    <div>
+      <PageHeader
+        title="Demo Requests"
+        subtitle="Landing page “Apply for demo” submissions"
+      />
+      <DataTable
+        columns={[
+          { key: 'companyName', label: 'Company' },
+          { key: 'contactName', label: 'Contact' },
+          { key: 'email', label: 'Email' },
+          { key: 'phone', label: 'Phone', render: (r) => r.phone || '—' },
+          {
+            key: 'message',
+            label: 'Notes',
+            render: (r) => (
+              <span className="block max-w-[220px] truncate" title={r.message}>
+                {r.message || '—'}
+              </span>
+            ),
+          },
+          { key: 'status', label: 'Status', render: (r) => <StatusBadge status={r.status} /> },
+          {
+            key: 'createdAt',
+            label: 'Submitted',
+            render: (r) => (r.createdAt ? formatDateTime(r.createdAt) : '—'),
+          },
+          {
+            key: 'actions',
+            label: 'Actions',
+            render: (r) => (
+              <div className="flex flex-wrap gap-1">
+                {['Contacted', 'Approved', 'Rejected'].map((s) => (
+                  <button
+                    key={s}
+                    type="button"
+                    className="btn-secondary text-xs"
+                    disabled={r.status === s}
+                    onClick={() => updateDemoRequestStatus(r.id, s)}
+                  >
+                    {s}
+                  </button>
+                ))}
+              </div>
+            ),
+          },
+        ]}
+        rows={demoRequests || []}
+        emptyMessage="No demo requests yet"
+      />
+    </div>
+  );
+}
