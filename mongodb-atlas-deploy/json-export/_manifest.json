@@ -1,0 +1,51 @@
+{
+  "database": "rugos",
+  "exportedAt": "2026-10-06T05:58:24.538Z",
+  "collections": [
+    {
+      "collection": "subscriptions",
+      "count": 4,
+      "file": "subscriptions.json"
+    },
+    {
+      "collection": "tenantappstates",
+      "count": 1,
+      "file": "tenantappstates.json"
+    },
+    {
+      "collection": "stockledgers",
+      "count": 0,
+      "file": "stockledgers.json"
+    },
+    {
+      "collection": "plans",
+      "count": 3,
+      "file": "plans.json"
+    },
+    {
+      "collection": "orders",
+      "count": 26,
+      "file": "orders.json"
+    },
+    {
+      "collection": "tenants",
+      "count": 4,
+      "file": "tenants.json"
+    },
+    {
+      "collection": "auditlogs",
+      "count": 0,
+      "file": "auditlogs.json"
+    },
+    {
+      "collection": "users",
+      "count": 9,
+      "file": "users.json"
+    },
+    {
+      "collection": "inventoryitems",
+      "count": 20,
+      "file": "inventoryitems.json"
+    }
+  ]
+}

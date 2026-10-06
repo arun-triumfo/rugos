@@ -1,0 +1,62 @@
+[
+  {
+    "_id": "6ac0d09f89301cf4baae976c",
+    "key": "sub-001",
+    "tenantId": "6ac0d09f89301cf4baae9767",
+    "planId": "6ac0d09f89301cf4baae9763",
+    "billingCycle": "yearly",
+    "amount": 249990,
+    "status": "Active",
+    "paymentRef": "PAY-DEMO-8801",
+    "startedAt": "2026-08-02T09:00:00.000Z",
+    "renewsAt": "2027-08-02T09:00:00.000Z",
+    "__v": 0,
+    "createdAt": "2026-10-03T09:53:35.513Z",
+    "updatedAt": "2026-10-03T09:53:35.513Z"
+  },
+  {
+    "_id": "6ac0d09f89301cf4baae976d",
+    "key": "sub-002",
+    "tenantId": "6ac0d09f89301cf4baae9768",
+    "planId": "6ac0d09f89301cf4baae9762",
+    "billingCycle": "monthly",
+    "amount": 9999,
+    "status": "Active",
+    "paymentRef": "PAY-DEMO-8802",
+    "startedAt": "2026-09-11T08:30:00.000Z",
+    "renewsAt": "2026-11-11T08:30:00.000Z",
+    "__v": 0,
+    "createdAt": "2026-10-03T09:53:35.514Z",
+    "updatedAt": "2026-10-03T09:53:35.514Z"
+  },
+  {
+    "_id": "6ac0d09f89301cf4baae976e",
+    "key": "sub-003",
+    "tenantId": "6ac0d09f89301cf4baae9769",
+    "planId": "6ac0d09f89301cf4baae9763",
+    "billingCycle": "yearly",
+    "amount": 249990,
+    "status": "Pending Activation",
+    "paymentRef": "PAY-DEMO-9910",
+    "startedAt": null,
+    "renewsAt": null,
+    "__v": 0,
+    "createdAt": "2026-10-03T09:53:35.514Z",
+    "updatedAt": "2026-10-03T09:53:35.514Z"
+  },
+  {
+    "_id": "6ac0d09f89301cf4baae976f",
+    "key": "sub-004",
+    "tenantId": "6ac0d09f89301cf4baae976a",
+    "planId": "6ac0d09f89301cf4baae9762",
+    "billingCycle": "monthly",
+    "amount": 9999,
+    "status": "Pending Activation",
+    "paymentRef": "PAY-DEMO-9911",
+    "startedAt": null,
+    "renewsAt": null,
+    "__v": 0,
+    "createdAt": "2026-10-03T09:53:35.514Z",
+    "updatedAt": "2026-10-03T09:53:35.514Z"
+  }
+]

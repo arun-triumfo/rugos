@@ -1,0 +1,73 @@
+[
+  {
+    "_id": "6ac0d09f89301cf4baae9762",
+    "key": "plan-starter",
+    "name": "Starter",
+    "description": "For single-warehouse teams starting marketplace operations.",
+    "monthlyPrice": 9999,
+    "yearlyPrice": 99990,
+    "currency": "INR",
+    "popular": false,
+    "active": true,
+    "features": [
+      "Orders & SKU mapping",
+      "Inventory (India + USA views)",
+      "Pick, pack & shipping labels",
+      "1 marketplace connector (demo)",
+      "Email support",
+      "Up to 3 users"
+    ],
+    "usersAllowed": 3,
+    "__v": 0,
+    "createdAt": "2026-10-03T09:53:35.497Z",
+    "updatedAt": "2026-10-03T09:53:35.497Z"
+  },
+  {
+    "_id": "6ac0d09f89301cf4baae9763",
+    "key": "plan-growth",
+    "name": "Growth",
+    "description": "For India↔USA replenishment and multi-channel selling.",
+    "monthlyPrice": 24999,
+    "yearlyPrice": 249990,
+    "currency": "INR",
+    "popular": true,
+    "active": true,
+    "features": [
+      "Everything in Starter",
+      "Replenishment & USA receipts",
+      "True cost & profitability",
+      "Courier invoice audit",
+      "Amazon + Etsy + Walmart (demo)",
+      "Up to 15 users",
+      "Priority support"
+    ],
+    "usersAllowed": 15,
+    "__v": 0,
+    "createdAt": "2026-10-03T09:53:35.498Z",
+    "updatedAt": "2026-10-03T09:53:35.498Z"
+  },
+  {
+    "_id": "6ac0d09f89301cf4baae9764",
+    "key": "plan-enterprise",
+    "name": "Enterprise",
+    "description": "For multi-entity export/import operators with advanced controls.",
+    "monthlyPrice": 49999,
+    "yearlyPrice": 499990,
+    "currency": "INR",
+    "popular": false,
+    "active": true,
+    "features": [
+      "Everything in Growth",
+      "EBRC / BRC / FIRA workflows",
+      "Advanced roles & audit",
+      "Custom integrations roadmap",
+      "Dedicated success manager",
+      "Unlimited users",
+      "SLA-backed support"
+    ],
+    "usersAllowed": 999,
+    "__v": 0,
+    "createdAt": "2026-10-03T09:53:35.498Z",
+    "updatedAt": "2026-10-03T09:53:35.498Z"
+  }
+]

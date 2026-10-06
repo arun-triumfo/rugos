@@ -1,0 +1,4741 @@
+[
+  {
+    "_id": "6ac0d09f89301cf4baae97ab",
+    "tenantId": "6ac0d09f89301cf4baae9767",
+    "data": {
+      "products": [
+        {
+          "id": "PRD-1001",
+          "sku": "RUG-1001",
+          "name": "Hand Knotted Wool Rug",
+          "category": "Hand Knotted",
+          "material": "Wool",
+          "construction": "Hand Knotted",
+          "size": "8x10",
+          "shape": "Rectangle",
+          "weight": 28.5,
+          "gsm": 3200,
+          "sellingPrice": 20000,
+          "standardCost": 8500,
+          "countryOfOrigin": "India",
+          "barcode": "8901001001001",
+          "qr": "QR-RUG-1001",
+          "image": null,
+          "status": "Active",
+          "amazonSku": "AMZ-RUG-BLUE-8X10",
+          "etsySku": "ETS-HK-WOOL-810",
+          "walmartSku": "WMT-HKW-810",
+          "description": "Premium hand-knotted wool rug with traditional Persian motifs, indigo and ivory palette."
+        },
+        {
+          "id": "PRD-1002",
+          "sku": "RUG-1002",
+          "name": "Hand Tufted Rug",
+          "category": "Hand Tufted",
+          "material": "Wool Blend",
+          "construction": "Hand Tufted",
+          "size": "5x7",
+          "shape": "Rectangle",
+          "weight": 14.2,
+          "gsm": 2400,
+          "sellingPrice": 12500,
+          "standardCost": 5200,
+          "countryOfOrigin": "India",
+          "barcode": "8901001001002",
+          "qr": "QR-RUG-1002",
+          "image": null,
+          "status": "Active",
+          "amazonSku": "AMZ-RUG-TUFT-5X7",
+          "etsySku": "ETS-HT-570",
+          "walmartSku": "WMT-HT-570",
+          "description": "Soft hand-tufted wool blend rug for living spaces."
+        },
+        {
+          "id": "PRD-1003",
+          "sku": "RUG-1003",
+          "name": "Jute Area Rug",
+          "category": "Natural Fiber",
+          "material": "Jute",
+          "construction": "Handwoven",
+          "size": "6x9",
+          "shape": "Rectangle",
+          "weight": 11.8,
+          "gsm": 1800,
+          "sellingPrice": 6800,
+          "standardCost": 2400,
+          "countryOfOrigin": "India",
+          "barcode": "8901001001003",
+          "qr": "QR-RUG-1003",
+          "image": null,
+          "status": "Active",
+          "amazonSku": "AMZ-JUTE-69",
+          "etsySku": "ETS-JUTE-69",
+          "walmartSku": "WMT-JUTE-69",
+          "description": "Natural jute area rug with organic texture."
+        },
+        {
+          "id": "PRD-1004",
+          "sku": "RUG-1004",
+          "name": "Vintage Persian Rug",
+          "category": "Traditional",
+          "material": "Wool",
+          "construction": "Hand Knotted",
+          "size": "9x12",
+          "shape": "Rectangle",
+          "weight": 42,
+          "gsm": 3600,
+          "sellingPrice": 48500,
+          "standardCost": 22000,
+          "countryOfOrigin": "India",
+          "barcode": "8901001001004",
+          "qr": "QR-RUG-1004",
+          "image": null,
+          "status": "Active",
+          "amazonSku": "AMZ-PERS-912",
+          "etsySku": "ETS-PERS-912",
+          "walmartSku": null,
+          "description": "Vintage-inspired Persian design in deep crimson and gold."
+        },
+        {
+          "id": "PRD-1005",
+          "sku": "RUG-1005",
+          "name": "Wool Silk Rug",
+          "category": "Luxury",
+          "material": "Wool & Silk",
+          "construction": "Hand Knotted",
+          "size": "8x10",
+          "shape": "Rectangle",
+          "weight": 26,
+          "gsm": 3400,
+          "sellingPrice": 62000,
+          "standardCost": 28000,
+          "countryOfOrigin": "India",
+          "barcode": "8901001001005",
+          "qr": "QR-RUG-1005",
+          "image": null,
+          "status": "Active",
+          "amazonSku": "AMZ-WS-810",
+          "etsySku": "ETS-WS-810",
+          "walmartSku": null,
+          "description": "Luxury wool-silk blend with luminous sheen."
+        },
+        {
+          "id": "PRD-1006",
+          "sku": "RUG-1006",
+          "name": "Flatweave Kilim",
+          "category": "Kilim",
+          "material": "Wool",
+          "construction": "Flatweave",
+          "size": "4x6",
+          "shape": "Rectangle",
+          "weight": 6.5,
+          "gsm": 1200,
+          "sellingPrice": 8900,
+          "standardCost": 3100,
+          "countryOfOrigin": "India",
+          "barcode": "8901001001006",
+          "qr": "QR-RUG-1006",
+          "image": null,
+          "status": "Active",
+          "amazonSku": "AMZ-KILIM-46",
+          "etsySku": "ETS-KILIM-46",
+          "walmartSku": "WMT-KILIM-46",
+          "description": "Reversible flatweave kilim with geometric tribal patterns."
+        },
+        {
+          "id": "PRD-1007",
+          "sku": "RUG-1007",
+          "name": "Modern Geometric Rug",
+          "category": "Contemporary",
+          "material": "Polypropylene",
+          "construction": "Machine Made",
+          "size": "8x10",
+          "shape": "Rectangle",
+          "weight": 18,
+          "gsm": 2000,
+          "sellingPrice": 9800,
+          "standardCost": 3800,
+          "countryOfOrigin": "India",
+          "barcode": "8901001001007",
+          "qr": "QR-RUG-1007",
+          "image": null,
+          "status": "Active",
+          "amazonSku": "AMZ-GEO-810",
+          "etsySku": null,
+          "walmartSku": "WMT-GEO-810",
+          "description": "Bold modern geometric pattern in charcoal and cream."
+        },
+        {
+          "id": "PRD-1008",
+          "sku": "RUG-1008",
+          "name": "Traditional Oriental Rug",
+          "category": "Traditional",
+          "material": "Wool",
+          "construction": "Hand Knotted",
+          "size": "6x9",
+          "shape": "Rectangle",
+          "weight": 22,
+          "gsm": 3000,
+          "sellingPrice": 27500,
+          "standardCost": 12000,
+          "countryOfOrigin": "India",
+          "barcode": "8901001001008",
+          "qr": "QR-RUG-1008",
+          "image": null,
+          "status": "Active",
+          "amazonSku": "AMZ-ORI-69",
+          "etsySku": "ETS-ORI-69",
+          "walmartSku": "WMT-ORI-69",
+          "description": "Classic oriental medallion design."
+        },
+        {
+          "id": "PRD-1009",
+          "sku": "RUG-1009",
+          "name": "Natural Jute Runner",
+          "category": "Runner",
+          "material": "Jute",
+          "construction": "Handwoven",
+          "size": "2.5x8",
+          "shape": "Runner",
+          "weight": 5.2,
+          "gsm": 1600,
+          "sellingPrice": 4200,
+          "standardCost": 1500,
+          "countryOfOrigin": "India",
+          "barcode": "8901001001009",
+          "qr": "QR-RUG-1009",
+          "image": null,
+          "status": "Active",
+          "amazonSku": "AMZ-JRUN-258",
+          "etsySku": "ETS-JRUN-258",
+          "walmartSku": "WMT-JRUN-258",
+          "description": "Hallway jute runner with braided border."
+        },
+        {
+          "id": "PRD-1010",
+          "sku": "RUG-1010",
+          "name": "Luxury Wool Rug",
+          "category": "Luxury",
+          "material": "New Zealand Wool",
+          "construction": "Hand Tufted",
+          "size": "9x12",
+          "shape": "Rectangle",
+          "weight": 38,
+          "gsm": 2800,
+          "sellingPrice": 54000,
+          "standardCost": 24000,
+          "countryOfOrigin": "India",
+          "barcode": "8901001001010",
+          "qr": "QR-RUG-1010",
+          "image": null,
+          "status": "Active",
+          "amazonSku": "AMZ-LUX-912",
+          "etsySku": "ETS-LUX-912",
+          "walmartSku": null,
+          "description": "Plush luxury wool rug in soft taupe."
+        },
+        {
+          "id": "PRD-1011",
+          "sku": "RUG-1011",
+          "name": "Round Braided Rug",
+          "category": "Braided",
+          "material": "Cotton",
+          "construction": "Braided",
+          "size": "6ft Round",
+          "shape": "Round",
+          "weight": 8,
+          "gsm": 1400,
+          "sellingPrice": 7500,
+          "standardCost": 2800,
+          "countryOfOrigin": "India",
+          "barcode": "8901001001011",
+          "qr": "QR-RUG-1011",
+          "image": null,
+          "status": "Active",
+          "amazonSku": "AMZ-RND-6",
+          "etsySku": "ETS-RND-6",
+          "walmartSku": "WMT-RND-6",
+          "description": "Round braided cotton rug for casual spaces."
+        },
+        {
+          "id": "PRD-1012",
+          "sku": "RUG-1012",
+          "name": "Shaggy Plush Rug",
+          "category": "Shag",
+          "material": "Polyester",
+          "construction": "Machine Made",
+          "size": "5x7",
+          "shape": "Rectangle",
+          "weight": 12.5,
+          "gsm": 2200,
+          "sellingPrice": 11000,
+          "standardCost": 4200,
+          "countryOfOrigin": "India",
+          "barcode": "8901001001012",
+          "qr": "QR-RUG-1012",
+          "image": null,
+          "status": "Active",
+          "amazonSku": "AMZ-SHAG-57",
+          "etsySku": null,
+          "walmartSku": "WMT-SHAG-57",
+          "description": "Ultra-soft shaggy plush pile rug."
+        },
+        {
+          "id": "PRD-1013",
+          "sku": "RUG-1013",
+          "name": "Moroccan Trellis Rug",
+          "category": "Contemporary",
+          "material": "Wool",
+          "construction": "Handwoven",
+          "size": "8x10",
+          "shape": "Rectangle",
+          "weight": 20,
+          "gsm": 2100,
+          "sellingPrice": 18500,
+          "standardCost": 7800,
+          "countryOfOrigin": "India",
+          "barcode": "8901001001013",
+          "qr": "QR-RUG-1013",
+          "image": null,
+          "status": "Active",
+          "amazonSku": "AMZ-MOR-810",
+          "etsySku": "ETS-MOR-810",
+          "walmartSku": "WMT-MOR-810",
+          "description": "Moroccan trellis pattern in ivory and charcoal."
+        },
+        {
+          "id": "PRD-1014",
+          "sku": "RUG-1014",
+          "name": "Outdoor Patio Rug",
+          "category": "Outdoor",
+          "material": "Polypropylene",
+          "construction": "Machine Made",
+          "size": "6x9",
+          "shape": "Rectangle",
+          "weight": 9,
+          "gsm": 1100,
+          "sellingPrice": 5500,
+          "standardCost": 1900,
+          "countryOfOrigin": "India",
+          "barcode": "8901001001014",
+          "qr": "QR-RUG-1014",
+          "image": null,
+          "status": "Active",
+          "amazonSku": "AMZ-OUT-69",
+          "etsySku": null,
+          "walmartSku": "WMT-OUT-69",
+          "description": "Weather-resistant outdoor patio rug."
+        },
+        {
+          "id": "PRD-1015",
+          "sku": "RUG-1015",
+          "name": "Antique Wash Rug",
+          "category": "Vintage",
+          "material": "Wool",
+          "construction": "Hand Knotted",
+          "size": "7x10",
+          "shape": "Rectangle",
+          "weight": 24,
+          "gsm": 2900,
+          "sellingPrice": 32000,
+          "standardCost": 14500,
+          "countryOfOrigin": "India",
+          "barcode": "8901001001015",
+          "qr": "QR-RUG-1015",
+          "image": null,
+          "status": "Active",
+          "amazonSku": "AMZ-ANT-710",
+          "etsySku": "ETS-ANT-710",
+          "walmartSku": null,
+          "description": "Antique-wash finish for a lived-in heritage look."
+        },
+        {
+          "id": "PRD-1016",
+          "sku": "RUG-1016",
+          "name": "Kids Playroom Rug",
+          "category": "Kids",
+          "material": "Cotton",
+          "construction": "Machine Made",
+          "size": "5x7",
+          "shape": "Rectangle",
+          "weight": 7.5,
+          "gsm": 1300,
+          "sellingPrice": 4800,
+          "standardCost": 1600,
+          "countryOfOrigin": "India",
+          "barcode": "8901001001016",
+          "qr": "QR-RUG-1016",
+          "image": null,
+          "status": "Active",
+          "amazonSku": "AMZ-KIDS-57",
+          "etsySku": "ETS-KIDS-57",
+          "walmartSku": "WMT-KIDS-57",
+          "description": "Colorful kids playroom rug with soft cotton pile."
+        }
+      ],
+      "skuMappings": [
+        {
+          "id": "MAP-001",
+          "marketplaceSku": "AMZ-RUG-BLUE-8X10",
+          "marketplace": "Amazon",
+          "internalSku": "RUG-1001",
+          "status": "Mapped",
+          "product": "Hand Knotted Wool Rug"
+        },
+        {
+          "id": "MAP-002",
+          "marketplaceSku": "AMZ-RUG-NEW-BLUE",
+          "marketplace": "Amazon",
+          "internalSku": null,
+          "status": "Mapping Required",
+          "product": "Unknown Blue Rug Listing"
+        },
+        {
+          "id": "MAP-003",
+          "marketplaceSku": "ETS-HK-WOOL-NEW",
+          "marketplace": "Etsy",
+          "internalSku": null,
+          "status": "Mapping Required",
+          "product": "Hand Knotted Wool — New Listing"
+        },
+        {
+          "id": "MAP-004",
+          "marketplaceSku": "WMT-GEO-810-V2",
+          "marketplace": "Walmart",
+          "internalSku": null,
+          "status": "Mapping Required",
+          "product": "Modern Geometric Rug V2"
+        },
+        {
+          "id": "MAP-005",
+          "marketplaceSku": "AMZ-PERS-912",
+          "marketplace": "Amazon",
+          "internalSku": "RUG-1004",
+          "status": "Mapped",
+          "product": "Vintage Persian Rug"
+        },
+        {
+          "id": "MAP-006",
+          "marketplaceSku": "ETS-KILIM-46",
+          "marketplace": "Etsy",
+          "internalSku": "RUG-1006",
+          "status": "Mapped",
+          "product": "Flatweave Kilim"
+        },
+        {
+          "id": "MAP-007",
+          "marketplaceSku": "WMT-JUTE-NEW",
+          "marketplace": "Walmart",
+          "internalSku": null,
+          "status": "Mapping Required",
+          "product": "Jute Listing Unmapped"
+        },
+        {
+          "id": "MAP-008",
+          "marketplaceSku": "AMZ-LUX-912-B",
+          "marketplace": "Amazon",
+          "internalSku": null,
+          "status": "Mapping Required",
+          "product": "Luxury Wool Bundle Listing"
+        }
+      ],
+      "stockLedger": [
+        {
+          "id": "LED-001",
+          "date": "2026-09-01T08:00:00",
+          "sku": "RUG-1001",
+          "type": "Opening Stock",
+          "reference": "OPEN-SEP",
+          "from": "—",
+          "to": "India Finished Stock",
+          "qtyIn": 14,
+          "qtyOut": 0,
+          "balance": 14,
+          "user": "System",
+          "notes": "Monthly opening"
+        },
+        {
+          "id": "LED-002",
+          "date": "2026-09-05T10:15:00",
+          "sku": "RUG-1001",
+          "type": "Reservation",
+          "reference": "ORD-1025",
+          "from": "India Finished Stock",
+          "to": "India Reserved",
+          "qtyIn": 0,
+          "qtyOut": 1,
+          "balance": 13,
+          "user": "Priya Sharma",
+          "notes": "Reserved for #1025"
+        },
+        {
+          "id": "LED-003",
+          "date": "2026-09-08T14:00:00",
+          "sku": "RUG-1001",
+          "type": "Dispatch",
+          "reference": "REP-2026-001",
+          "from": "Packed / Ready",
+          "to": "In Transit",
+          "qtyIn": 0,
+          "qtyOut": 4,
+          "balance": 9,
+          "user": "Ravi Kumar",
+          "notes": "India→USA replenishment"
+        },
+        {
+          "id": "LED-004",
+          "date": "2026-09-12T11:30:00",
+          "sku": "RUG-1001",
+          "type": "USA Receipt",
+          "reference": "RCP-USA-041",
+          "from": "In Transit",
+          "to": "USA Warehouse",
+          "qtyIn": 4,
+          "qtyOut": 0,
+          "balance": 9,
+          "user": "Mike Johnson",
+          "notes": "Matched receipt"
+        },
+        {
+          "id": "LED-005",
+          "date": "2026-09-15T09:00:00",
+          "sku": "RUG-1001",
+          "type": "Allocation",
+          "reference": "ORD-1016",
+          "from": "USA Warehouse",
+          "to": "Merchant Fulfilment",
+          "qtyIn": 0,
+          "qtyOut": 1,
+          "balance": 8,
+          "user": "Mike Johnson",
+          "notes": "USA fulfilment"
+        },
+        {
+          "id": "LED-006",
+          "date": "2026-09-18T09:07:00",
+          "sku": "RUG-1001",
+          "type": "Reservation",
+          "reference": "ORD-1001",
+          "from": "India Finished Stock",
+          "to": "India Reserved",
+          "qtyIn": 0,
+          "qtyOut": 0,
+          "balance": 10,
+          "user": "Pending",
+          "notes": "Awaiting demo reservation"
+        },
+        {
+          "id": "LED-007",
+          "date": "2026-09-10T12:00:00",
+          "sku": "RUG-1002",
+          "type": "Pick",
+          "reference": "ORD-1005",
+          "from": "India Reserved",
+          "to": "Packed / Ready",
+          "qtyIn": 0,
+          "qtyOut": 1,
+          "balance": 22,
+          "user": "Amit Singh",
+          "notes": "Picked for transit"
+        },
+        {
+          "id": "LED-008",
+          "date": "2026-09-11T16:00:00",
+          "sku": "RUG-1003",
+          "type": "Adjustment",
+          "reference": "ADJ-019",
+          "from": "India Finished Stock",
+          "to": "Damaged",
+          "qtyIn": 0,
+          "qtyOut": 2,
+          "balance": 45,
+          "user": "Ravi Kumar",
+          "notes": "QC damage"
+        },
+        {
+          "id": "LED-009",
+          "date": "2026-09-14T08:30:00",
+          "sku": "RUG-1004",
+          "type": "Transfer",
+          "reference": "TRF-088",
+          "from": "India Finished Stock",
+          "to": "Packed / Ready",
+          "qtyIn": 0,
+          "qtyOut": 1,
+          "balance": 4,
+          "user": "Amit Singh",
+          "notes": "Prep for dispatch"
+        },
+        {
+          "id": "LED-010",
+          "date": "2026-09-16T10:00:00",
+          "sku": "RUG-1006",
+          "type": "Return",
+          "reference": "RET-004",
+          "from": "Returned",
+          "to": "USA Warehouse",
+          "qtyIn": 1,
+          "qtyOut": 0,
+          "balance": 18,
+          "user": "Mike Johnson",
+          "notes": "Resalable return"
+        },
+        {
+          "id": "LED-011",
+          "date": "2026-09-17T09:15:00",
+          "sku": "RUG-1007",
+          "type": "In Transit",
+          "reference": "SHP-1012",
+          "from": "India Dispatch",
+          "to": "In Transit",
+          "qtyIn": 0,
+          "qtyOut": 1,
+          "balance": 35,
+          "user": "System",
+          "notes": "Dispatched"
+        },
+        {
+          "id": "LED-012",
+          "date": "2026-09-18T07:00:00",
+          "sku": "RUG-1013",
+          "type": "Cycle Count Correction",
+          "reference": "CC-012",
+          "from": "—",
+          "to": "India Finished Stock",
+          "qtyIn": 0,
+          "qtyOut": 1,
+          "balance": 2,
+          "user": "Auditor",
+          "notes": "Physical count variance"
+        },
+        {
+          "id": "LED-013",
+          "date": "2026-09-19T11:00:00",
+          "sku": "RUG-1009",
+          "type": "Receipt",
+          "reference": "PO-REC-55",
+          "from": "Production",
+          "to": "India Finished Stock",
+          "qtyIn": 20,
+          "qtyOut": 0,
+          "balance": 60,
+          "user": "Ravi Kumar",
+          "notes": "Production receipt"
+        },
+        {
+          "id": "LED-014",
+          "date": "2026-09-20T13:20:00",
+          "sku": "RUG-1010",
+          "type": "Release",
+          "reference": "ORD-CNCL-9",
+          "from": "India Reserved",
+          "to": "India Finished Stock",
+          "qtyIn": 1,
+          "qtyOut": 0,
+          "balance": 5,
+          "user": "Priya Sharma",
+          "notes": "Cancelled order release"
+        },
+        {
+          "id": "LED-015",
+          "date": "2026-09-21T10:40:00",
+          "sku": "RUG-1001",
+          "type": "Pack",
+          "reference": "ORD-1017",
+          "from": "Picked",
+          "to": "Packed / Ready",
+          "qtyIn": 0,
+          "qtyOut": 0,
+          "balance": 10,
+          "user": "Amit Singh",
+          "notes": "Packed"
+        }
+      ],
+      "transfers": [
+        {
+          "id": "TRF-088",
+          "date": "2026-09-14",
+          "sku": "RUG-1004",
+          "qty": 1,
+          "from": "India Finished Stock",
+          "to": "Packed / Ready",
+          "status": "Completed",
+          "user": "Amit Singh"
+        },
+        {
+          "id": "TRF-089",
+          "date": "2026-09-16",
+          "sku": "RUG-1002",
+          "qty": 5,
+          "from": "India Finished Stock",
+          "to": "In Transit",
+          "status": "In Progress",
+          "user": "Ravi Kumar"
+        },
+        {
+          "id": "TRF-090",
+          "date": "2026-09-18",
+          "sku": "RUG-1007",
+          "qty": 8,
+          "from": "In Transit",
+          "to": "USA Warehouse",
+          "status": "Pending Receipt",
+          "user": "Mike Johnson"
+        },
+        {
+          "id": "TRF-091",
+          "date": "2026-09-19",
+          "sku": "RUG-1009",
+          "qty": 10,
+          "from": "USA Warehouse",
+          "to": "Amazon FBA",
+          "status": "Completed",
+          "user": "Mike Johnson"
+        },
+        {
+          "id": "TRF-092",
+          "date": "2026-09-20",
+          "sku": "RUG-1011",
+          "qty": 3,
+          "from": "India Finished Stock",
+          "to": "India Reserved",
+          "status": "Completed",
+          "user": "Priya Sharma"
+        }
+      ],
+      "adjustments": [
+        {
+          "id": "ADJ-019",
+          "date": "2026-09-11",
+          "sku": "RUG-1003",
+          "qty": -2,
+          "reason": "Damage",
+          "location": "India Finished Stock",
+          "user": "Ravi Kumar",
+          "status": "Approved"
+        },
+        {
+          "id": "ADJ-020",
+          "date": "2026-09-15",
+          "sku": "RUG-1012",
+          "qty": -1,
+          "reason": "Damage",
+          "location": "USA Warehouse",
+          "user": "Mike Johnson",
+          "status": "Approved"
+        },
+        {
+          "id": "ADJ-021",
+          "date": "2026-09-18",
+          "sku": "RUG-1006",
+          "qty": 1,
+          "reason": "Found Stock",
+          "location": "India Finished Stock",
+          "user": "Amit Singh",
+          "status": "Approved"
+        },
+        {
+          "id": "ADJ-022",
+          "date": "2026-09-20",
+          "sku": "RUG-1017",
+          "qty": -1,
+          "reason": "Write-off",
+          "location": "USA Warehouse",
+          "user": "Auditor",
+          "status": "Pending Approval"
+        }
+      ],
+      "cycleCounts": [
+        {
+          "id": "CC-010",
+          "date": "2026-09-10",
+          "warehouse": "India Main Warehouse",
+          "sku": "RUG-1001",
+          "systemQty": 11,
+          "countedQty": 11,
+          "variance": 0,
+          "status": "Matched",
+          "user": "Ravi Kumar"
+        },
+        {
+          "id": "CC-011",
+          "date": "2026-09-12",
+          "warehouse": "USA East Warehouse",
+          "sku": "RUG-1006",
+          "systemQty": 17,
+          "countedQty": 18,
+          "variance": 1,
+          "status": "Adjusted",
+          "user": "Mike Johnson"
+        },
+        {
+          "id": "CC-012",
+          "date": "2026-09-18",
+          "warehouse": "India Main Warehouse",
+          "sku": "RUG-1013",
+          "systemQty": 3,
+          "countedQty": 2,
+          "variance": -1,
+          "status": "Adjusted",
+          "user": "Auditor"
+        },
+        {
+          "id": "CC-013",
+          "date": "2026-09-21",
+          "warehouse": "India Main Warehouse",
+          "sku": "RUG-1009",
+          "systemQty": 60,
+          "countedQty": 60,
+          "variance": 0,
+          "status": "Matched",
+          "user": "Amit Singh"
+        }
+      ],
+      "locations": [
+        {
+          "id": "IND-A-01",
+          "location": "IND-A-01",
+          "warehouse": "India Main Warehouse",
+          "skus": [
+            "RUG-1002",
+            "RUG-1006",
+            "RUG-1011",
+            "RUG-1016",
+            "RUG-1018"
+          ],
+          "occupied": 72,
+          "capacity": 100
+        },
+        {
+          "id": "IND-A-02",
+          "location": "IND-A-02",
+          "warehouse": "India Main Warehouse",
+          "skus": [
+            "RUG-1003",
+            "RUG-1007",
+            "RUG-1009",
+            "RUG-1012",
+            "RUG-1014",
+            "RUG-1020"
+          ],
+          "occupied": 85,
+          "capacity": 120
+        },
+        {
+          "id": "IND-B-01",
+          "location": "IND-B-01",
+          "warehouse": "India Main Warehouse",
+          "skus": [
+            "RUG-1004",
+            "RUG-1008",
+            "RUG-1013",
+            "RUG-1017",
+            "RUG-1019"
+          ],
+          "occupied": 40,
+          "capacity": 80
+        },
+        {
+          "id": "IND-RUG-01",
+          "location": "IND-RUG-01",
+          "warehouse": "India Main Warehouse",
+          "skus": [
+            "RUG-1001",
+            "RUG-1005",
+            "RUG-1010",
+            "RUG-1015"
+          ],
+          "occupied": 28,
+          "capacity": 50
+        },
+        {
+          "id": "USA-A-01",
+          "location": "USA-A-01",
+          "warehouse": "USA East Warehouse",
+          "skus": [
+            "RUG-1002",
+            "RUG-1003",
+            "RUG-1006",
+            "RUG-1007",
+            "RUG-1011",
+            "RUG-1012",
+            "RUG-1014",
+            "RUG-1016"
+          ],
+          "occupied": 90,
+          "capacity": 150
+        },
+        {
+          "id": "USA-B-02",
+          "location": "USA-B-02",
+          "warehouse": "USA East Warehouse",
+          "skus": [
+            "RUG-1004",
+            "RUG-1008",
+            "RUG-1013",
+            "RUG-1015",
+            "RUG-1019"
+          ],
+          "occupied": 35,
+          "capacity": 80
+        },
+        {
+          "id": "USA-RUG-01",
+          "location": "USA-RUG-01",
+          "warehouse": "USA East Warehouse",
+          "skus": [
+            "RUG-1001",
+            "RUG-1005",
+            "RUG-1009",
+            "RUG-1010",
+            "RUG-1017"
+          ],
+          "occupied": 42,
+          "capacity": 70
+        }
+      ],
+      "shipments": [
+        {
+          "id": "SHP-1001",
+          "order": "#1001",
+          "courier": null,
+          "awb": null,
+          "origin": "India Main Warehouse",
+          "destination": "USA East Warehouse",
+          "weight": 28.5,
+          "dimWeight": 32,
+          "chargeableWeight": 32,
+          "estimatedCost": 1250,
+          "actualCost": null,
+          "status": "Not Created",
+          "lastUpdate": "2026-09-18T09:05:00",
+          "tracking": []
+        },
+        {
+          "id": "SHP-1002",
+          "order": "#1002",
+          "courier": "UPS",
+          "awb": "1Z999AA10123456784",
+          "origin": "USA East Warehouse",
+          "destination": "Seattle, WA",
+          "weight": 13,
+          "dimWeight": 14,
+          "chargeableWeight": 14,
+          "estimatedCost": 1600,
+          "actualCost": 1800,
+          "status": "In Transit",
+          "lastUpdate": "2026-09-21T14:00:00",
+          "tracking": [
+            {
+              "at": "2026-09-19T10:00:00",
+              "event": "Shipment created",
+              "location": "USA East Warehouse"
+            },
+            {
+              "at": "2026-09-19T16:00:00",
+              "event": "Picked up by UPS",
+              "location": "Newark, NJ"
+            },
+            {
+              "at": "2026-09-21T08:00:00",
+              "event": "In transit",
+              "location": "Chicago Hub"
+            }
+          ]
+        },
+        {
+          "id": "SHP-1003",
+          "order": "#1003",
+          "courier": "Delhivery International",
+          "awb": "DLV88321001",
+          "origin": "India Main Warehouse",
+          "destination": "Chicago, IL",
+          "weight": 11.8,
+          "dimWeight": 13,
+          "chargeableWeight": 13,
+          "estimatedCost": 850,
+          "actualCost": 900,
+          "status": "Ready",
+          "lastUpdate": "2026-09-17T15:00:00",
+          "tracking": []
+        },
+        {
+          "id": "SHP-1004",
+          "order": "#1004",
+          "courier": "FedEx",
+          "awb": "794612345678",
+          "origin": "USA East Warehouse",
+          "destination": "Toronto, ON",
+          "weight": 22,
+          "dimWeight": 24,
+          "chargeableWeight": 24,
+          "estimatedCost": 2200,
+          "actualCost": 2400,
+          "status": "Delivered",
+          "lastUpdate": "2026-09-20T11:00:00",
+          "tracking": [
+            {
+              "at": "2026-09-17T09:00:00",
+              "event": "Dispatched",
+              "location": "Newark, NJ"
+            },
+            {
+              "at": "2026-09-19T18:00:00",
+              "event": "Customs cleared",
+              "location": "Toronto"
+            },
+            {
+              "at": "2026-09-20T11:00:00",
+              "event": "Delivered",
+              "location": "Toronto, ON"
+            }
+          ]
+        },
+        {
+          "id": "SHP-1005",
+          "order": "#1005",
+          "courier": "DHL",
+          "awb": "JD0146000099887766",
+          "origin": "India Main Warehouse",
+          "destination": "Denver, CO",
+          "weight": 14.2,
+          "dimWeight": 16,
+          "chargeableWeight": 16,
+          "estimatedCost": 1300,
+          "actualCost": 1400,
+          "status": "In Transit",
+          "lastUpdate": "2026-09-20T08:00:00",
+          "tracking": [
+            {
+              "at": "2026-09-16T14:00:00",
+              "event": "Dispatched India",
+              "location": "Jaipur"
+            },
+            {
+              "at": "2026-09-18T06:00:00",
+              "event": "Departed origin",
+              "location": "DEL Airport"
+            },
+            {
+              "at": "2026-09-20T08:00:00",
+              "event": "In transit to destination",
+              "location": "CVG Hub"
+            }
+          ]
+        },
+        {
+          "id": "SHP-1007",
+          "order": "#1007",
+          "courier": "Amazon Logistics",
+          "awb": "AMZL-554433",
+          "origin": "Amazon FBA",
+          "destination": "San Francisco, CA",
+          "weight": 38,
+          "dimWeight": 40,
+          "chargeableWeight": 40,
+          "estimatedCost": 0,
+          "actualCost": 0,
+          "status": "Delivered",
+          "lastUpdate": "2026-09-16T12:00:00",
+          "tracking": []
+        },
+        {
+          "id": "SHP-1008",
+          "order": "#1008",
+          "courier": "USPS",
+          "awb": "9400111899223344556677",
+          "origin": "USA East Warehouse",
+          "destination": "Miami, FL",
+          "weight": 18,
+          "dimWeight": 19,
+          "chargeableWeight": 19,
+          "estimatedCost": 900,
+          "actualCost": 950,
+          "status": "Out for Delivery",
+          "lastUpdate": "2026-09-22T07:30:00",
+          "tracking": []
+        },
+        {
+          "id": "SHP-1012",
+          "order": "#1012",
+          "courier": "Delhivery International",
+          "awb": "DLV88401002",
+          "origin": "India Main Warehouse",
+          "destination": "USA East Warehouse",
+          "weight": 12.5,
+          "dimWeight": 14,
+          "chargeableWeight": 14,
+          "estimatedCost": 950,
+          "actualCost": 1000,
+          "status": "Dispatched",
+          "lastUpdate": "2026-09-12T18:00:00",
+          "tracking": []
+        },
+        {
+          "id": "SHP-1013",
+          "order": "#1013",
+          "courier": "FedEx",
+          "awb": "794698765432",
+          "origin": "USA East Warehouse",
+          "destination": "New York, NY",
+          "weight": 24,
+          "dimWeight": 26,
+          "chargeableWeight": 26,
+          "estimatedCost": 1400,
+          "actualCost": 1600,
+          "status": "Exception",
+          "lastUpdate": "2026-09-21T09:00:00",
+          "tracking": [
+            {
+              "at": "2026-09-18T10:00:00",
+              "event": "Shipped",
+              "location": "Newark, NJ"
+            },
+            {
+              "at": "2026-09-21T09:00:00",
+              "event": "Delivery exception — recipient unavailable",
+              "location": "New York, NY"
+            }
+          ]
+        },
+        {
+          "id": "SHP-1016",
+          "order": "#1016",
+          "courier": "UPS",
+          "awb": "1Z999CC30345678901",
+          "origin": "USA East Warehouse",
+          "destination": "Portland, OR",
+          "weight": 28.5,
+          "dimWeight": 32,
+          "chargeableWeight": 32,
+          "estimatedCost": 1800,
+          "actualCost": 2200,
+          "status": "RTO",
+          "lastUpdate": "2026-09-18T16:00:00",
+          "tracking": []
+        },
+        {
+          "id": "SHP-1011",
+          "order": "#1011",
+          "courier": "UPS",
+          "awb": "1Z999BB20234567890",
+          "origin": "USA East Warehouse",
+          "destination": "Atlanta, GA",
+          "weight": 15.6,
+          "dimWeight": 16,
+          "chargeableWeight": 16,
+          "estimatedCost": 1000,
+          "actualCost": 1100,
+          "status": "Delivered",
+          "lastUpdate": "2026-09-15T14:00:00",
+          "tracking": []
+        },
+        {
+          "id": "SHP-1019",
+          "order": "#1019",
+          "courier": "UPS",
+          "awb": "1Z999DD40456789012",
+          "origin": "USA East Warehouse",
+          "destination": "Mountain View, CA",
+          "weight": 22,
+          "dimWeight": 24,
+          "chargeableWeight": 24,
+          "estimatedCost": 2000,
+          "actualCost": 2100,
+          "status": "Delivered",
+          "lastUpdate": "2026-09-12T11:00:00",
+          "tracking": []
+        },
+        {
+          "id": "SHP-1020",
+          "order": "#1020",
+          "courier": "USPS",
+          "awb": "9400111899229988776655",
+          "origin": "USA East Warehouse",
+          "destination": "Philadelphia, PA",
+          "weight": 15,
+          "dimWeight": 15,
+          "chargeableWeight": 15,
+          "estimatedCost": 750,
+          "actualCost": 780,
+          "status": "Delivered",
+          "lastUpdate": "2026-09-11T10:00:00",
+          "tracking": []
+        },
+        {
+          "id": "SHP-1022",
+          "order": "#1022",
+          "courier": "DHL",
+          "awb": "JD0146000055667788",
+          "origin": "India Main Warehouse",
+          "destination": "Melbourne, AU",
+          "weight": 14.2,
+          "dimWeight": 16,
+          "chargeableWeight": 16,
+          "estimatedCost": 2600,
+          "actualCost": 2800,
+          "status": "In Transit",
+          "lastUpdate": "2026-09-20T06:00:00",
+          "tracking": []
+        },
+        {
+          "id": "SHP-1023",
+          "order": "#1023",
+          "courier": "FedEx",
+          "awb": "794611122233",
+          "origin": "USA East Warehouse",
+          "destination": "Dallas, TX",
+          "weight": 38,
+          "dimWeight": 40,
+          "chargeableWeight": 40,
+          "estimatedCost": 2600,
+          "actualCost": 2800,
+          "status": "Delivered",
+          "lastUpdate": "2026-09-10T15:00:00",
+          "tracking": []
+        },
+        {
+          "id": "SHP-1025",
+          "order": "#1025",
+          "courier": "UPS",
+          "awb": "1Z999EE50567890123",
+          "origin": "USA East Warehouse",
+          "destination": "Philadelphia, PA",
+          "weight": 28.5,
+          "dimWeight": 32,
+          "chargeableWeight": 32,
+          "estimatedCost": 1050,
+          "actualCost": 1100,
+          "status": "Delivered",
+          "lastUpdate": "2026-09-08T12:00:00",
+          "tracking": []
+        }
+      ],
+      "courierReferences": [
+        {
+          "id": "CR-001",
+          "order": "#1003",
+          "provider": "Delhivery International",
+          "reference": "DLV-INT-88321",
+          "awb": "DLV88321001",
+          "qrReference": "QR-DLV-88321",
+          "serviceType": "Express",
+          "weight": 11.8,
+          "dimensions": "120x80x15 cm",
+          "estimatedCost": 850,
+          "notes": "Mapped from India courier portal",
+          "status": "Mapped"
+        },
+        {
+          "id": "CR-002",
+          "order": "#1005",
+          "provider": "DHL",
+          "reference": "DHL-99887766",
+          "awb": "JD0146000099887766",
+          "qrReference": "QR-DHL-9988",
+          "serviceType": "Express Worldwide",
+          "weight": 14.2,
+          "dimensions": "100x70x12 cm",
+          "estimatedCost": 1300,
+          "notes": "Manual AWB entry",
+          "status": "Mapped"
+        },
+        {
+          "id": "CR-003",
+          "order": "#1012",
+          "provider": "Delhivery International",
+          "reference": "DLV-INT-88401",
+          "awb": "DLV88401002",
+          "qrReference": "QR-DLV-88401",
+          "serviceType": "Standard",
+          "weight": 12.5,
+          "dimensions": "90x60x12 cm",
+          "estimatedCost": 950,
+          "notes": "",
+          "status": "Mapped"
+        },
+        {
+          "id": "CR-004",
+          "order": "#1017",
+          "provider": "DHL",
+          "reference": "DHL-11223344",
+          "awb": "JD0146000011223344",
+          "qrReference": "QR-DHL-1122",
+          "serviceType": "Express",
+          "weight": 11.8,
+          "dimensions": "120x80x15 cm",
+          "estimatedCost": 850,
+          "notes": "",
+          "status": "Mapped"
+        },
+        {
+          "id": "CR-005",
+          "order": "#1001",
+          "provider": null,
+          "reference": null,
+          "awb": null,
+          "qrReference": null,
+          "serviceType": null,
+          "weight": 28.5,
+          "dimensions": "250x180x12 cm",
+          "estimatedCost": 1250,
+          "notes": "Awaiting external courier portal reference",
+          "status": "Pending"
+        }
+      ],
+      "exceptions": [
+        {
+          "id": "EX-001",
+          "shipment": "SHP-1013",
+          "order": "#1013",
+          "type": "Delivery Exception",
+          "courier": "FedEx",
+          "awb": "794698765432",
+          "status": "Open",
+          "age": "1 day",
+          "notes": "Recipient unavailable"
+        },
+        {
+          "id": "EX-002",
+          "shipment": "SHP-1016",
+          "order": "#1016",
+          "type": "RTO",
+          "courier": "UPS",
+          "awb": "1Z999CC30345678901",
+          "status": "In Progress",
+          "age": "4 days",
+          "notes": "Customer refused delivery"
+        },
+        {
+          "id": "EX-003",
+          "shipment": "SHP-1005",
+          "order": "#1005",
+          "type": "Delay",
+          "courier": "DHL",
+          "awb": "JD0146000099887766",
+          "status": "Monitoring",
+          "age": "2 days",
+          "notes": "Hub delay at CVG"
+        },
+        {
+          "id": "EX-004",
+          "shipment": "SHP-1008",
+          "order": "#1008",
+          "type": "Address Issue",
+          "courier": "USPS",
+          "awb": "9400111899223344556677",
+          "status": "Resolved",
+          "age": "0 days",
+          "notes": "Address corrected"
+        }
+      ],
+      "replenishments": [
+        {
+          "id": "REP-2026-001",
+          "createdDate": "2026-09-05",
+          "indiaWarehouse": "India Main Warehouse",
+          "usaWarehouse": "USA East Warehouse",
+          "skus": [
+            {
+              "sku": "RUG-1001",
+              "product": "Hand Knotted Wool Rug",
+              "qty": 4
+            },
+            {
+              "sku": "RUG-1002",
+              "product": "Hand Tufted Rug",
+              "qty": 8
+            },
+            {
+              "sku": "RUG-1006",
+              "product": "Flatweave Kilim",
+              "qty": 10
+            },
+            {
+              "sku": "RUG-1009",
+              "product": "Natural Jute Runner",
+              "qty": 15
+            }
+          ],
+          "totalUnits": 37,
+          "cartons": 12,
+          "grossWeight": 285,
+          "freightCost": 185000,
+          "etd": "2026-09-08",
+          "eta": "2026-09-18",
+          "status": "USA Received",
+          "timeline": [
+            {
+              "at": "2026-09-05",
+              "title": "Draft created"
+            },
+            {
+              "at": "2026-09-06",
+              "title": "Approved by Management"
+            },
+            {
+              "at": "2026-09-07",
+              "title": "Packing completed"
+            },
+            {
+              "at": "2026-09-08",
+              "title": "Dispatched India"
+            },
+            {
+              "at": "2026-09-09",
+              "title": "In Transit"
+            },
+            {
+              "at": "2026-09-18",
+              "title": "USA Received — matched"
+            }
+          ]
+        },
+        {
+          "id": "REP-2026-002",
+          "createdDate": "2026-09-12",
+          "indiaWarehouse": "India Main Warehouse",
+          "usaWarehouse": "USA East Warehouse",
+          "skus": [
+            {
+              "sku": "RUG-1003",
+              "product": "Jute Area Rug",
+              "qty": 20
+            },
+            {
+              "sku": "RUG-1007",
+              "product": "Modern Geometric Rug",
+              "qty": 12
+            },
+            {
+              "sku": "RUG-1014",
+              "product": "Outdoor Patio Rug",
+              "qty": 15
+            }
+          ],
+          "totalUnits": 47,
+          "cartons": 16,
+          "grossWeight": 340,
+          "freightCost": 210000,
+          "etd": "2026-09-15",
+          "eta": "2026-09-25",
+          "status": "In Transit",
+          "timeline": [
+            {
+              "at": "2026-09-12",
+              "title": "Draft created"
+            },
+            {
+              "at": "2026-09-13",
+              "title": "Approved"
+            },
+            {
+              "at": "2026-09-14",
+              "title": "Packing"
+            },
+            {
+              "at": "2026-09-15",
+              "title": "Dispatched India"
+            },
+            {
+              "at": "2026-09-16",
+              "title": "In Transit"
+            }
+          ]
+        },
+        {
+          "id": "REP-2026-003",
+          "createdDate": "2026-09-18",
+          "indiaWarehouse": "India Main Warehouse",
+          "usaWarehouse": "USA East Warehouse",
+          "skus": [
+            {
+              "sku": "RUG-1004",
+              "product": "Vintage Persian Rug",
+              "qty": 3
+            },
+            {
+              "sku": "RUG-1005",
+              "product": "Wool Silk Rug",
+              "qty": 2
+            },
+            {
+              "sku": "RUG-1010",
+              "product": "Luxury Wool Rug",
+              "qty": 3
+            }
+          ],
+          "totalUnits": 8,
+          "cartons": 8,
+          "grossWeight": 220,
+          "freightCost": 95000,
+          "etd": "2026-09-22",
+          "eta": "2026-10-02",
+          "status": "Packing",
+          "timeline": [
+            {
+              "at": "2026-09-18",
+              "title": "Draft created"
+            },
+            {
+              "at": "2026-09-19",
+              "title": "Approved"
+            },
+            {
+              "at": "2026-09-20",
+              "title": "Packing started"
+            }
+          ]
+        },
+        {
+          "id": "REP-2026-004",
+          "createdDate": "2026-09-20",
+          "indiaWarehouse": "India Main Warehouse",
+          "usaWarehouse": "Amazon FBA",
+          "skus": [
+            {
+              "sku": "RUG-1003",
+              "product": "Jute Area Rug",
+              "qty": 25
+            },
+            {
+              "sku": "RUG-1009",
+              "product": "Natural Jute Runner",
+              "qty": 30
+            },
+            {
+              "sku": "RUG-1016",
+              "product": "Kids Playroom Rug",
+              "qty": 20
+            }
+          ],
+          "totalUnits": 75,
+          "cartons": 22,
+          "grossWeight": 410,
+          "freightCost": 275000,
+          "etd": null,
+          "eta": null,
+          "status": "Approved",
+          "timeline": [
+            {
+              "at": "2026-09-20",
+              "title": "Draft created"
+            },
+            {
+              "at": "2026-09-21",
+              "title": "Approved for FBA replenishment"
+            }
+          ]
+        },
+        {
+          "id": "REP-2026-005",
+          "createdDate": "2026-09-21",
+          "indiaWarehouse": "India Main Warehouse",
+          "usaWarehouse": "USA East Warehouse",
+          "skus": [
+            {
+              "sku": "RUG-1013",
+              "product": "Moroccan Trellis Rug",
+              "qty": 10
+            },
+            {
+              "sku": "RUG-1008",
+              "product": "Traditional Oriental Rug",
+              "qty": 6
+            }
+          ],
+          "totalUnits": 16,
+          "cartons": 10,
+          "grossWeight": 190,
+          "freightCost": 120000,
+          "etd": null,
+          "eta": null,
+          "status": "Draft",
+          "timeline": [
+            {
+              "at": "2026-09-21",
+              "title": "Draft created — awaiting approval"
+            }
+          ]
+        }
+      ],
+      "usaReceipts": [
+        {
+          "id": "RCP-USA-041",
+          "replenishment": "REP-2026-001",
+          "date": "2026-09-18",
+          "sku": "RUG-1001",
+          "expected": 4,
+          "received": 4,
+          "difference": 0,
+          "condition": "Good",
+          "status": "Matched"
+        },
+        {
+          "id": "RCP-USA-042",
+          "replenishment": "REP-2026-001",
+          "date": "2026-09-18",
+          "sku": "RUG-1002",
+          "expected": 8,
+          "received": 8,
+          "difference": 0,
+          "condition": "Good",
+          "status": "Matched"
+        },
+        {
+          "id": "RCP-USA-043",
+          "replenishment": "REP-2026-001",
+          "date": "2026-09-18",
+          "sku": "RUG-1006",
+          "expected": 10,
+          "received": 9,
+          "difference": -1,
+          "condition": "Good",
+          "status": "Short"
+        },
+        {
+          "id": "RCP-USA-044",
+          "replenishment": "REP-2026-001",
+          "date": "2026-09-18",
+          "sku": "RUG-1009",
+          "expected": 15,
+          "received": 15,
+          "difference": 0,
+          "condition": "Good",
+          "status": "Matched"
+        },
+        {
+          "id": "RCP-USA-045",
+          "replenishment": "REP-2026-002",
+          "date": "2026-09-25",
+          "sku": "RUG-1003",
+          "expected": 20,
+          "received": null,
+          "difference": null,
+          "condition": null,
+          "status": "Pending"
+        },
+        {
+          "id": "RCP-USA-046",
+          "order": "#1001",
+          "date": null,
+          "sku": "RUG-1001",
+          "expected": 1,
+          "received": null,
+          "difference": null,
+          "condition": null,
+          "status": "Awaiting Dispatch"
+        }
+      ],
+      "receivables": [
+        {
+          "id": "INV-B2B-001",
+          "invoice": "INV-B2B-001",
+          "customer": "HomeStyle Distributors LLC",
+          "country": "USA",
+          "currency": "USD",
+          "invoiceAmount": 28500,
+          "paid": 0,
+          "outstanding": 28500,
+          "invoiceDate": "2026-08-15",
+          "dueDate": "2026-09-14",
+          "status": "Overdue",
+          "paymentReference": null,
+          "bankReference": null
+        },
+        {
+          "id": "INV-B2B-002",
+          "invoice": "INV-B2B-002",
+          "customer": "Nordic Living AB",
+          "country": "Germany",
+          "currency": "EUR",
+          "invoiceAmount": 18200,
+          "paid": 9100,
+          "outstanding": 9100,
+          "invoiceDate": "2026-08-28",
+          "dueDate": "2026-09-27",
+          "status": "Partially Paid",
+          "paymentReference": "PAY-8821",
+          "bankReference": "BNK-44102"
+        },
+        {
+          "id": "INV-B2B-003",
+          "invoice": "INV-B2B-003",
+          "customer": "Pacific Imports Pty",
+          "country": "Australia",
+          "currency": "AUD",
+          "invoiceAmount": 22400,
+          "paid": 22400,
+          "outstanding": 0,
+          "invoiceDate": "2026-08-01",
+          "dueDate": "2026-08-31",
+          "status": "Paid",
+          "paymentReference": "PAY-8700",
+          "bankReference": "BNK-43900"
+        },
+        {
+          "id": "INV-B2B-004",
+          "invoice": "INV-B2B-004",
+          "customer": "Maple Retail Co",
+          "country": "Canada",
+          "currency": "CAD",
+          "invoiceAmount": 15600,
+          "paid": 0,
+          "outstanding": 15600,
+          "invoiceDate": "2026-09-01",
+          "dueDate": "2026-10-01",
+          "status": "Open",
+          "paymentReference": null,
+          "bankReference": null
+        },
+        {
+          "id": "INV-B2B-005",
+          "invoice": "INV-B2B-005",
+          "customer": "Britannia Home Ltd",
+          "country": "UK",
+          "currency": "GBP",
+          "invoiceAmount": 19800,
+          "paid": 0,
+          "outstanding": 19800,
+          "invoiceDate": "2026-07-20",
+          "dueDate": "2026-08-19",
+          "status": "Overdue",
+          "paymentReference": null,
+          "bankReference": null
+        },
+        {
+          "id": "INV-B2B-006",
+          "invoice": "INV-B2B-006",
+          "customer": "Texas Flooring Wholesale",
+          "country": "USA",
+          "currency": "USD",
+          "invoiceAmount": 31200,
+          "paid": 15600,
+          "outstanding": 15600,
+          "invoiceDate": "2026-09-05",
+          "dueDate": "2026-10-05",
+          "status": "Partially Paid",
+          "paymentReference": "PAY-8910",
+          "bankReference": "BNK-45001"
+        },
+        {
+          "id": "INV-B2B-007",
+          "invoice": "INV-B2B-007",
+          "customer": "Berlin Interiors GmbH",
+          "country": "Germany",
+          "currency": "EUR",
+          "invoiceAmount": 27500,
+          "paid": 0,
+          "outstanding": 27500,
+          "invoiceDate": "2026-09-10",
+          "dueDate": "2026-10-10",
+          "status": "Open",
+          "paymentReference": null,
+          "bankReference": null
+        },
+        {
+          "id": "INV-B2B-008",
+          "invoice": "INV-B2B-008",
+          "customer": "Sydney Design Hub",
+          "country": "Australia",
+          "currency": "AUD",
+          "invoiceAmount": 14200,
+          "paid": 0,
+          "outstanding": 14200,
+          "invoiceDate": "2026-06-15",
+          "dueDate": "2026-07-15",
+          "status": "Overdue",
+          "paymentReference": null,
+          "bankReference": null
+        },
+        {
+          "id": "INV-B2B-009",
+          "invoice": "INV-B2B-009",
+          "customer": "Cascade Rugs Inc",
+          "country": "USA",
+          "currency": "USD",
+          "invoiceAmount": 45000,
+          "paid": 45000,
+          "outstanding": 0,
+          "invoiceDate": "2026-08-10",
+          "dueDate": "2026-09-09",
+          "status": "Paid",
+          "paymentReference": "PAY-8755",
+          "bankReference": "BNK-44200"
+        },
+        {
+          "id": "INV-B2B-010",
+          "invoice": "INV-B2B-010",
+          "customer": "Ontario Décor Group",
+          "country": "Canada",
+          "currency": "CAD",
+          "invoiceAmount": 11800,
+          "paid": 0,
+          "outstanding": 11800,
+          "invoiceDate": "2026-09-12",
+          "dueDate": "2026-10-12",
+          "status": "Open",
+          "paymentReference": null,
+          "bankReference": null
+        },
+        {
+          "id": "INV-MKT-1001",
+          "invoice": "INV-MKT-1001",
+          "customer": "Jennifer Walsh (Amazon #1001)",
+          "country": "USA",
+          "currency": "INR",
+          "invoiceAmount": 20000,
+          "paid": 20000,
+          "outstanding": 0,
+          "invoiceDate": "2026-09-18",
+          "dueDate": "2026-09-18",
+          "status": "Paid",
+          "paymentReference": "AMZ-SETTLE",
+          "bankReference": null
+        }
+      ],
+      "courierInvoices": [
+        {
+          "id": "CI-001",
+          "invoiceNumber": "DHL-INV-88201",
+          "courier": "DHL",
+          "invoiceDate": "2026-09-01",
+          "amount": 48500,
+          "awbs": 12,
+          "status": "Audited"
+        },
+        {
+          "id": "CI-002",
+          "invoiceNumber": "DLV-INV-99102",
+          "courier": "Delhivery International",
+          "invoiceDate": "2026-09-05",
+          "amount": 32800,
+          "awbs": 8,
+          "status": "Disputed"
+        },
+        {
+          "id": "CI-003",
+          "invoiceNumber": "UPS-INV-71001",
+          "courier": "UPS",
+          "invoiceDate": "2026-09-08",
+          "amount": 52000,
+          "awbs": 15,
+          "status": "Pending Audit"
+        },
+        {
+          "id": "CI-004",
+          "invoiceNumber": "FDX-INV-33012",
+          "courier": "FedEx",
+          "invoiceDate": "2026-09-10",
+          "amount": 41200,
+          "awbs": 10,
+          "status": "Audited"
+        },
+        {
+          "id": "CI-005",
+          "invoiceNumber": "USPS-INV-22001",
+          "courier": "USPS",
+          "invoiceDate": "2026-09-12",
+          "amount": 18500,
+          "awbs": 9,
+          "status": "Pending Audit"
+        }
+      ],
+      "courierAuditLines": [
+        {
+          "id": "CAL-001",
+          "invoice": "CI-001",
+          "awb": "JD0146000099887766",
+          "systemWeight": 14.2,
+          "billedWeight": 16,
+          "systemRate": 90,
+          "billedRate": 95,
+          "expectedCharge": 1300,
+          "billedCharge": 1520,
+          "variance": 220,
+          "duplicate": false,
+          "disputeStatus": "Open"
+        },
+        {
+          "id": "CAL-002",
+          "invoice": "CI-001",
+          "awb": "JD0146000011223344",
+          "systemWeight": 11.8,
+          "billedWeight": 11.8,
+          "systemRate": 72,
+          "billedRate": 72,
+          "expectedCharge": 850,
+          "billedCharge": 850,
+          "variance": 0,
+          "duplicate": false,
+          "disputeStatus": "None"
+        },
+        {
+          "id": "CAL-003",
+          "invoice": "CI-001",
+          "awb": "JD0146000055667788",
+          "systemWeight": 14.2,
+          "billedWeight": 18,
+          "systemRate": 180,
+          "billedRate": 195,
+          "expectedCharge": 2600,
+          "billedCharge": 3510,
+          "variance": 910,
+          "duplicate": false,
+          "disputeStatus": "Open"
+        },
+        {
+          "id": "CAL-004",
+          "invoice": "CI-002",
+          "awb": "DLV88321001",
+          "systemWeight": 11.8,
+          "billedWeight": 13,
+          "systemRate": 65,
+          "billedRate": 72,
+          "expectedCharge": 850,
+          "billedCharge": 936,
+          "variance": 86,
+          "duplicate": false,
+          "disputeStatus": "Submitted"
+        },
+        {
+          "id": "CAL-005",
+          "invoice": "CI-002",
+          "awb": "DLV88401002",
+          "systemWeight": 12.5,
+          "billedWeight": 12.5,
+          "systemRate": 76,
+          "billedRate": 76,
+          "expectedCharge": 950,
+          "billedCharge": 950,
+          "variance": 0,
+          "duplicate": false,
+          "disputeStatus": "None"
+        },
+        {
+          "id": "CAL-006",
+          "invoice": "CI-002",
+          "awb": "DLV88321001",
+          "systemWeight": 11.8,
+          "billedWeight": 13,
+          "systemRate": 65,
+          "billedRate": 72,
+          "expectedCharge": 850,
+          "billedCharge": 936,
+          "variance": 86,
+          "duplicate": true,
+          "disputeStatus": "Open"
+        },
+        {
+          "id": "CAL-007",
+          "invoice": "CI-003",
+          "awb": "1Z999AA10123456784",
+          "systemWeight": 13,
+          "billedWeight": 14,
+          "systemRate": 114,
+          "billedRate": 128,
+          "expectedCharge": 1600,
+          "billedCharge": 1792,
+          "variance": 192,
+          "duplicate": false,
+          "disputeStatus": "Open"
+        },
+        {
+          "id": "CAL-008",
+          "invoice": "CI-003",
+          "awb": "1Z999BB20234567890",
+          "systemWeight": 15.6,
+          "billedWeight": 15.6,
+          "systemRate": 70,
+          "billedRate": 70,
+          "expectedCharge": 1100,
+          "billedCharge": 1100,
+          "variance": 0,
+          "duplicate": false,
+          "disputeStatus": "None"
+        },
+        {
+          "id": "CAL-009",
+          "invoice": "CI-003",
+          "awb": "1Z999CC30345678901",
+          "systemWeight": 28.5,
+          "billedWeight": 32,
+          "systemRate": 68,
+          "billedRate": 75,
+          "expectedCharge": 1800,
+          "billedCharge": 2400,
+          "variance": 600,
+          "duplicate": false,
+          "disputeStatus": "Open"
+        },
+        {
+          "id": "CAL-010",
+          "invoice": "CI-003",
+          "awb": "1Z999DD40456789012",
+          "systemWeight": 22,
+          "billedWeight": 24,
+          "systemRate": 87,
+          "billedRate": 87,
+          "expectedCharge": 2000,
+          "billedCharge": 2088,
+          "variance": 88,
+          "duplicate": false,
+          "disputeStatus": "None"
+        },
+        {
+          "id": "CAL-011",
+          "invoice": "CI-004",
+          "awb": "794612345678",
+          "systemWeight": 22,
+          "billedWeight": 24,
+          "systemRate": 100,
+          "billedRate": 100,
+          "expectedCharge": 2200,
+          "billedCharge": 2400,
+          "variance": 200,
+          "duplicate": false,
+          "disputeStatus": "Recovered"
+        },
+        {
+          "id": "CAL-012",
+          "invoice": "CI-004",
+          "awb": "794698765432",
+          "systemWeight": 24,
+          "billedWeight": 26,
+          "systemRate": 61,
+          "billedRate": 68,
+          "expectedCharge": 1400,
+          "billedCharge": 1768,
+          "variance": 368,
+          "duplicate": false,
+          "disputeStatus": "Open"
+        },
+        {
+          "id": "CAL-013",
+          "invoice": "CI-004",
+          "awb": "794611122233",
+          "systemWeight": 38,
+          "billedWeight": 40,
+          "systemRate": 70,
+          "billedRate": 70,
+          "expectedCharge": 2600,
+          "billedCharge": 2800,
+          "variance": 200,
+          "duplicate": false,
+          "disputeStatus": "None"
+        },
+        {
+          "id": "CAL-014",
+          "invoice": "CI-005",
+          "awb": "9400111899223344556677",
+          "systemWeight": 18,
+          "billedWeight": 19,
+          "systemRate": 50,
+          "billedRate": 50,
+          "expectedCharge": 900,
+          "billedCharge": 950,
+          "variance": 50,
+          "duplicate": false,
+          "disputeStatus": "None"
+        },
+        {
+          "id": "CAL-015",
+          "invoice": "CI-005",
+          "awb": "9400111899229988776655",
+          "systemWeight": 15,
+          "billedWeight": 15,
+          "systemRate": 52,
+          "billedRate": 52,
+          "expectedCharge": 750,
+          "billedCharge": 780,
+          "variance": 30,
+          "duplicate": false,
+          "disputeStatus": "None"
+        }
+      ],
+      "ebrc": [
+        {
+          "id": "EBRC-001",
+          "invoice": "INV-EXP-8821",
+          "customer": "Pacific Imports Pty",
+          "currency": "AUD",
+          "invoiceAmount": 22400,
+          "realizedAmount": 22400,
+          "bankReference": "SBI-FIRC-441",
+          "exportDate": "2026-08-01",
+          "dueDate": "2026-09-15",
+          "ebrcStatus": "Completed",
+          "brcStatus": "Completed",
+          "documents": [
+            "Shipping Bill",
+            "FIRC"
+          ]
+        },
+        {
+          "id": "EBRC-002",
+          "invoice": "INV-EXP-8901",
+          "customer": "HomeStyle Distributors LLC",
+          "currency": "USD",
+          "invoiceAmount": 28500,
+          "realizedAmount": 0,
+          "bankReference": null,
+          "exportDate": "2026-08-15",
+          "dueDate": "2026-09-30",
+          "ebrcStatus": "Pending",
+          "brcStatus": "Pending",
+          "documents": [
+            "Commercial Invoice"
+          ]
+        },
+        {
+          "id": "EBRC-003",
+          "invoice": "INV-EXP-9010",
+          "customer": "Britannia Home Ltd",
+          "currency": "GBP",
+          "invoiceAmount": 19800,
+          "realizedAmount": 19800,
+          "bankReference": "HDFC-FIRC-992",
+          "exportDate": "2026-07-20",
+          "dueDate": "2026-09-01",
+          "ebrcStatus": "Verified",
+          "brcStatus": "Submitted",
+          "documents": [
+            "Shipping Bill",
+            "AWB",
+            "FIRC"
+          ]
+        },
+        {
+          "id": "EBRC-004",
+          "invoice": "INV-EXP-9102",
+          "customer": "Nordic Living AB",
+          "currency": "EUR",
+          "invoiceAmount": 18200,
+          "realizedAmount": 9100,
+          "bankReference": "SBI-FIRC-502",
+          "exportDate": "2026-08-28",
+          "dueDate": "2026-10-10",
+          "ebrcStatus": "Submitted",
+          "brcStatus": "Pending",
+          "documents": [
+            "Commercial Invoice",
+            "Packing List"
+          ]
+        },
+        {
+          "id": "EBRC-005",
+          "invoice": "INV-EXP-9200",
+          "customer": "Berlin Interiors GmbH",
+          "currency": "EUR",
+          "invoiceAmount": 27500,
+          "realizedAmount": 0,
+          "bankReference": null,
+          "exportDate": "2026-09-10",
+          "dueDate": "2026-10-25",
+          "ebrcStatus": "Pending",
+          "brcStatus": "Pending",
+          "documents": []
+        }
+      ],
+      "fira": [
+        {
+          "id": "FIRA-001",
+          "invoice": "INV-EXP-8821",
+          "customer": "Pacific Imports Pty",
+          "foreignCurrency": "AUD",
+          "amount": 22400,
+          "receiptDate": "2026-08-28",
+          "bank": "SBI",
+          "transactionReference": "SBI-FIRC-441",
+          "firaStatus": "Completed",
+          "documents": [
+            "FIRC",
+            "Bank Advice"
+          ]
+        },
+        {
+          "id": "FIRA-002",
+          "invoice": "INV-EXP-9010",
+          "customer": "Britannia Home Ltd",
+          "foreignCurrency": "GBP",
+          "amount": 19800,
+          "receiptDate": "2026-08-25",
+          "bank": "HDFC",
+          "transactionReference": "HDFC-FIRC-992",
+          "firaStatus": "Verified",
+          "documents": [
+            "FIRC"
+          ]
+        },
+        {
+          "id": "FIRA-003",
+          "invoice": "INV-EXP-8901",
+          "customer": "HomeStyle Distributors LLC",
+          "foreignCurrency": "USD",
+          "amount": 28500,
+          "receiptDate": null,
+          "bank": "SBI",
+          "transactionReference": null,
+          "firaStatus": "Pending",
+          "documents": []
+        },
+        {
+          "id": "FIRA-004",
+          "invoice": "INV-EXP-9102",
+          "customer": "Nordic Living AB",
+          "foreignCurrency": "EUR",
+          "amount": 9100,
+          "receiptDate": "2026-09-15",
+          "bank": "SBI",
+          "transactionReference": "SBI-FIRC-502",
+          "firaStatus": "Submitted",
+          "documents": [
+            "Partial FIRC"
+          ]
+        }
+      ],
+      "exportDocuments": [
+        {
+          "id": "DOC-001",
+          "documentNumber": "CI-2026-0918-1001",
+          "shipment": "SHP-1001",
+          "type": "Commercial Invoice",
+          "version": 1,
+          "createdDate": "2026-09-18",
+          "status": "Draft",
+          "createdBy": "System"
+        },
+        {
+          "id": "DOC-002",
+          "documentNumber": "PL-2026-0918-1001",
+          "shipment": "SHP-1001",
+          "type": "Packing List",
+          "version": 1,
+          "createdDate": "2026-09-18",
+          "status": "Draft",
+          "createdBy": "System"
+        },
+        {
+          "id": "DOC-003",
+          "documentNumber": "CI-2026-0908-REP1",
+          "shipment": "REP-2026-001",
+          "type": "Commercial Invoice",
+          "version": 2,
+          "createdDate": "2026-09-08",
+          "status": "Final",
+          "createdBy": "Accounts Manager"
+        },
+        {
+          "id": "DOC-004",
+          "documentNumber": "PL-2026-0908-REP1",
+          "shipment": "REP-2026-001",
+          "type": "Packing List",
+          "version": 2,
+          "createdDate": "2026-09-08",
+          "status": "Final",
+          "createdBy": "Logistics Manager"
+        },
+        {
+          "id": "DOC-005",
+          "documentNumber": "PI-2026-0912-REP2",
+          "shipment": "REP-2026-002",
+          "type": "Proforma Invoice",
+          "version": 1,
+          "createdDate": "2026-09-12",
+          "status": "Approved",
+          "createdBy": "Sales Manager"
+        },
+        {
+          "id": "DOC-006",
+          "documentNumber": "SB-2026-0915-REP2",
+          "shipment": "REP-2026-002",
+          "type": "Shipping Bill",
+          "version": 1,
+          "createdDate": "2026-09-15",
+          "status": "Submitted",
+          "createdBy": "Logistics Manager"
+        },
+        {
+          "id": "DOC-007",
+          "documentNumber": "AWB-DHL-1005",
+          "shipment": "SHP-1005",
+          "type": "AWB / BL",
+          "version": 1,
+          "createdDate": "2026-09-16",
+          "status": "Final",
+          "createdBy": "India Warehouse"
+        },
+        {
+          "id": "DOC-008",
+          "documentNumber": "COO-2026-0908",
+          "shipment": "REP-2026-001",
+          "type": "Certificate / Origin Reference",
+          "version": 1,
+          "createdDate": "2026-09-08",
+          "status": "Final",
+          "createdBy": "Accounts Manager"
+        },
+        {
+          "id": "DOC-009",
+          "documentNumber": "CI-2026-0916-1005",
+          "shipment": "SHP-1005",
+          "type": "Commercial Invoice",
+          "version": 1,
+          "createdDate": "2026-09-16",
+          "status": "Generated",
+          "createdBy": "System"
+        },
+        {
+          "id": "DOC-010",
+          "documentNumber": "PL-2026-0916-1005",
+          "shipment": "SHP-1005",
+          "type": "Packing List",
+          "version": 1,
+          "createdDate": "2026-09-16",
+          "status": "Generated",
+          "createdBy": "System"
+        },
+        {
+          "id": "DOC-011",
+          "documentNumber": "CI-2026-0912-1012",
+          "shipment": "SHP-1012",
+          "type": "Commercial Invoice",
+          "version": 1,
+          "createdDate": "2026-09-12",
+          "status": "Approved",
+          "createdBy": "Accounts Manager"
+        },
+        {
+          "id": "DOC-012",
+          "documentNumber": "EXP-DET-001",
+          "shipment": "REP-2026-001",
+          "type": "Exporter Details",
+          "version": 1,
+          "createdDate": "2026-09-05",
+          "status": "Final",
+          "createdBy": "Super Admin"
+        },
+        {
+          "id": "DOC-013",
+          "documentNumber": "INCO-FOB-REP1",
+          "shipment": "REP-2026-001",
+          "type": "Incoterms",
+          "version": 1,
+          "createdDate": "2026-09-05",
+          "status": "Final",
+          "createdBy": "Logistics Manager"
+        },
+        {
+          "id": "DOC-014",
+          "documentNumber": "HS-5701-RUG",
+          "shipment": "REP-2026-001",
+          "type": "HS Codes",
+          "version": 1,
+          "createdDate": "2026-09-05",
+          "status": "Final",
+          "createdBy": "Accounts Manager"
+        },
+        {
+          "id": "DOC-015",
+          "documentNumber": "SUP-QC-REP1",
+          "shipment": "REP-2026-001",
+          "type": "Supporting Documents",
+          "version": 1,
+          "createdDate": "2026-09-07",
+          "status": "Final",
+          "createdBy": "India Warehouse"
+        },
+        {
+          "id": "DOC-016",
+          "documentNumber": "CI-2026-0907-1022",
+          "shipment": "SHP-1022",
+          "type": "Commercial Invoice",
+          "version": 1,
+          "createdDate": "2026-09-07",
+          "status": "Submitted",
+          "createdBy": "Accounts Manager"
+        }
+      ],
+      "payments": [
+        {
+          "id": "PAY-8700",
+          "invoice": "INV-B2B-003",
+          "amount": 22400,
+          "date": "2026-08-30",
+          "method": "Wire",
+          "reference": "BNK-43900"
+        },
+        {
+          "id": "PAY-8755",
+          "invoice": "INV-B2B-009",
+          "amount": 45000,
+          "date": "2026-09-08",
+          "method": "Wire",
+          "reference": "BNK-44200"
+        },
+        {
+          "id": "PAY-8821",
+          "invoice": "INV-B2B-002",
+          "amount": 9100,
+          "date": "2026-09-10",
+          "method": "Wire",
+          "reference": "BNK-44102"
+        },
+        {
+          "id": "PAY-8910",
+          "invoice": "INV-B2B-006",
+          "amount": 15600,
+          "date": "2026-09-18",
+          "method": "Wire",
+          "reference": "BNK-45001"
+        }
+      ],
+      "returns": [
+        {
+          "id": "RET-001",
+          "originalOrder": "#1016",
+          "originalShipment": "SHP-1016",
+          "customer": "Chris Evans",
+          "sku": "RUG-1001",
+          "product": "Hand Knotted Wool Rug",
+          "qty": 1,
+          "reason": "Customer refused delivery (RTO)",
+          "returnDestination": "USA East Warehouse",
+          "condition": "Resalable",
+          "refundStatus": "Pending",
+          "replacementStatus": "None",
+          "status": "In Transit Return"
+        },
+        {
+          "id": "RET-002",
+          "originalOrder": "#1013",
+          "originalShipment": "SHP-1013",
+          "customer": "Olivia Martinez",
+          "sku": "RUG-1015",
+          "product": "Antique Wash Rug",
+          "qty": 1,
+          "reason": "Delivery exception — customer requested return",
+          "returnDestination": "USA East Warehouse",
+          "condition": "Resalable",
+          "refundStatus": "Not Started",
+          "replacementStatus": "None",
+          "status": "Requested"
+        },
+        {
+          "id": "RET-003",
+          "originalOrder": "#1004",
+          "originalShipment": "SHP-1004",
+          "customer": "Michael Torres",
+          "sku": "RUG-1008",
+          "product": "Traditional Oriental Rug",
+          "qty": 1,
+          "reason": "Color not as expected",
+          "returnDestination": "USA East Warehouse",
+          "condition": "Resalable",
+          "refundStatus": "Refunded",
+          "replacementStatus": "None",
+          "status": "Closed"
+        },
+        {
+          "id": "RET-004",
+          "originalOrder": "#1002",
+          "originalShipment": "SHP-1002",
+          "customer": "Robert Chen",
+          "sku": "RUG-1006",
+          "product": "Flatweave Kilim",
+          "qty": 1,
+          "reason": "Damaged in transit",
+          "returnDestination": "USA East Warehouse",
+          "condition": "Damaged",
+          "refundStatus": "Pending",
+          "replacementStatus": "Approved",
+          "status": "Inspected"
+        },
+        {
+          "id": "RET-005",
+          "originalOrder": "#1011",
+          "originalShipment": "SHP-1011",
+          "customer": "Karen Davis",
+          "sku": "RUG-1009",
+          "product": "Natural Jute Runner",
+          "qty": 1,
+          "reason": "Wrong size shipped",
+          "returnDestination": "USA East Warehouse",
+          "condition": "Resalable",
+          "refundStatus": "Refunded",
+          "replacementStatus": "Shipped",
+          "status": "Closed"
+        },
+        {
+          "id": "RET-006",
+          "originalOrder": "#1008",
+          "originalShipment": "SHP-1008",
+          "customer": "Lisa Nguyen",
+          "sku": "RUG-1007",
+          "product": "Modern Geometric Rug",
+          "qty": 1,
+          "reason": "Changed mind",
+          "returnDestination": "USA East Warehouse",
+          "condition": "Resalable",
+          "refundStatus": "Not Started",
+          "replacementStatus": "None",
+          "status": "Approved"
+        },
+        {
+          "id": "RET-007",
+          "originalOrder": "#1020",
+          "originalShipment": "SHP-1020",
+          "customer": "Patricia White",
+          "sku": "RUG-1016",
+          "product": "Kids Playroom Rug",
+          "qty": 1,
+          "reason": "Stain on arrival",
+          "returnDestination": "USA East Warehouse",
+          "condition": "Repairable",
+          "refundStatus": "Pending",
+          "replacementStatus": "None",
+          "status": "Received"
+        },
+        {
+          "id": "RET-008",
+          "originalOrder": "#1007",
+          "originalShipment": "SHP-1007",
+          "customer": "David Park",
+          "sku": "RUG-1010",
+          "product": "Luxury Wool Rug",
+          "qty": 1,
+          "reason": "Quality concern",
+          "returnDestination": "Amazon FBA",
+          "condition": "Resalable",
+          "refundStatus": "Refunded",
+          "replacementStatus": "None",
+          "status": "Closed"
+        }
+      ],
+      "claims": [
+        {
+          "id": "CLM-001",
+          "shipment": "SHP-1016",
+          "order": "#1016",
+          "courier": "UPS",
+          "claimType": "RTO Damage",
+          "claimAmount": 2200,
+          "approvedAmount": null,
+          "status": "Submitted",
+          "evidence": [
+            "Photos",
+            "AWB"
+          ],
+          "notes": "Tentative Workflow — claim rules pending finalization",
+          "tentative": true
+        },
+        {
+          "id": "CLM-002",
+          "shipment": "SHP-1013",
+          "order": "#1013",
+          "courier": "FedEx",
+          "claimType": "Delay Compensation",
+          "claimAmount": 500,
+          "approvedAmount": 250,
+          "status": "Partially Approved",
+          "evidence": [
+            "Tracking log"
+          ],
+          "notes": "Tentative Workflow",
+          "tentative": true
+        },
+        {
+          "id": "CLM-003",
+          "shipment": "SHP-1005",
+          "order": "#1005",
+          "courier": "DHL",
+          "claimType": "Weight Overbilling",
+          "claimAmount": 220,
+          "approvedAmount": 220,
+          "status": "Recovered",
+          "evidence": [
+            "Courier invoice audit"
+          ],
+          "notes": "Linked to courier audit CAL-001",
+          "tentative": true
+        },
+        {
+          "id": "CLM-004",
+          "shipment": "REP-2026-001",
+          "order": null,
+          "courier": "Ocean Freight",
+          "claimType": "Shortage",
+          "claimAmount": 3100,
+          "approvedAmount": null,
+          "status": "Under Review",
+          "evidence": [
+            "USA receipt RCP-USA-043"
+          ],
+          "notes": "1 unit short on RUG-1006",
+          "tentative": true
+        },
+        {
+          "id": "CLM-005",
+          "shipment": "SHP-1022",
+          "order": "#1022",
+          "courier": "DHL",
+          "claimType": "Transit Damage",
+          "claimAmount": 1500,
+          "approvedAmount": null,
+          "status": "Draft",
+          "evidence": [],
+          "notes": "Tentative Workflow — awaiting photos",
+          "tentative": true
+        }
+      ],
+      "mto": [
+        {
+          "id": "MTO-001",
+          "order": "#1018",
+          "sku": "RUG-1006",
+          "product": "Flatweave Kilim",
+          "qty": 1,
+          "customer": "Nina Patel",
+          "expectedReady": "2026-09-28",
+          "stage": "Production",
+          "pendingQty": 1,
+          "notes": "Custom colorway — indigo/cream",
+          "attachments": []
+        },
+        {
+          "id": "MTO-002",
+          "order": "#1027",
+          "sku": "RUG-1005",
+          "product": "Wool Silk Rug",
+          "qty": 1,
+          "customer": "Custom B2B",
+          "expectedReady": "2026-10-05",
+          "stage": "To Make",
+          "pendingQty": 1,
+          "notes": "Bespoke size 7x11",
+          "attachments": []
+        },
+        {
+          "id": "MTO-003",
+          "order": "#1028",
+          "sku": "RUG-1001",
+          "product": "Hand Knotted Wool Rug",
+          "qty": 2,
+          "customer": "Cascade Rugs Inc",
+          "expectedReady": "2026-10-12",
+          "stage": "QC Ready",
+          "pendingQty": 0,
+          "notes": "Bulk B2B order",
+          "attachments": [
+            "QC sheet"
+          ]
+        },
+        {
+          "id": "MTO-004",
+          "order": "#1029",
+          "sku": "RUG-1015",
+          "product": "Antique Wash Rug",
+          "qty": 1,
+          "customer": "Private Client",
+          "expectedReady": "2026-09-25",
+          "stage": "Pack",
+          "pendingQty": 0,
+          "notes": "Ready to pack",
+          "attachments": []
+        },
+        {
+          "id": "MTO-005",
+          "order": "#1030",
+          "sku": "RUG-1004",
+          "product": "Vintage Persian Rug",
+          "qty": 1,
+          "customer": "Nordic Living AB",
+          "expectedReady": "2026-10-20",
+          "stage": "To Make",
+          "pendingQty": 1,
+          "notes": "Special dye lot",
+          "attachments": []
+        },
+        {
+          "id": "MTO-006",
+          "order": "#1031",
+          "sku": "RUG-1010",
+          "product": "Luxury Wool Rug",
+          "qty": 1,
+          "customer": "HomeStyle Distributors",
+          "expectedReady": "2026-10-08",
+          "stage": "Production",
+          "pendingQty": 1,
+          "notes": "",
+          "attachments": []
+        }
+      ],
+      "pickPack": [
+        {
+          "id": "PP-001",
+          "order": "#1001",
+          "sku": "RUG-1001",
+          "product": "Hand Knotted Wool Rug",
+          "thumbnail": null,
+          "bin": "IND-RUG-01",
+          "orderedQty": 1,
+          "pickQty": 0,
+          "packedQty": 0,
+          "barcode": "8901001001001",
+          "operator": "Amit Singh",
+          "status": "Awaiting Pick"
+        },
+        {
+          "id": "PP-002",
+          "order": "#1009",
+          "sku": "RUG-1004",
+          "product": "Vintage Persian Rug",
+          "thumbnail": null,
+          "bin": "IND-B-01",
+          "orderedQty": 1,
+          "pickQty": 1,
+          "packedQty": 0,
+          "barcode": "8901001001004",
+          "operator": "Amit Singh",
+          "status": "Picking"
+        },
+        {
+          "id": "PP-003",
+          "order": "#1003",
+          "sku": "RUG-1003",
+          "product": "Jute Area Rug",
+          "thumbnail": null,
+          "bin": "IND-A-02",
+          "orderedQty": 1,
+          "pickQty": 1,
+          "packedQty": 1,
+          "barcode": "8901001001003",
+          "operator": "Ravi Kumar",
+          "status": "Packed"
+        },
+        {
+          "id": "PP-004",
+          "order": "#1006",
+          "sku": "RUG-1005",
+          "product": "Wool Silk Rug",
+          "thumbnail": null,
+          "bin": "IND-RUG-01",
+          "orderedQty": 1,
+          "pickQty": 1,
+          "packedQty": 1,
+          "barcode": "8901001001005",
+          "operator": "Ravi Kumar",
+          "status": "Packed"
+        },
+        {
+          "id": "PP-005",
+          "order": "#1017",
+          "sku": "RUG-1003",
+          "product": "Jute Area Rug",
+          "thumbnail": null,
+          "bin": "IND-A-02",
+          "orderedQty": 1,
+          "pickQty": 1,
+          "packedQty": 1,
+          "barcode": "8901001001003",
+          "operator": "Amit Singh",
+          "status": "Packed"
+        },
+        {
+          "id": "PP-006",
+          "order": "#1014",
+          "sku": "RUG-1011",
+          "product": "Round Braided Rug",
+          "thumbnail": null,
+          "bin": "IND-A-01",
+          "orderedQty": 2,
+          "pickQty": 0,
+          "packedQty": 0,
+          "barcode": "8901001001011",
+          "operator": "Unassigned",
+          "status": "Awaiting Pick"
+        },
+        {
+          "id": "PP-007",
+          "order": "#1021",
+          "sku": "RUG-1005",
+          "product": "Wool Silk Rug",
+          "thumbnail": null,
+          "bin": "IND-RUG-01",
+          "orderedQty": 1,
+          "pickQty": 0,
+          "packedQty": 0,
+          "barcode": "8901001001005",
+          "operator": "Unassigned",
+          "status": "Awaiting Pick"
+        },
+        {
+          "id": "PP-008",
+          "order": "#1012",
+          "sku": "RUG-1012",
+          "product": "Shaggy Plush Rug",
+          "thumbnail": null,
+          "bin": "IND-A-02",
+          "orderedQty": 1,
+          "pickQty": 1,
+          "packedQty": 1,
+          "barcode": "8901001001012",
+          "operator": "Ravi Kumar",
+          "status": "Packed"
+        }
+      ],
+      "packingQueue": [
+        {
+          "id": "PQ-001",
+          "order": "#1009",
+          "sku": "RUG-1004",
+          "status": "Awaiting Pack Spec",
+          "cartons": 0,
+          "proof": null
+        },
+        {
+          "id": "PQ-002",
+          "order": "#1003",
+          "sku": "RUG-1003",
+          "status": "Ready for Dispatch",
+          "cartons": 1,
+          "proof": "packing-proof-1003.jpg"
+        },
+        {
+          "id": "PQ-003",
+          "order": "#1006",
+          "sku": "RUG-1005",
+          "status": "Ready for Dispatch",
+          "cartons": 1,
+          "proof": "packing-proof-1006.jpg"
+        },
+        {
+          "id": "PQ-004",
+          "order": "#1017",
+          "sku": "RUG-1003",
+          "status": "Ready for Dispatch",
+          "cartons": 1,
+          "proof": "packing-proof-1017.jpg"
+        }
+      ],
+      "users": [
+        {
+          "id": "USR-001",
+          "name": "Arjun Mehta",
+          "email": "admin@rugos.demo",
+          "role": "Super Admin",
+          "department": "Administration",
+          "location": "Jaipur HQ",
+          "status": "Active",
+          "lastLogin": "2026-09-22T08:15:00"
+        },
+        {
+          "id": "USR-002",
+          "name": "Priya Sharma",
+          "email": "priya@rugos.demo",
+          "role": "Management",
+          "department": "Operations",
+          "location": "Jaipur HQ",
+          "status": "Active",
+          "lastLogin": "2026-09-22T07:50:00"
+        },
+        {
+          "id": "USR-003",
+          "name": "Amit Singh",
+          "email": "amit@rugos.demo",
+          "role": "India Warehouse",
+          "department": "Warehouse",
+          "location": "India Main Warehouse",
+          "status": "Active",
+          "lastLogin": "2026-09-22T06:30:00"
+        },
+        {
+          "id": "USR-004",
+          "name": "Ravi Kumar",
+          "email": "ravi@rugos.demo",
+          "role": "India Warehouse",
+          "department": "Warehouse",
+          "location": "India Main Warehouse",
+          "status": "Active",
+          "lastLogin": "2026-09-21T18:00:00"
+        },
+        {
+          "id": "USR-005",
+          "name": "Mike Johnson",
+          "email": "mike@rugos.demo",
+          "role": "USA Warehouse",
+          "department": "Warehouse",
+          "location": "USA East Warehouse",
+          "status": "Active",
+          "lastLogin": "2026-09-22T01:10:00"
+        },
+        {
+          "id": "USR-006",
+          "name": "Neha Gupta",
+          "email": "neha@rugos.demo",
+          "role": "Accounts",
+          "department": "Finance",
+          "location": "Jaipur HQ",
+          "status": "Active",
+          "lastLogin": "2026-09-22T09:00:00"
+        },
+        {
+          "id": "USR-007",
+          "name": "Sanjay Verma",
+          "email": "sanjay@rugos.demo",
+          "role": "Sales",
+          "department": "Sales",
+          "location": "Jaipur HQ",
+          "status": "Active",
+          "lastLogin": "2026-09-21T16:40:00"
+        },
+        {
+          "id": "USR-008",
+          "name": "Anita Desai",
+          "email": "anita@rugos.demo",
+          "role": "Logistics",
+          "department": "Logistics",
+          "location": "Jaipur HQ",
+          "status": "Active",
+          "lastLogin": "2026-09-22T08:45:00"
+        },
+        {
+          "id": "USR-009",
+          "name": "Vikram Rao",
+          "email": "vikram@rugos.demo",
+          "role": "Auditor",
+          "department": "Compliance",
+          "location": "Jaipur HQ",
+          "status": "Active",
+          "lastLogin": "2026-09-20T11:00:00"
+        }
+      ],
+      "alerts": [
+        {
+          "id": "ALT-001",
+          "type": "Mapping Missing",
+          "title": "SKU mapping required for ETS-HK-WOOL-NEW",
+          "priority": "Critical",
+          "module": "SKU Mapping",
+          "link": "/sku-mapping",
+          "read": false,
+          "acknowledged": false,
+          "resolved": false,
+          "createdAt": "2026-09-22T08:10:00"
+        },
+        {
+          "id": "ALT-002",
+          "type": "Overdue Order",
+          "title": "Order #1010 awaiting inventory allocation",
+          "priority": "High",
+          "module": "Orders",
+          "link": "/orders/1010",
+          "read": false,
+          "acknowledged": false,
+          "resolved": false,
+          "createdAt": "2026-09-22T07:00:00"
+        },
+        {
+          "id": "ALT-003",
+          "type": "Shipment Delay",
+          "title": "Delayed India dispatch for Order #1009",
+          "priority": "High",
+          "module": "Warehouse",
+          "link": "/warehouse/dispatch",
+          "read": false,
+          "acknowledged": false,
+          "resolved": false,
+          "createdAt": "2026-09-21T16:00:00"
+        },
+        {
+          "id": "ALT-004",
+          "type": "USA Receipt Discrepancy",
+          "title": "Short receipt on REP-2026-001 / RUG-1006",
+          "priority": "Critical",
+          "module": "Replenishment",
+          "link": "/warehouse/usa-receipts",
+          "read": false,
+          "acknowledged": true,
+          "resolved": false,
+          "createdAt": "2026-09-18T14:00:00"
+        },
+        {
+          "id": "ALT-005",
+          "type": "Courier Exception",
+          "title": "Delivery exception on SHP-1013",
+          "priority": "High",
+          "module": "Shipping",
+          "link": "/shipping-exceptions",
+          "read": true,
+          "acknowledged": true,
+          "resolved": false,
+          "createdAt": "2026-09-21T09:00:00"
+        },
+        {
+          "id": "ALT-006",
+          "type": "Overdue Receivable",
+          "title": "INV-B2B-001 overdue — HomeStyle Distributors",
+          "priority": "Critical",
+          "module": "Finance",
+          "link": "/finance/receivables",
+          "read": false,
+          "acknowledged": false,
+          "resolved": false,
+          "createdAt": "2026-09-15T09:00:00"
+        },
+        {
+          "id": "ALT-007",
+          "type": "Courier Variance",
+          "title": "Courier invoice variance ₹82,450 open disputes",
+          "priority": "High",
+          "module": "Finance",
+          "link": "/finance/courier-audit",
+          "read": false,
+          "acknowledged": false,
+          "resolved": false,
+          "createdAt": "2026-09-20T11:00:00"
+        },
+        {
+          "id": "ALT-008",
+          "type": "Pending Export Realization",
+          "title": "EBRC pending for INV-EXP-8901",
+          "priority": "Medium",
+          "module": "Export",
+          "link": "/export/ebrc-brc",
+          "read": false,
+          "acknowledged": false,
+          "resolved": false,
+          "createdAt": "2026-09-19T10:00:00"
+        },
+        {
+          "id": "ALT-009",
+          "type": "Low Stock",
+          "title": "RUG-1013 below reorder level",
+          "priority": "High",
+          "module": "Inventory",
+          "link": "/inventory",
+          "read": false,
+          "acknowledged": false,
+          "resolved": false,
+          "createdAt": "2026-09-21T08:00:00"
+        },
+        {
+          "id": "ALT-010",
+          "type": "Low Stock",
+          "title": "RUG-1017 out of stock in India",
+          "priority": "Critical",
+          "module": "Inventory",
+          "link": "/inventory",
+          "read": true,
+          "acknowledged": true,
+          "resolved": false,
+          "createdAt": "2026-09-18T12:00:00"
+        },
+        {
+          "id": "ALT-011",
+          "type": "Replenishment Required",
+          "title": "USA low stock projected for RUG-1004",
+          "priority": "Medium",
+          "module": "Replenishment",
+          "link": "/replenishment",
+          "read": false,
+          "acknowledged": false,
+          "resolved": false,
+          "createdAt": "2026-09-22T06:00:00"
+        },
+        {
+          "id": "ALT-012",
+          "type": "Return Received",
+          "title": "RET-007 received at USA warehouse",
+          "priority": "Medium",
+          "module": "Returns",
+          "link": "/returns",
+          "read": false,
+          "acknowledged": false,
+          "resolved": false,
+          "createdAt": "2026-09-21T15:00:00"
+        },
+        {
+          "id": "ALT-013",
+          "type": "Failed Sync",
+          "title": "Walmart order import — 2 failed records",
+          "priority": "Medium",
+          "module": "Integrations",
+          "link": "/marketplace-imports",
+          "read": true,
+          "acknowledged": false,
+          "resolved": false,
+          "createdAt": "2026-09-22T05:30:00"
+        },
+        {
+          "id": "ALT-014",
+          "type": "Mapping Missing",
+          "title": "AMZ-RUG-NEW-BLUE needs internal SKU",
+          "priority": "High",
+          "module": "SKU Mapping",
+          "link": "/sku-mapping",
+          "read": false,
+          "acknowledged": false,
+          "resolved": false,
+          "createdAt": "2026-09-22T08:05:00"
+        },
+        {
+          "id": "ALT-015",
+          "type": "Overdue Receivable",
+          "title": "INV-B2B-005 overdue — Britannia Home Ltd",
+          "priority": "High",
+          "module": "Finance",
+          "link": "/finance/receivables",
+          "read": false,
+          "acknowledged": false,
+          "resolved": false,
+          "createdAt": "2026-09-10T09:00:00"
+        },
+        {
+          "id": "ALT-016",
+          "type": "Shipment Delay",
+          "title": "SHP-1005 transit delay at CVG hub",
+          "priority": "Medium",
+          "module": "Shipping",
+          "link": "/shipments/SHP-1005",
+          "read": false,
+          "acknowledged": false,
+          "resolved": false,
+          "createdAt": "2026-09-20T08:00:00"
+        }
+      ],
+      "auditLogs": [
+        {
+          "id": "AUD-001",
+          "timestamp": "2026-09-18T09:05:00",
+          "user": "System Sync",
+          "module": "Orders",
+          "action": "Import",
+          "reference": "Order #1001",
+          "oldValue": null,
+          "newValue": "Imported",
+          "ip": "10.0.0.1",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-002",
+          "timestamp": "2026-09-18T09:06:00",
+          "user": "System",
+          "module": "Orders",
+          "action": "Normalize",
+          "reference": "Order #1001",
+          "oldValue": "Imported",
+          "newValue": "Mapping Required",
+          "ip": "10.0.0.1",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-003",
+          "timestamp": "2026-09-17T14:30:00",
+          "user": "Priya Sharma",
+          "module": "Inventory",
+          "action": "Reserve",
+          "reference": "Order #1002",
+          "oldValue": "Available 20",
+          "newValue": "Reserved +2",
+          "ip": "10.0.1.12",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-004",
+          "timestamp": "2026-09-17T15:00:00",
+          "user": "Amit Singh",
+          "module": "Warehouse",
+          "action": "Start Pick",
+          "reference": "Order #1003",
+          "oldValue": "Awaiting Pick",
+          "newValue": "Picking",
+          "ip": "10.0.2.5",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-005",
+          "timestamp": "2026-09-17T16:20:00",
+          "user": "Amit Singh",
+          "module": "Shipping",
+          "action": "AWB Updated",
+          "reference": "SHP-1003",
+          "oldValue": null,
+          "newValue": "DLV88321001",
+          "ip": "10.0.2.5",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-006",
+          "timestamp": "2026-09-18T14:00:00",
+          "user": "Mike Johnson",
+          "module": "Warehouse",
+          "action": "USA Receipt Confirmed",
+          "reference": "RCP-USA-041",
+          "oldValue": "Pending",
+          "newValue": "Matched",
+          "ip": "10.0.3.8",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-007",
+          "timestamp": "2026-09-18T14:05:00",
+          "user": "Mike Johnson",
+          "module": "Warehouse",
+          "action": "Create Discrepancy",
+          "reference": "RCP-USA-043",
+          "oldValue": "Expected 10",
+          "newValue": "Received 9",
+          "ip": "10.0.3.8",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-008",
+          "timestamp": "2026-09-20T11:30:00",
+          "user": "Neha Gupta",
+          "module": "Finance",
+          "action": "Courier Invoice Disputed",
+          "reference": "CI-002",
+          "oldValue": "Pending Audit",
+          "newValue": "Disputed",
+          "ip": "10.0.1.20",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-009",
+          "timestamp": "2026-09-18T10:00:00",
+          "user": "Neha Gupta",
+          "module": "Finance",
+          "action": "Payment Recorded",
+          "reference": "INV-B2B-006",
+          "oldValue": "Open",
+          "newValue": "Partially Paid",
+          "ip": "10.0.1.20",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-010",
+          "timestamp": "2026-09-15T09:00:00",
+          "user": "Neha Gupta",
+          "module": "Products",
+          "action": "Product Cost Changed",
+          "reference": "RUG-1001",
+          "oldValue": "8200",
+          "newValue": "8500",
+          "ip": "10.0.1.20",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-011",
+          "timestamp": "2026-09-19T08:00:00",
+          "user": "Anita Desai",
+          "module": "Replenishment",
+          "action": "Approve",
+          "reference": "REP-2026-003",
+          "oldValue": "Draft",
+          "newValue": "Approved",
+          "ip": "10.0.1.15",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-012",
+          "timestamp": "2026-09-21T09:00:00",
+          "user": "System",
+          "module": "Shipping",
+          "action": "Exception Raised",
+          "reference": "SHP-1013",
+          "oldValue": "In Transit",
+          "newValue": "Exception",
+          "ip": "10.0.0.1",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-013",
+          "timestamp": "2026-09-12T10:00:00",
+          "user": "Sanjay Verma",
+          "module": "SKU Mapping",
+          "action": "Map SKU",
+          "reference": "AMZ-PERS-912",
+          "oldValue": null,
+          "newValue": "RUG-1004",
+          "ip": "10.0.1.18",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-014",
+          "timestamp": "2026-09-16T12:00:00",
+          "user": "Ravi Kumar",
+          "module": "Warehouse",
+          "action": "Mark Packed",
+          "reference": "Order #1006",
+          "oldValue": "Packing",
+          "newValue": "Packed",
+          "ip": "10.0.2.6",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-015",
+          "timestamp": "2026-09-08T16:00:00",
+          "user": "Anita Desai",
+          "module": "Replenishment",
+          "action": "Dispatch India",
+          "reference": "REP-2026-001",
+          "oldValue": "Packing",
+          "newValue": "Dispatched India",
+          "ip": "10.0.1.15",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-016",
+          "timestamp": "2026-09-22T05:30:00",
+          "user": "System Sync",
+          "module": "Integrations",
+          "action": "Import Failed",
+          "reference": "Walmart Sync",
+          "oldValue": null,
+          "newValue": "2 failed",
+          "ip": "10.0.0.1",
+          "status": "Failed"
+        },
+        {
+          "id": "AUD-017",
+          "timestamp": "2026-09-21T11:00:00",
+          "user": "Vikram Rao",
+          "module": "Inventory",
+          "action": "Cycle Count",
+          "reference": "CC-012",
+          "oldValue": "3",
+          "newValue": "2",
+          "ip": "10.0.1.30",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-018",
+          "timestamp": "2026-09-20T14:00:00",
+          "user": "Neha Gupta",
+          "module": "Export",
+          "action": "EBRC Submit",
+          "reference": "EBRC-004",
+          "oldValue": "Pending",
+          "newValue": "Submitted",
+          "ip": "10.0.1.20",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-019",
+          "timestamp": "2026-09-19T16:00:00",
+          "user": "Mike Johnson",
+          "module": "Returns",
+          "action": "Inspect Return",
+          "reference": "RET-004",
+          "oldValue": "Received",
+          "newValue": "Inspected",
+          "ip": "10.0.3.8",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-020",
+          "timestamp": "2026-09-18T17:00:00",
+          "user": "Anita Desai",
+          "module": "Claims",
+          "action": "Submit Claim",
+          "reference": "CLM-001",
+          "oldValue": "Draft",
+          "newValue": "Submitted",
+          "ip": "10.0.1.15",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-021",
+          "timestamp": "2026-09-17T09:00:00",
+          "user": "Priya Sharma",
+          "module": "Orders",
+          "action": "Allocate Inventory",
+          "reference": "Order #1014",
+          "oldValue": "Awaiting Inventory",
+          "newValue": "Reserved",
+          "ip": "10.0.1.12",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-022",
+          "timestamp": "2026-09-16T08:00:00",
+          "user": "System",
+          "module": "Finance",
+          "action": "Cost Recalculation",
+          "reference": "Batch",
+          "oldValue": null,
+          "newValue": "48 orders",
+          "ip": "10.0.0.1",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-023",
+          "timestamp": "2026-09-15T14:00:00",
+          "user": "Amit Singh",
+          "module": "Shipping",
+          "action": "Generate Label",
+          "reference": "Order #1003",
+          "oldValue": null,
+          "newValue": "Label Generated",
+          "ip": "10.0.2.5",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-024",
+          "timestamp": "2026-09-14T10:00:00",
+          "user": "Ravi Kumar",
+          "module": "Warehouse",
+          "action": "Dispatch",
+          "reference": "Order #1012",
+          "oldValue": "Ready for Dispatch",
+          "newValue": "Dispatched",
+          "ip": "10.0.2.6",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-025",
+          "timestamp": "2026-09-13T11:00:00",
+          "user": "Sanjay Verma",
+          "module": "Products",
+          "action": "Create Product",
+          "reference": "RUG-1016",
+          "oldValue": null,
+          "newValue": "Active",
+          "ip": "10.0.1.18",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-026",
+          "timestamp": "2026-09-12T15:00:00",
+          "user": "Neha Gupta",
+          "module": "Finance",
+          "action": "Approve Document",
+          "reference": "DOC-011",
+          "oldValue": "Generated",
+          "newValue": "Approved",
+          "ip": "10.0.1.20",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-027",
+          "timestamp": "2026-09-11T09:00:00",
+          "user": "Arjun Mehta",
+          "module": "Users",
+          "action": "Role Update",
+          "reference": "USR-008",
+          "oldValue": "Sales",
+          "newValue": "Logistics",
+          "ip": "10.0.1.1",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-028",
+          "timestamp": "2026-09-10T13:00:00",
+          "user": "System",
+          "module": "Alerts",
+          "action": "Create Alert",
+          "reference": "ALT-006",
+          "oldValue": null,
+          "newValue": "Overdue Receivable",
+          "ip": "10.0.0.1",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-029",
+          "timestamp": "2026-09-09T10:00:00",
+          "user": "Anita Desai",
+          "module": "Integrations",
+          "action": "Manual Sync",
+          "reference": "Amazon",
+          "oldValue": null,
+          "newValue": "Success",
+          "ip": "10.0.1.15",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-030",
+          "timestamp": "2026-09-08T12:00:00",
+          "user": "Mike Johnson",
+          "module": "Inventory",
+          "action": "Transfer",
+          "reference": "TRF-091",
+          "oldValue": "USA Warehouse",
+          "newValue": "Amazon FBA",
+          "ip": "10.0.3.8",
+          "status": "Success"
+        },
+        {
+          "id": "AUD-031",
+          "timestamp": "2026-09-22T08:00:00",
+          "user": "Priya Sharma",
+          "module": "Orders",
+          "action": "View Demo Workflow",
+          "reference": "Order #1001",
+          "oldValue": null,
+          "newValue": "Opened",
+          "ip": "10.0.1.12",
+          "status": "Success"
+        }
+      ],
+      "jobs": [
+        {
+          "id": "JOB-001",
+          "job": "Amazon Order Import",
+          "lastRun": "2026-09-22T05:00:00",
+          "duration": "42s",
+          "records": 36,
+          "status": "Success",
+          "nextRun": "2026-09-22T11:00:00"
+        },
+        {
+          "id": "JOB-002",
+          "job": "Etsy Order Import",
+          "lastRun": "2026-09-22T05:05:00",
+          "duration": "28s",
+          "records": 12,
+          "status": "Success",
+          "nextRun": "2026-09-22T11:05:00"
+        },
+        {
+          "id": "JOB-003",
+          "job": "Walmart Order Import",
+          "lastRun": "2026-09-22T05:10:00",
+          "duration": "35s",
+          "records": 8,
+          "status": "Failed",
+          "nextRun": "2026-09-22T11:10:00"
+        },
+        {
+          "id": "JOB-004",
+          "job": "Inventory Sync",
+          "lastRun": "2026-09-22T04:00:00",
+          "duration": "1m 12s",
+          "records": 20,
+          "status": "Success",
+          "nextRun": "2026-09-22T10:00:00"
+        },
+        {
+          "id": "JOB-005",
+          "job": "Tracking Sync",
+          "lastRun": "2026-09-22T06:00:00",
+          "duration": "55s",
+          "records": 15,
+          "status": "Running",
+          "nextRun": "2026-09-22T12:00:00"
+        },
+        {
+          "id": "JOB-006",
+          "job": "Cost Recalculation",
+          "lastRun": "2026-09-22T03:00:00",
+          "duration": "2m 05s",
+          "records": 48,
+          "status": "Success",
+          "nextRun": "2026-09-23T03:00:00"
+        },
+        {
+          "id": "JOB-007",
+          "job": "Receivable Ageing",
+          "lastRun": "2026-09-22T02:00:00",
+          "duration": "18s",
+          "records": 11,
+          "status": "Success",
+          "nextRun": "2026-09-23T02:00:00"
+        },
+        {
+          "id": "JOB-008",
+          "job": "Forecast Refresh",
+          "lastRun": "2026-09-21T22:00:00",
+          "duration": "1m 40s",
+          "records": 16,
+          "status": "Queued",
+          "nextRun": "2026-09-22T22:00:00"
+        }
+      ],
+      "integrations": [
+        {
+          "id": "INT-001",
+          "name": "Amazon",
+          "category": "Marketplace",
+          "status": "Demo Connected",
+          "note": "Demo data only — live API requires credentials",
+          "lastSync": "2026-09-22T05:00:00"
+        },
+        {
+          "id": "INT-002",
+          "name": "Etsy",
+          "category": "Marketplace",
+          "status": "Demo Connected",
+          "note": "Demo data only — live API requires credentials",
+          "lastSync": "2026-09-22T05:05:00"
+        },
+        {
+          "id": "INT-003",
+          "name": "Walmart",
+          "category": "Marketplace",
+          "status": "Demo Connected",
+          "note": "Demo data only — live API requires credentials",
+          "lastSync": "2026-09-22T05:10:00"
+        },
+        {
+          "id": "INT-004",
+          "name": "India Courier Portal",
+          "category": "Courier",
+          "status": "Manual Process",
+          "note": "Interim manual/reference workflow — operator maps AWB/QR from external portal",
+          "lastSync": null
+        },
+        {
+          "id": "INT-005",
+          "name": "Future USA Courier",
+          "category": "Courier",
+          "status": "Pending API",
+          "note": "Future / pending provider integration — not live",
+          "lastSync": null
+        },
+        {
+          "id": "INT-006",
+          "name": "Email",
+          "category": "Communication",
+          "status": "Demo Connected",
+          "note": "Demo notifications only",
+          "lastSync": "2026-09-22T08:00:00"
+        },
+        {
+          "id": "INT-007",
+          "name": "SMS",
+          "category": "Communication",
+          "status": "Not Configured",
+          "note": "Requires external provider/account",
+          "lastSync": null
+        },
+        {
+          "id": "INT-008",
+          "name": "WhatsApp",
+          "category": "Communication",
+          "status": "Not Configured",
+          "note": "Requires external provider/account",
+          "lastSync": null
+        }
+      ],
+      "importLogs": [
+        {
+          "id": "IMP-001",
+          "source": "Amazon",
+          "startedAt": "2026-09-22T05:00:00",
+          "completedAt": "2026-09-22T05:00:42",
+          "recordsReceived": 36,
+          "created": 4,
+          "updated": 30,
+          "skipped": 2,
+          "failed": 0
+        },
+        {
+          "id": "IMP-002",
+          "source": "Etsy",
+          "startedAt": "2026-09-22T05:05:00",
+          "completedAt": "2026-09-22T05:05:28",
+          "recordsReceived": 12,
+          "created": 2,
+          "updated": 9,
+          "skipped": 1,
+          "failed": 0
+        },
+        {
+          "id": "IMP-003",
+          "source": "Walmart",
+          "startedAt": "2026-09-22T05:10:00",
+          "completedAt": "2026-09-22T05:10:35",
+          "recordsReceived": 10,
+          "created": 1,
+          "updated": 7,
+          "skipped": 0,
+          "failed": 2
+        },
+        {
+          "id": "IMP-004",
+          "source": "Amazon",
+          "startedAt": "2026-09-21T17:00:00",
+          "completedAt": "2026-09-21T17:00:38",
+          "recordsReceived": 28,
+          "created": 3,
+          "updated": 24,
+          "skipped": 1,
+          "failed": 0
+        },
+        {
+          "id": "IMP-005",
+          "source": "Etsy",
+          "startedAt": "2026-09-21T17:05:00",
+          "completedAt": "2026-09-21T17:05:22",
+          "recordsReceived": 9,
+          "created": 1,
+          "updated": 8,
+          "skipped": 0,
+          "failed": 0
+        }
+      ],
+      "marketplaceSync": [
+        {
+          "marketplace": "Amazon",
+          "status": "Demo Connected",
+          "lastSync": "2026-09-22T05:00:00",
+          "ordersImported": 156,
+          "failedImports": 0,
+          "syncStatus": "Healthy",
+          "nextSync": "2026-09-22T11:00:00"
+        },
+        {
+          "marketplace": "Etsy",
+          "status": "Demo Connected",
+          "lastSync": "2026-09-22T05:05:00",
+          "ordersImported": 64,
+          "failedImports": 0,
+          "syncStatus": "Healthy",
+          "nextSync": "2026-09-22T11:05:00"
+        },
+        {
+          "marketplace": "Walmart",
+          "status": "Demo Connected",
+          "lastSync": "2026-09-22T05:10:00",
+          "ordersImported": 42,
+          "failedImports": 2,
+          "syncStatus": "Warning",
+          "nextSync": "2026-09-22T11:10:00"
+        }
+      ],
+      "rolePermissions": {
+        "Management": {
+          "Orders": [
+            "View",
+            "Create",
+            "Edit",
+            "Approve",
+            "Export"
+          ],
+          "Products": [
+            "View",
+            "Create",
+            "Edit",
+            "Export"
+          ],
+          "Inventory": [
+            "View",
+            "Edit",
+            "Approve",
+            "Export"
+          ],
+          "Warehouse": [
+            "View",
+            "Approve"
+          ],
+          "Shipping": [
+            "View",
+            "Approve"
+          ],
+          "Export": [
+            "View",
+            "Approve"
+          ],
+          "Returns": [
+            "View",
+            "Approve"
+          ],
+          "Finance": [
+            "View",
+            "Approve",
+            "Export"
+          ],
+          "Reports": [
+            "View",
+            "Export"
+          ],
+          "Users": [
+            "View"
+          ],
+          "Settings": [
+            "View"
+          ]
+        },
+        "India Warehouse": {
+          "Orders": [
+            "View",
+            "Process"
+          ],
+          "Products": [
+            "View"
+          ],
+          "Inventory": [
+            "View",
+            "Edit",
+            "Process"
+          ],
+          "Warehouse": [
+            "View",
+            "Create",
+            "Edit",
+            "Process"
+          ],
+          "Shipping": [
+            "View",
+            "Edit",
+            "Process"
+          ],
+          "Export": [
+            "View"
+          ],
+          "Returns": [
+            "View"
+          ],
+          "Finance": [],
+          "Reports": [
+            "View"
+          ],
+          "Users": [],
+          "Settings": []
+        },
+        "USA Warehouse": {
+          "Orders": [
+            "View",
+            "Process"
+          ],
+          "Products": [
+            "View"
+          ],
+          "Inventory": [
+            "View",
+            "Edit",
+            "Process"
+          ],
+          "Warehouse": [
+            "View",
+            "Create",
+            "Edit",
+            "Process"
+          ],
+          "Shipping": [
+            "View",
+            "Edit",
+            "Process"
+          ],
+          "Export": [],
+          "Returns": [
+            "View",
+            "Edit",
+            "Process"
+          ],
+          "Finance": [],
+          "Reports": [
+            "View"
+          ],
+          "Users": [],
+          "Settings": []
+        },
+        "Accounts": {
+          "Orders": [
+            "View"
+          ],
+          "Products": [
+            "View"
+          ],
+          "Inventory": [
+            "View"
+          ],
+          "Warehouse": [
+            "View"
+          ],
+          "Shipping": [
+            "View"
+          ],
+          "Export": [
+            "View",
+            "Create",
+            "Edit",
+            "Approve",
+            "Export"
+          ],
+          "Returns": [
+            "View"
+          ],
+          "Finance": [
+            "View",
+            "Create",
+            "Edit",
+            "Approve",
+            "Import",
+            "Export"
+          ],
+          "Reports": [
+            "View",
+            "Export"
+          ],
+          "Users": [],
+          "Settings": [
+            "View"
+          ]
+        },
+        "Sales": {
+          "Orders": [
+            "View",
+            "Create",
+            "Edit"
+          ],
+          "Products": [
+            "View",
+            "Create",
+            "Edit"
+          ],
+          "Inventory": [
+            "View"
+          ],
+          "Warehouse": [
+            "View"
+          ],
+          "Shipping": [
+            "View"
+          ],
+          "Export": [
+            "View"
+          ],
+          "Returns": [
+            "View"
+          ],
+          "Finance": [
+            "View"
+          ],
+          "Reports": [
+            "View",
+            "Export"
+          ],
+          "Users": [],
+          "Settings": []
+        },
+        "Logistics": {
+          "Orders": [
+            "View"
+          ],
+          "Products": [
+            "View"
+          ],
+          "Inventory": [
+            "View"
+          ],
+          "Warehouse": [
+            "View",
+            "Process"
+          ],
+          "Shipping": [
+            "View",
+            "Create",
+            "Edit",
+            "Process"
+          ],
+          "Export": [
+            "View",
+            "Create",
+            "Edit"
+          ],
+          "Returns": [
+            "View",
+            "Edit"
+          ],
+          "Finance": [
+            "View"
+          ],
+          "Reports": [
+            "View",
+            "Export"
+          ],
+          "Users": [],
+          "Settings": []
+        },
+        "Auditor": {
+          "Orders": [
+            "View",
+            "Export"
+          ],
+          "Products": [
+            "View",
+            "Export"
+          ],
+          "Inventory": [
+            "View",
+            "Export"
+          ],
+          "Warehouse": [
+            "View",
+            "Export"
+          ],
+          "Shipping": [
+            "View",
+            "Export"
+          ],
+          "Export": [
+            "View",
+            "Export"
+          ],
+          "Returns": [
+            "View",
+            "Export"
+          ],
+          "Finance": [
+            "View",
+            "Export"
+          ],
+          "Reports": [
+            "View",
+            "Export"
+          ],
+          "Users": [
+            "View"
+          ],
+          "Settings": [
+            "View"
+          ]
+        },
+        "Super Admin": {
+          "Orders": [
+            "View",
+            "Create",
+            "Edit",
+            "Delete",
+            "Approve",
+            "Import",
+            "Export",
+            "Process"
+          ],
+          "Products": [
+            "View",
+            "Create",
+            "Edit",
+            "Delete",
+            "Approve",
+            "Import",
+            "Export"
+          ],
+          "Inventory": [
+            "View",
+            "Create",
+            "Edit",
+            "Delete",
+            "Approve",
+            "Import",
+            "Export",
+            "Process"
+          ],
+          "Warehouse": [
+            "View",
+            "Create",
+            "Edit",
+            "Delete",
+            "Approve",
+            "Process"
+          ],
+          "Shipping": [
+            "View",
+            "Create",
+            "Edit",
+            "Delete",
+            "Approve",
+            "Process"
+          ],
+          "Export": [
+            "View",
+            "Create",
+            "Edit",
+            "Delete",
+            "Approve",
+            "Export"
+          ],
+          "Returns": [
+            "View",
+            "Create",
+            "Edit",
+            "Delete",
+            "Approve",
+            "Process"
+          ],
+          "Finance": [
+            "View",
+            "Create",
+            "Edit",
+            "Delete",
+            "Approve",
+            "Import",
+            "Export"
+          ],
+          "Reports": [
+            "View",
+            "Export"
+          ],
+          "Users": [
+            "View",
+            "Create",
+            "Edit",
+            "Delete"
+          ],
+          "Settings": [
+            "View",
+            "Create",
+            "Edit",
+            "Delete"
+          ]
+        }
+      },
+      "kpis": {
+        "todaysSales": 485000,
+        "monthlySales": 12800000,
+        "totalOrders": 248,
+        "ordersToday": 36,
+        "pendingOrders": 42,
+        "pendingDispatch": 17,
+        "inTransitUnits": 842,
+        "usaInventoryUnits": 1428,
+        "indiaInventoryUnits": 3764,
+        "usaStockValue": 18500000,
+        "indiaStockValue": 24200000,
+        "outstandingReceivables": 1875000,
+        "grossProfit": 4460000,
+        "netProfit": 3120000,
+        "grossMargin": 34.8,
+        "returns": 18,
+        "courierDisputes": 82450,
+        "lowStockSkus": 5
+      },
+      "salesTrend": {
+        "daily": [
+          {
+            "label": "16 Sep",
+            "sales": 320000,
+            "orders": 28
+          },
+          {
+            "label": "17 Sep",
+            "sales": 410000,
+            "orders": 34
+          },
+          {
+            "label": "18 Sep",
+            "sales": 385000,
+            "orders": 31
+          },
+          {
+            "label": "19 Sep",
+            "sales": 455000,
+            "orders": 38
+          },
+          {
+            "label": "20 Sep",
+            "sales": 390000,
+            "orders": 33
+          },
+          {
+            "label": "21 Sep",
+            "sales": 470000,
+            "orders": 40
+          },
+          {
+            "label": "22 Sep",
+            "sales": 485000,
+            "orders": 36
+          }
+        ],
+        "weekly": [
+          {
+            "label": "W1 Aug",
+            "sales": 2100000,
+            "orders": 180
+          },
+          {
+            "label": "W2 Aug",
+            "sales": 2450000,
+            "orders": 205
+          },
+          {
+            "label": "W3 Aug",
+            "sales": 2680000,
+            "orders": 220
+          },
+          {
+            "label": "W4 Aug",
+            "sales": 2920000,
+            "orders": 240
+          },
+          {
+            "label": "W1 Sep",
+            "sales": 3100000,
+            "orders": 255
+          },
+          {
+            "label": "W2 Sep",
+            "sales": 3350000,
+            "orders": 270
+          },
+          {
+            "label": "W3 Sep",
+            "sales": 3200000,
+            "orders": 248
+          }
+        ],
+        "monthly": [
+          {
+            "label": "Apr",
+            "sales": 9200000,
+            "orders": 780
+          },
+          {
+            "label": "May",
+            "sales": 10100000,
+            "orders": 850
+          },
+          {
+            "label": "Jun",
+            "sales": 11200000,
+            "orders": 920
+          },
+          {
+            "label": "Jul",
+            "sales": 11800000,
+            "orders": 980
+          },
+          {
+            "label": "Aug",
+            "sales": 12100000,
+            "orders": 1020
+          },
+          {
+            "label": "Sep",
+            "sales": 12800000,
+            "orders": 1050
+          }
+        ]
+      },
+      "salesByMarketplace": [
+        {
+          "name": "Amazon",
+          "value": 7200000
+        },
+        {
+          "name": "Etsy",
+          "value": 3100000
+        },
+        {
+          "name": "Walmart",
+          "value": 2500000
+        }
+      ],
+      "salesByCountry": [
+        {
+          "name": "USA",
+          "value": 8500000
+        },
+        {
+          "name": "Canada",
+          "value": 1600000
+        },
+        {
+          "name": "UK",
+          "value": 1200000
+        },
+        {
+          "name": "Germany",
+          "value": 900000
+        },
+        {
+          "name": "Australia",
+          "value": 600000
+        }
+      ],
+      "inventoryByLocation": [
+        {
+          "name": "India",
+          "value": 3764
+        },
+        {
+          "name": "In Transit",
+          "value": 842
+        },
+        {
+          "name": "USA",
+          "value": 1428
+        },
+        {
+          "name": "Amazon FBA",
+          "value": 980
+        }
+      ],
+      "orderStatusDist": [
+        {
+          "name": "Delivered",
+          "value": 98
+        },
+        {
+          "name": "In Transit",
+          "value": 32
+        },
+        {
+          "name": "Processing",
+          "value": 45
+        },
+        {
+          "name": "Packed",
+          "value": 28
+        },
+        {
+          "name": "Pending",
+          "value": 30
+        },
+        {
+          "name": "Returns/RTO",
+          "value": 15
+        }
+      ],
+      "profitTrend": [
+        {
+          "label": "Apr",
+          "gross": 28.5,
+          "net": 18.2
+        },
+        {
+          "label": "May",
+          "gross": 30.1,
+          "net": 19.5
+        },
+        {
+          "label": "Jun",
+          "gross": 31.8,
+          "net": 21
+        },
+        {
+          "label": "Jul",
+          "gross": 33.2,
+          "net": 22.4
+        },
+        {
+          "label": "Aug",
+          "gross": 34,
+          "net": 23.1
+        },
+        {
+          "label": "Sep",
+          "gross": 34.8,
+          "net": 24.4
+        }
+      ],
+      "receivableAgeing": [
+        {
+          "name": "Current",
+          "value": 420000
+        },
+        {
+          "name": "1-30",
+          "value": 380000
+        },
+        {
+          "name": "31-60",
+          "value": 455000
+        },
+        {
+          "name": "61-90",
+          "value": 320000
+        },
+        {
+          "name": "90+",
+          "value": 300000
+        }
+      ],
+      "courierExceptionsChart": [
+        {
+          "name": "Delay",
+          "value": 8
+        },
+        {
+          "name": "Delivery Exception",
+          "value": 5
+        },
+        {
+          "name": "RTO",
+          "value": 4
+        },
+        {
+          "name": "Address Issue",
+          "value": 3
+        },
+        {
+          "name": "Damage",
+          "value": 2
+        }
+      ],
+      "topSkus": [
+        {
+          "sku": "RUG-1001",
+          "name": "Hand Knotted Wool Rug",
+          "units": 48,
+          "revenue": 960000
+        },
+        {
+          "sku": "RUG-1003",
+          "name": "Jute Area Rug",
+          "units": 92,
+          "revenue": 625600
+        },
+        {
+          "sku": "RUG-1006",
+          "name": "Flatweave Kilim",
+          "units": 71,
+          "revenue": 631900
+        },
+        {
+          "sku": "RUG-1009",
+          "name": "Natural Jute Runner",
+          "units": 110,
+          "revenue": 462000
+        },
+        {
+          "sku": "RUG-1002",
+          "name": "Hand Tufted Rug",
+          "units": 55,
+          "revenue": 687500
+        }
+      ],
+      "lowStock": [
+        {
+          "sku": "RUG-1017",
+          "name": "Limited Edition Silk Runner",
+          "free": 0,
+          "reorder": 2
+        },
+        {
+          "sku": "RUG-1013",
+          "name": "Moroccan Trellis Rug",
+          "free": 1,
+          "reorder": 5
+        },
+        {
+          "sku": "RUG-1004",
+          "name": "Vintage Persian Rug",
+          "free": 3,
+          "reorder": 3
+        },
+        {
+          "sku": "RUG-1010",
+          "name": "Luxury Wool Rug",
+          "free": 4,
+          "reorder": 3
+        },
+        {
+          "sku": "RUG-1005",
+          "name": "Wool Silk Rug",
+          "free": 4,
+          "reorder": 2
+        }
+      ],
+      "criticalAttention": [
+        {
+          "id": "ca1",
+          "title": "SKU Mapping Missing",
+          "count": 5,
+          "link": "/sku-mapping",
+          "severity": "Critical"
+        },
+        {
+          "id": "ca2",
+          "title": "Orders Awaiting Allocation",
+          "count": 3,
+          "link": "/orders?status=Awaiting+Inventory",
+          "severity": "High"
+        },
+        {
+          "id": "ca3",
+          "title": "Delayed India Dispatch",
+          "count": 4,
+          "link": "/warehouse/dispatch",
+          "severity": "High"
+        },
+        {
+          "id": "ca4",
+          "title": "USA Receipt Discrepancies",
+          "count": 1,
+          "link": "/warehouse/usa-receipts",
+          "severity": "Critical"
+        },
+        {
+          "id": "ca5",
+          "title": "Courier Delivery Exception",
+          "count": 2,
+          "link": "/shipping-exceptions",
+          "severity": "High"
+        },
+        {
+          "id": "ca6",
+          "title": "Overdue Receivable",
+          "count": 3,
+          "link": "/finance/receivables",
+          "severity": "Critical"
+        },
+        {
+          "id": "ca7",
+          "title": "Courier Invoice Variance",
+          "count": 8,
+          "link": "/finance/courier-audit",
+          "severity": "High"
+        },
+        {
+          "id": "ca8",
+          "title": "Pending Export Realization",
+          "count": 2,
+          "link": "/export/ebrc-brc",
+          "severity": "Medium"
+        },
+        {
+          "id": "ca9",
+          "title": "Low Stock",
+          "count": 5,
+          "link": "/inventory",
+          "severity": "High"
+        },
+        {
+          "id": "ca10",
+          "title": "Old Inventory (>90 days)",
+          "count": 12,
+          "link": "/analytics/inventory",
+          "severity": "Medium"
+        }
+      ],
+      "commandCenter": [
+        {
+          "key": "marketplace",
+          "label": "Marketplace",
+          "count": 3,
+          "status": "Connected",
+          "exceptions": 2,
+          "link": "/marketplace-imports"
+        },
+        {
+          "key": "orders",
+          "label": "Orders",
+          "count": 248,
+          "status": "Active",
+          "exceptions": 5,
+          "link": "/orders"
+        },
+        {
+          "key": "mapping",
+          "label": "SKU Mapping",
+          "count": 8,
+          "status": "Exceptions",
+          "exceptions": 5,
+          "link": "/sku-mapping"
+        },
+        {
+          "key": "inventory",
+          "label": "Inventory",
+          "count": 7014,
+          "status": "Healthy",
+          "exceptions": 5,
+          "link": "/inventory"
+        },
+        {
+          "key": "warehouse",
+          "label": "Warehouse",
+          "count": 17,
+          "status": "Processing",
+          "exceptions": 4,
+          "link": "/warehouse/pick-pack"
+        },
+        {
+          "key": "packing",
+          "label": "Packing",
+          "count": 8,
+          "status": "In Progress",
+          "exceptions": 1,
+          "link": "/warehouse/packing"
+        },
+        {
+          "key": "dispatch",
+          "label": "India Dispatch",
+          "count": 17,
+          "status": "Pending",
+          "exceptions": 4,
+          "link": "/warehouse/dispatch"
+        },
+        {
+          "key": "transit",
+          "label": "In Transit",
+          "count": 842,
+          "status": "Moving",
+          "exceptions": 3,
+          "link": "/replenishment"
+        },
+        {
+          "key": "usaReceipt",
+          "label": "USA Receipt",
+          "count": 6,
+          "status": "Active",
+          "exceptions": 1,
+          "link": "/warehouse/usa-receipts"
+        },
+        {
+          "key": "usaInventory",
+          "label": "USA Inventory",
+          "count": 1428,
+          "status": "Available",
+          "exceptions": 0,
+          "link": "/inventory"
+        },
+        {
+          "key": "shipment",
+          "label": "Customer Shipment",
+          "count": 15,
+          "status": "Active",
+          "exceptions": 2,
+          "link": "/shipments"
+        },
+        {
+          "key": "delivery",
+          "label": "Delivery / Return",
+          "count": 116,
+          "status": "Mixed",
+          "exceptions": 8,
+          "link": "/returns"
+        },
+        {
+          "key": "finance",
+          "label": "Finance",
+          "count": 11,
+          "status": "Open Items",
+          "exceptions": 3,
+          "link": "/finance/receivables"
+        },
+        {
+          "key": "profit",
+          "label": "Profitability",
+          "count": "34.8%",
+          "status": "On Track",
+          "exceptions": 0,
+          "link": "/finance/profitability"
+        }
+      ],
+      "forecast": {
+        "sales30Day": [
+          {
+            "label": "D1",
+            "actual": 485000,
+            "forecast": 490000
+          },
+          {
+            "label": "D5",
+            "actual": null,
+            "forecast": 505000
+          },
+          {
+            "label": "D10",
+            "actual": null,
+            "forecast": 520000
+          },
+          {
+            "label": "D15",
+            "actual": null,
+            "forecast": 535000
+          },
+          {
+            "label": "D20",
+            "actual": null,
+            "forecast": 545000
+          },
+          {
+            "label": "D25",
+            "actual": null,
+            "forecast": 560000
+          },
+          {
+            "label": "D30",
+            "actual": null,
+            "forecast": 575000
+          }
+        ],
+        "demandBySku": [
+          {
+            "sku": "RUG-1001",
+            "demand": 22,
+            "available": 10,
+            "suggestion": "Replenish 15 to USA"
+          },
+          {
+            "sku": "RUG-1003",
+            "demand": 40,
+            "available": 45,
+            "suggestion": "Maintain"
+          },
+          {
+            "sku": "RUG-1013",
+            "demand": 18,
+            "available": 2,
+            "suggestion": "Urgent replenish 20"
+          },
+          {
+            "sku": "RUG-1004",
+            "demand": 12,
+            "available": 4,
+            "suggestion": "Replenish 10"
+          },
+          {
+            "sku": "RUG-1009",
+            "demand": 55,
+            "available": 60,
+            "suggestion": "Maintain"
+          }
+        ],
+        "usaInventoryProjection": [
+          {
+            "label": "Week 1",
+            "units": 1428
+          },
+          {
+            "label": "Week 2",
+            "units": 1380
+          },
+          {
+            "label": "Week 3",
+            "units": 1510
+          },
+          {
+            "label": "Week 4",
+            "units": 1460
+          }
+        ],
+        "badge": "Forecast based on available historical data"
+      },
+      "notifications": [
+        {
+          "id": "N1",
+          "title": "Order #1001 ready for demo workflow",
+          "time": "10 min ago",
+          "read": false
+        },
+        {
+          "id": "N2",
+          "title": "Walmart sync completed with 2 failures",
+          "time": "3 hrs ago",
+          "read": false
+        },
+        {
+          "id": "N3",
+          "title": "USA receipt discrepancy on REP-2026-001",
+          "time": "4 days ago",
+          "read": true
+        },
+        {
+          "id": "N4",
+          "title": "Courier dispute opened — ₹82,450",
+          "time": "2 days ago",
+          "read": false
+        }
+      ],
+      "demoWorkflowStep": 1
+    },
+    "createdAt": "2026-10-03T09:53:35.690Z",
+    "updatedAt": "2026-10-03T09:58:24.267Z",
+    "__v": 0
+  }
+]
