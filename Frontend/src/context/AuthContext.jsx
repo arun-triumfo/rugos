@@ -9,10 +9,11 @@ const AuthContext = createContext(null);
 
 const ROLE_NAV_FILTER = {
   [ROLES.INDIA_WAREHOUSE]: ['Overview', 'Commerce', 'Catalog', 'Inventory', 'Warehouse', 'Replenishment', 'Shipping', 'System'],
-  [ROLES.USA_WAREHOUSE]: ['Overview', 'Commerce', 'Inventory', 'Warehouse', 'Replenishment', 'Shipping', 'Returns', 'System'],
+  [ROLES.USA_WAREHOUSE]: ['Overview', 'Commerce', 'Catalog', 'Inventory', 'Warehouse', 'Replenishment', 'Shipping', 'Returns', 'System'],
   [ROLES.ACCOUNTS]: ['Overview', 'Commerce', 'Export', 'Finance', 'Analytics', 'System'],
-  [ROLES.SALES]: ['Overview', 'Commerce', 'Catalog', 'Analytics', 'System'],
-  [ROLES.LOGISTICS]: ['Overview', 'Commerce', 'Warehouse', 'Replenishment', 'Shipping', 'Export', 'Returns', 'System'],
+  // Sales sees full order→ship path for client demos (masters + ops)
+  [ROLES.SALES]: ['Overview', 'Commerce', 'Catalog', 'Inventory', 'Warehouse', 'Shipping', 'Analytics', 'System'],
+  [ROLES.LOGISTICS]: ['Overview', 'Commerce', 'Catalog', 'Inventory', 'Warehouse', 'Replenishment', 'Shipping', 'Export', 'Returns', 'System'],
   [ROLES.AUDITOR]: ['Overview', 'Commerce', 'Catalog', 'Inventory', 'Warehouse', 'Shipping', 'Export', 'Returns', 'Finance', 'Analytics', 'System'],
 };
 
