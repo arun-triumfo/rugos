@@ -258,20 +258,21 @@ export function SuperAdminDemoRequestsPage() {
   return (
     <div>
       <PageHeader
-        title="Access Requests"
-        subtitle="Landing page trial / access form submissions"
+        title="Demo Requests"
+        subtitle="Book a Personalized Demo submissions from the landing page"
       />
       <DataTable
         columns={[
           { key: 'companyName', label: 'Company' },
-          { key: 'contactName', label: 'Contact' },
-          { key: 'email', label: 'Email' },
+          { key: 'email', label: 'Work email' },
+          { key: 'country', label: 'Country', render: (r) => r.country || '—' },
+          { key: 'businessType', label: 'Business type', render: (r) => r.businessType || '—' },
           { key: 'phone', label: 'Phone', render: (r) => r.phone || '—' },
           {
             key: 'message',
             label: 'Notes',
             render: (r) => (
-              <span className="block max-w-[220px] truncate" title={r.message}>
+              <span className="block max-w-[180px] truncate" title={r.message}>
                 {r.message || '—'}
               </span>
             ),
@@ -303,7 +304,7 @@ export function SuperAdminDemoRequestsPage() {
           },
         ]}
         rows={demoRequests || []}
-        emptyMessage="No access requests yet"
+        emptyMessage="No demo requests yet"
       />
     </div>
   );

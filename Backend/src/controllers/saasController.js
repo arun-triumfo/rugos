@@ -276,9 +276,11 @@ function mapDemoRequest(d) {
   return {
     id: d._id.toString(),
     companyName: d.companyName,
-    contactName: d.contactName,
+    contactName: d.contactName || '',
     email: d.email,
     phone: d.phone || '',
+    country: d.country || '',
+    businessType: d.businessType || '',
     message: d.message || '',
     status: d.status,
     createdAt: d.createdAt,
@@ -286,16 +288,18 @@ function mapDemoRequest(d) {
 }
 
 export const createDemoRequest = asyncHandler(async (req, res) => {
-  const { companyName, contactName, email, phone, message } = req.body || {};
-  if (!companyName?.trim() || !contactName?.trim() || !email?.trim()) {
-    throw httpError(400, 'Company name, contact name and email are required');
+  const { companyName, contactName, email, phone, country, businessType, message } = req.body || {};
+  if (!companyName?.trim() || !email?.trim()) {
+    throw httpError(400, 'Company name and work email are required');
   }
 
   const doc = await DemoRequest.create({
     companyName: companyName.trim(),
-    contactName: contactName.trim(),
+    contactName: (contactName || companyName).trim(),
     email: email.trim().toLowerCase(),
     phone: (phone || '').trim(),
+    country: (country || '').trim(),
+    businessType: (businessType || '').trim(),
     message: (message || '').trim(),
     status: 'Pending',
   });

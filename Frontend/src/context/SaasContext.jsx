@@ -277,17 +277,25 @@ export function SaasProvider({ children }) {
     notify('Subscription plan updated');
   }, [state.plans, state.subscriptions, notify, refreshFromApi]);
 
-  const requestDemo = useCallback(async ({ companyName, contactName, email, phone, message }) => {
-    if (!companyName?.trim() || !contactName?.trim() || !email?.trim()) {
-      return { ok: false, error: 'Company, contact name and email are required' };
+  const requestDemo = useCallback(async ({ companyName, contactName, email, phone, country, businessType, message }) => {
+    if (!companyName?.trim() || !email?.trim()) {
+      return { ok: false, error: 'Company name and work email are required' };
     }
+
+    const payload = {
+      companyName: companyName.trim(),
+      contactName: (contactName || companyName).trim(),
+      email: email.trim().toLowerCase(),
+      phone: phone || '',
+      country: country || '',
+      businessType: businessType || '',
+      message: message || '',
+    };
 
     if (!USE_MOCK_API) {
       try {
-        await apiPost('/saas/demo-requests', {
-          companyName, contactName, email, phone, message,
-        });
-        notify('Demo request submitted — we will contact you soon');
+        await apiPost('/saas/demo-requests', payload);
+        notify('Demo request received — we will contact you soon');
         return { ok: true };
       } catch (err) {
         return { ok: false, error: err.message };
@@ -300,18 +308,14 @@ export function SaasProvider({ children }) {
       demoRequests: [
         {
           id,
-          companyName: companyName.trim(),
-          contactName: contactName.trim(),
-          email: email.trim().toLowerCase(),
-          phone: phone || '',
-          message: message || '',
+          ...payload,
           status: 'Pending',
           createdAt: new Date().toISOString(),
         },
         ...(prev.demoRequests || []),
       ],
     }));
-    notify('Demo request submitted — we will contact you soon');
+    notify('Demo request received — we will contact you soon');
     return { ok: true };
   }, [notify]);
 
