@@ -8,23 +8,12 @@ import {
   Activity, ScrollText, Settings, ChevronDown, ChevronRight,
 } from 'lucide-react';
 
-/**
- * Client demo flow (enabled groups):
- * 1. Overview → Dashboard
- * 2. Commerce → Import → SKU map → Orders
- * 3. Catalog → Product / SKU masters
- * 4. Inventory → Stock + ledger (reserve / free)
- * 5. Warehouse → MTO → Pick/Pack → Locations master
- * 6. Shipping → Shipments → Labels → Tracking
- *
- * Remaining groups stay commented for later demos.
- */
 export const NAV_GROUPS = [
   {
     label: 'Overview',
     items: [
       { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
-      // { to: '/command-center', label: 'Command Center', icon: Command },
+      { to: '/command-center', label: 'Command Center', icon: Command },
     ],
   },
   {
@@ -48,9 +37,9 @@ export const NAV_GROUPS = [
     items: [
       { to: '/inventory', label: 'Inventory Overview', icon: Boxes },
       { to: '/inventory/ledger', label: 'Stock Ledger', icon: BookOpen },
-      // { to: '/inventory/transfers', label: 'Inventory Transfers', icon: ArrowLeftRight },
-      // { to: '/inventory/adjustments', label: 'Adjustments', icon: SlidersHorizontal },
-      // { to: '/inventory/cycle-count', label: 'Cycle Count', icon: ClipboardCheck },
+      { to: '/inventory/transfers', label: 'Inventory Transfers', icon: ArrowLeftRight },
+      { to: '/inventory/adjustments', label: 'Adjustments', icon: SlidersHorizontal },
+      { to: '/inventory/cycle-count', label: 'Cycle Count', icon: ClipboardCheck },
     ],
   },
   {
@@ -60,22 +49,10 @@ export const NAV_GROUPS = [
       { to: '/warehouse/mto', label: 'MTO / Production', icon: Factory },
       { to: '/warehouse/pick-pack', label: 'Pick & Pack', icon: ScanLine },
       { to: '/warehouse/packing', label: 'Packing Queue', icon: PackageCheck },
-      // { to: '/warehouse/dispatch', label: 'India Dispatch', icon: Truck },
-      // { to: '/warehouse/usa-receipts', label: 'USA Receipts', icon: PackageOpen },
+      { to: '/warehouse/dispatch', label: 'India Dispatch', icon: Truck },
+      { to: '/warehouse/usa-receipts', label: 'USA Receipts', icon: PackageOpen },
     ],
   },
-  {
-    label: 'Shipping',
-    items: [
-      { to: '/shipments', label: 'Shipments', icon: Truck },
-      { to: '/labels', label: 'Labels', icon: FileText },
-      { to: '/tracking', label: 'Tracking', icon: Route },
-      // { to: '/courier-references', label: 'Courier References', icon: PackageSearch },
-      // { to: '/shipping-exceptions', label: 'Delivery Exceptions', icon: ShieldAlert },
-    ],
-  },
-  /*
-  // Later demo modules (keep commented):
   {
     label: 'Replenishment',
     items: [
@@ -83,6 +60,16 @@ export const NAV_GROUPS = [
       { to: '/replenishment/planning', label: 'Replenishment Planning', icon: Route },
       { to: '/in-transit', label: 'In Transit', icon: Plane },
       { to: '/receipt-reconciliation', label: 'Receipt Reconciliation', icon: ClipboardCheck },
+    ],
+  },
+  {
+    label: 'Shipping',
+    items: [
+      { to: '/shipments', label: 'Shipments', icon: Truck },
+      { to: '/courier-references', label: 'Courier References', icon: PackageSearch },
+      { to: '/labels', label: 'Labels', icon: FileText },
+      { to: '/tracking', label: 'Tracking', icon: Route },
+      { to: '/shipping-exceptions', label: 'Delivery Exceptions', icon: ShieldAlert },
     ],
   },
   {
@@ -138,7 +125,6 @@ export const NAV_GROUPS = [
       { to: '/settings', label: 'Settings', icon: Settings },
     ],
   },
-  */
 ];
 
 export { ChevronDown, ChevronRight };
