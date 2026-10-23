@@ -1,5 +1,5 @@
 import {
-  LayoutDashboard, Command, ShoppingCart, Download, Link2, Package, Tags,
+  LayoutDashboard, Command, GitBranch, ShoppingCart, Download, Link2, Package, Tags,
   Boxes, BookOpen, ArrowLeftRight, SlidersHorizontal, ClipboardCheck,
   Factory, ScanLine, PackageCheck, Truck, PackageOpen, MapPin,
   Ship, Route, PackageSearch, FileText, Plane, RotateCcw, ShieldAlert,
@@ -14,6 +14,7 @@ export const NAV_GROUPS = [
     items: [
       { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
       { to: '/command-center', label: 'Command Center', icon: Command },
+      { to: '/workflow-guide', label: 'Workflow Guide', icon: GitBranch },
     ],
   },
   {

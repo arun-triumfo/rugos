@@ -9,6 +9,7 @@ import LandingPage from './pages/Landing/LandingPage';
 import LoginPage from './pages/Login/LoginPage';
 import DashboardPage from './pages/Dashboard/DashboardPage';
 import CommandCenterPage from './pages/CommandCenter/CommandCenterPage';
+import WorkflowGuidePage from './pages/Workflow/WorkflowGuidePage';
 import OrdersPage from './pages/Orders/OrdersPage';
 import OrderDetailPage from './pages/Orders/OrderDetailPage';
 import MarketplaceImportsPage from './pages/Commerce/MarketplaceImportsPage';
@@ -72,6 +73,7 @@ export default function App() {
                 <Route element={<TenantAppGuard />}>
                   <Route path="/dashboard" element={<DashboardPage />} />
                   <Route path="/command-center" element={<CommandCenterPage />} />
+                  <Route path="/workflow-guide" element={<WorkflowGuidePage />} />
                   <Route path="/orders" element={<OrdersPage />} />
                   <Route path="/orders/:id" element={<OrderDetailPage />} />
                   <Route path="/marketplace-imports" element={<MarketplaceImportsPage />} />
